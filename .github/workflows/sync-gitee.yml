@@ -1,0 +1,25 @@
+name: Sync to Gitee
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync to Gitee
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          echo "Syncing ${REPO_NAME} to Gitee..."
+          git remote add gitee "https://zsdili:${GITEE_TOKEN}@gitee.com/zsdili/${REPO_NAME}.git"
+          git push gitee main:main --force
+          echo "✅ Synced to Gitee successfully"
