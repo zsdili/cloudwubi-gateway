@@ -4,23 +4,27 @@ CloudWubi 云端网关 - 腾讯云函数入口
 ====================================
 
 职责：接收端侧客户端 POST 的 JSON（五笔编码），查询五笔编码库，
-返回候选 Unicode 码点数组。
+返回候选 Unicode 码点数组；支持五笔动态构词（阶段2）。
 
 请求体格式（端侧 -> 网关）：
-    {"code": "wq"}
+    {"code": "wq"}                          # 单字查询
+    {"code": "wqvb", "phrase": true}        # 动态构词查询
 
 响应体格式（网关 -> 端侧）：
-    {"code": "wq", "candidates": [20320, 20320]}
+    {"code": "wq", "candidates": [20320]}
+    {"code": "wqvb", "candidates": [20320, 22909], "phrases": ["你好"]}
 
-本版本为阶段1最小可用原型：
-- 编码查询使用内存字典（演示用）
-- 支持 Redis 热点缓存（若配置了 REDIS_HOST 则启用，否则用内存）
-- 后续阶段2/3 在此基础上增加动态构词、语义排序、联邦训练
+版本演进：
+- 阶段1：编码查表（内存字典 + Redis热点缓存）
+- 阶段2：五笔动态构词引擎（无限组词，本版本新增）
+- 阶段3：语义排序、联邦自学习（规划中）
 """
 
 import json
 import os
 import re
+
+from phrase_engine import PhraseEngine, CODE_RE
 
 
 # ------------------------------------------------------------------
@@ -48,10 +52,18 @@ DEFAULT_DICT = {
     "i":   [0x6C34],            # 水
     "o":   [0x706B],            # 火
     "p":   [0x4E4B],            # 之
+    # 阶段2：构词演示数据（"你好" = wq vb）
+    "vb":  [0x597D],            # 好
+    "n":   [0x6C11],            # 民
+    "aw":  [0x5171],            # 共
+    "gjk": [0x754C],            # 界
+    "wn":  [0x4EBA, 0x6C11],    # 人、民（演示二字词编码）
 }
 
-# 合法编码校验：1~4 位，a~y
-CODE_RE = re.compile(r"^[a-y]{1,4}$")
+# 合法编码校验：1~4 位，a~y（从 phrase_engine 导入）
+
+# 全局构词引擎实例（懒加载）
+PHRASE_ENGINE = None
 
 
 # ------------------------------------------------------------------
@@ -135,6 +147,14 @@ def _query_with_cache(code):
 # ------------------------------------------------------------------
 # 腾讯云函数入口
 # ------------------------------------------------------------------
+def _get_phrase_engine():
+    """获取构词引擎实例（懒加载，绑定单字码表）。"""
+    global PHRASE_ENGINE
+    if PHRASE_ENGINE is None:
+        PHRASE_ENGINE = PhraseEngine(WB_DICT)
+    return PHRASE_ENGINE
+
+
 def main_handler(event, context):
     """腾讯云函数统一入口。
 
@@ -159,9 +179,23 @@ def main_handler(event, context):
     if not CODE_RE.match(code):
         return _resp(400, {"error": "invalid code, expect 1-4 of a-y"})
 
+    # 基础查询：单字/编码查表
     candidates = _query_with_cache(code)
+    resp = {"code": code, "candidates": candidates}
 
-    return _resp(200, {"code": code, "candidates": candidates})
+    # 阶段2扩展：动态构词（客户端请求 phrase=true 时启用）
+    if req.get("phrase"):
+        engine = _get_phrase_engine()
+        phrase_candidates = engine.build_phrases(code, max_results=10)
+        phrases = [p["phrase"] for p in phrase_candidates]
+        # 构词命中的汉字也并入候选码点
+        for p in phrase_candidates:
+            for cp in p["chars"]:
+                if cp not in resp["candidates"]:
+                    resp["candidates"].append(cp)
+        resp["phrases"] = phrases
+
+    return _resp(200, resp)
 
 
 def _resp(status_code, payload):
