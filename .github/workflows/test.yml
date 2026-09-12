@@ -1,0 +1,39 @@
+name: Test Gateway
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Python 单元测试
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 运行构词引擎测试
+        run: python3 test_phrase_engine.py
+
+      - name: 运行语义排序测试
+        run: python3 test_semantic_ranker.py
+
+      - name: 运行分层排序测试
+        run: python3 test_layered_rank.py
+
+      - name: 网关冒烟测试
+        run: |
+          python3 - <<'EOF'
+          import json
+          from index import main_handler
+          r = main_handler({'httpMethod':'POST','body':json.dumps({'code':'wqvb','phrase':True})}, None)
+          assert r['statusCode'] == 200
+          body = json.loads(r['body'])
+          assert '你好' in body.get('phrases', []), f"应含你好: {body}"
+          print("✅ 网关冒烟通过:", body['phrases'])
+          EOF
