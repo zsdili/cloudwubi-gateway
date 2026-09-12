@@ -1,7 +1,7 @@
 # CloudWubi 词组规则库（cloudwubi-rules/wubi86_phrases.txt）
-# 来源：Rime 官方五笔86码表 v0.7（LGPL-3.0, https://github.com/rime/rime-wubi）词组部分
+# 来源：Rime 官方五笔86码表 v0.7（LGPL-3.0）+ 当代热词注入（与时俱进）
 # 格式：编码 词组[ 词组...]（重码合并，按使用频率降序）
-# 提取：2026-09-12，仅保留标准CJK字符的 2~4 字词
+# 更新：2026-09-12（含云计算/算力/人工智能等31个热词）
 
 aaaa 恭恭敬敬
 aaad 工期
@@ -610,6 +610,7 @@ afpy 斯坦福
 afqe 菱角
 afqg 鞋印
 afqk 著名
+afql 区块链
 afqm 鞍钢
 afqq 墓志铭
 afrd 鞭挞
@@ -6774,6 +6775,7 @@ dkqv 右键
 dkrk 右拐
 dkrt 右手
 dksm 压路机
+dkt 碳中和
 dkte 右舷
 dkum 右端
 dkut 右首
@@ -7207,6 +7209,7 @@ doon 灰烬
 dooo 磷火
 doqc 灰色
 dorf 灰质
+dorn 大数据
 dorr 灰白
 dosg 磷酸
 douq 灰浆
@@ -7557,6 +7560,7 @@ dsfn 奇志
 dsfp 克格勃
 dsft 奇才
 dsfu 春梦无痕
+dsga 大模型
 dsgb 克林顿
 dsgh 有禁不止
 dsgj 盛极一时
@@ -10035,6 +10039,7 @@ feqc 真彩色
 feqg 零用钱
 ferj 戴月披星
 feta 干脆利落
+fetl 云服务
 fetv 运用自如
 feug 喜逐颜开
 feuy 南腔北调
@@ -11058,6 +11063,7 @@ fknd 喜剧
 fknf 露怯
 fknh 喜蛋
 fknu 喜悦
+fknw 去中心化
 fkoy 喜糖
 fkpg 嘉定
 fkpj 喜宴
@@ -12540,6 +12546,7 @@ fxqi 索绪尔
 fxqq 违约金
 fxug 老弱病残
 fxwx 无纸化
+fxyt 超级计算
 fyaj 坟墓
 fyap 坟茔
 fyck 声讯台
@@ -12593,6 +12600,7 @@ fysg 超文本
 fyss 坑木
 fysy 无话可说 无计可施
 fytg 走读生
+fyth 云计算
 fytr 填充物
 fytu 地方税
 fytx 老调重弹
@@ -16255,6 +16263,7 @@ heyn 肯綮
 hfad 肯塔基
 hfbm 歧出
 hfbu 目击耳闻
+hfc 上云
 hfft 目击者
 hfge 战无不胜
 hfhh 卡夫卡
@@ -20370,7 +20379,7 @@ iyih 流泪
 iyii 流水 流淌
 iyij 浪漫
 iyik 漩涡
-iyin 淤泥
+iyin 淤泥 深度学习
 iyip 游学
 iyiq 流光
 iyir 流派
@@ -20631,6 +20640,7 @@ jbyl 最为
 jbym 最高
 jbyp 最亮
 jbys 临阵磨枪
+jbyt 量子计算
 jcah 贤臣
 jcap 贤劳
 jcay 竖匾
@@ -25643,6 +25653,7 @@ luvv 男盗女娼
 luwd 较优
 luwq 较低
 luwr 恩将仇报
+luwx 国产化
 luxe 四六级
 luxk 较强
 luxu 较弱
@@ -25804,6 +25815,7 @@ lxwy 毗邻
 lxxk 团组织
 lxxr 软绵绵
 lxyf 累计
+lxyt 边缘计算
 lyab 国庆节
 lydg 罪该万死
 lydi 软磨硬泡
@@ -26172,6 +26184,7 @@ mgad 同期
 mgbg 败下阵来
 mgbm 同出
 mgcb 赋予
+mgce 赋能
 mgck 同台
 mgdd 网开三面
 mgde 赋有
@@ -30099,8 +30112,9 @@ opwg 迷倒
 opwq 迷你
 opwt 迷途
 opww 迷人
-opwx 熔化
+opwx 熔化 数字化
 opwy 迷信 迷住
+opxi 数字经济
 opxn 迷幻
 opxq 断鹤续凫
 opyb 迷离
@@ -30160,6 +30174,7 @@ oqye 炮衣
 oqyt 燃放
 orbb 烂摊子
 orit 粗制滥造
+orkn 数据中心
 orof 煤气灶
 oror 煌煌
 oroy 煤气炉
@@ -30246,6 +30261,7 @@ otuq 炸酱
 otuv 烙痕
 otva 炸毁
 otwt 炸伤
+otwx 数智化
 otwy 精选集
 otxu 炸弹
 oubb 粒子 料子
@@ -39969,6 +39985,7 @@ skgk 歌带
 skgo 可恶
 skhv 杏眼
 skif 可汗
+skin 机器学习
 skip 可溶
 skjg 可是
 skjt 歌星
@@ -40031,6 +40048,7 @@ skux 哥弟
 skuy 可辨
 skvb 可好
 skvv 歌女
+skw 机器人
 skwa 可供
 skwc 歌颂
 skwd 可做
@@ -41222,7 +41240,7 @@ tbgy 自取灭亡
 tbid 鄱阳湖
 tbkc 算了吧
 tbme 身子骨
-tbmq 季风
+tbmq 季风 物联网
 tbpl 季军
 tbpu 季初
 tbrb 季报
@@ -41286,6 +41304,7 @@ tcpu 笃实
 tcqa 私邸
 tcqb 私怨
 tcrr 私拆
+tcrt 智能制造
 tctc 笃笃
 tctf 私德
 tcth 私自 私处 径自
@@ -41305,7 +41324,7 @@ tcwg 私拿
 tcwh 私企
 tcwv 私分
 tcww 私人 私欲
-tcwx 私货
+tcwx 私货 智能化
 tcwy 笃信
 tcxj 私费
 tcyb 私塾
@@ -41811,6 +41830,7 @@ tfkl 告别
 tfkn 毛呢
 tfkq 告吹
 tfkt 循规蹈矩
+tflc 自动驾驶
 tfld 告罪
 tflf 行署
 tflg 德国 行车
@@ -42328,7 +42348,7 @@ thkw 算啥
 thlf 处置 自转
 thll 处男
 thlp 延边
-thlt 版图
+thlt 版图 算力
 thlw 自办
 thly 处罚
 thmd 彼岸
@@ -44758,6 +44778,7 @@ ucgm 痛责
 ucgo 痛恶
 ucgq 痛歼
 uchk 交叉点
+ucid 新能源
 ucif 普通法
 ucip 痛觉
 uckk 痛哭 痛骂
@@ -49049,6 +49070,7 @@ wasc 伐树
 wasm 借机
 wass 伐木
 wasy 供述
+watc 人工智能
 watf 代行
 watg 借重
 wath 借自
@@ -52086,6 +52108,7 @@ wyvi 从谏如流
 wyvt 集群
 wyvw 人为刀俎
 wywa 信贷
+wywb 信创
 wywd 依仗
 wywf 集会 领会
 wywg 集合 信使 伉俪

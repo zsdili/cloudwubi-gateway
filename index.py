@@ -237,9 +237,26 @@ def main_handler(event, context):
     if req.get("phrase"):
         engine = _get_phrase_engine()
         phrase_candidates = engine.build_phrases(code, max_results=10)
-        # 阶段3：语义排序（高频词优先 + 用户行为学习 + 流畅度）
+
+        # 阶段3增强：3码输入时，预测第4码的高频词组（前瞻预测）
+        if len(code) == 3:
+            # 从词库中找以当前3码为前缀的高频词组（如 "fy" -> "fyth" 云计算）
+            prefix_words = []
+            for pcode, words in PHRASE_DICT.items():
+                if pcode.startswith(code) and words:
+                    for w in words:
+                        if len(w) >= 2 and w not in [c["phrase"] for c in phrase_candidates]:
+                            prefix_words.append({
+                                "phrase": w,
+                                "chars": [ord(ch) for ch in w],
+                                "code": pcode,
+                                "type": "prediction",  # 第4码预测
+                            })
+            phrase_candidates.extend(prefix_words[:5])  # 最多补5个预测
+
+        # 阶段3：语义排序（分层：MRU置顶+高频优先+用户行为学习+流畅度）
         ranker = _get_ranker()
-        phrase_candidates = ranker.rank(phrase_candidates)
+        phrase_candidates = ranker.rank(phrase_candidates, code_len=len(code))
         phrases = [p["phrase"] for p in phrase_candidates]
         # 构词命中的汉字也并入候选码点
         for p in phrase_candidates:

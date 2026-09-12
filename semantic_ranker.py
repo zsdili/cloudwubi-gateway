@@ -64,6 +64,20 @@ DEFAULT_HIGH_FREQ = {
     "智能": 86,
 }
 
+# 当代热词（与时俱进：云计算/算力/人工智能等，2020s 高频新词）
+DEFAULT_TREND_WORDS = {
+    "云计算": 95, "算力": 90, "云服务": 92, "人工智能": 98,
+    "大模型": 96, "数字化": 90, "智能化": 89, "大数据": 92,
+    "机器学习": 88, "深度学习": 86, "自然语言": 82, "算法": 88,
+    "芯片": 85, "半导体": 84, "新能源": 86, "碳中和": 80,
+    "物联网": 82, "区块链": 78, "元宇宙": 76, "自动驾驶": 80,
+    "机器人": 84, "智能制造": 88, "工业互联网": 82, "数字经济": 90,
+    "5G": 88, "6G": 84, "边缘计算": 82, "量子计算": 80,
+    "AIGC": 92, "生成式AI": 90, "开源": 88, "去中心化": 82,
+    "国产化": 80, "信创": 78, "赋能": 86, "落地": 82,
+    "数智化": 88, "超级计算": 80, "数据中心": 84, "上云": 82,
+}
+
 # 常用单字权重（用于单字候选排序，如一级简码优先）
 DEFAULT_CHAR_WEIGHT = {
     "一": 100, "地": 95, "在": 98, "要": 90, "工": 92,
@@ -83,6 +97,8 @@ class SemanticRanker:
         self.high_freq = dict(DEFAULT_HIGH_FREQ)
         if high_freq:
             self.high_freq.update(high_freq)
+        # 合并当代热词（与时俱进）
+        self.high_freq.update(DEFAULT_TREND_WORDS)
         self.char_weight = dict(DEFAULT_CHAR_WEIGHT)
         if char_weight:
             self.char_weight.update(char_weight)
@@ -93,6 +109,12 @@ class SemanticRanker:
         self.user_data_path = user_data_path
         if user_data_path and os.path.exists(user_data_path):
             self._load_user_data()
+
+        # MRU：最近选中的字/词（优先置顶，本次会话内 + 持久化）
+        self.mru = []
+        self.mru_path = (user_data_path or "").replace(".json", "_mru.json")
+        if self.mru_path and os.path.exists(self.mru_path):
+            self._load_mru()
 
         # Bigram 流畅度统计（动态构建）
         self.bigram_count = defaultdict(int)
@@ -120,6 +142,38 @@ class SemanticRanker:
                     json.dump(dict(self.user_weight), f, ensure_ascii=False)
             except IOError:
                 pass
+        # 同时记录 MRU（最近选中）
+        self._remember(phrase)
+
+    # ------------------------------------------------------------------
+    # MRU：最近选中优先置顶
+    # ------------------------------------------------------------------
+    def _load_mru(self):
+        """加载 MRU 列表（JSON: [词组, ...]，最近在前）。"""
+        try:
+            with open(self.mru_path, "r", encoding="utf-8") as f:
+                self.mru = json.load(f)
+        except (IOError, ValueError):
+            self.mru = []
+
+    def _remember(self, phrase):
+        """记录最近选中的字/词（置顶，最多保留 50 条）。"""
+        if phrase in self.mru:
+            self.mru.remove(phrase)
+        self.mru.insert(0, phrase)
+        self.mru = self.mru[:50]
+        if self.mru_path:
+            try:
+                with open(self.mru_path, "w", encoding="utf-8") as f:
+                    json.dump(self.mru, f, ensure_ascii=False)
+            except IOError:
+                pass
+
+    def _mru_rank(self, phrase):
+        """MRU 排名（越小越靠前；未命中返回大值）。"""
+        if phrase in self.mru:
+            return self.mru.index(phrase)
+        return 9999
 
     # ------------------------------------------------------------------
     # 流畅度统计（Bigram）
@@ -155,23 +209,63 @@ class SemanticRanker:
         return total / valid
 
     # ------------------------------------------------------------------
-    # 核心：综合排序
+    # 核心：综合排序（分层智能排序）
     # ------------------------------------------------------------------
-    def rank(self, candidates):
+    def rank(self, candidates, code_len=None):
         """
         对构词引擎候选列表排序（原地修改，返回重排后的列表）。
-        candidates: [{"phrase":..., "chars":[...], "code":..., "type":...}]
+        code_len: 输入编码长度（1/2/3/4），用于分层排序规则。
+
+        分层规则（科学+先进）：
+          - MRU 置顶：上次选中的字/词永远最优先（用户习惯）
+          - 1 码：高频单字优先（一级简码）
+          - 2 码：先高频单字 → 再二字词组（简码字>词组）
+          - 3 码：提示第 4 码的高频词组（三级简码字 + 词组预测）
+          - 4 码：词库词组优先 → 单字
         """
         if not candidates:
             return candidates
 
-        for cand in candidates:
+        # 第一步：MRU 置顶（最高优先级，用户习惯记忆）
+        mru_first = [c for c in candidates if c["phrase"] in self.mru]
+        mru_first.sort(key=lambda c: self._mru_rank(c["phrase"]))
+        rest = [c for c in candidates if c["phrase"] not in self.mru]
+
+        # 第二步：分层门槛（科学编码规则，优先于词频）
+        # 1码：单字>一切；2码：单字>词组；3码：单字+预测词组；4码：词库词组>单字
+        clen = code_len or max((len(c.get("code", "")) for c in rest), default=0)
+        layer = {}  # phrase -> 分层值（越小越优先）
+        for cand in rest:
+            phrase = cand["phrase"]
+            if cand["type"] == "char":
+                if clen == 1:
+                    layer[phrase] = 0      # 1码：一级简码单字最优先
+                elif clen == 2:
+                    layer[phrase] = 0      # 2码：单字在词组前
+                elif clen == 3:
+                    layer[phrase] = 1      # 3码：三级简码字
+                else:
+                    layer[phrase] = 2      # 4码：单字殿后
+            elif cand["type"] in ("lexicon", "prediction"):
+                if clen == 2:
+                    layer[phrase] = 1      # 2码：词组在单字后
+                elif clen == 3:
+                    layer[phrase] = 0      # 3码：预测词组最优先（提示第4码）
+                else:
+                    layer[phrase] = 1      # 4码：词库词组优先于单字
+            else:  # 动态拼接词（word2/3/4）
+                layer[phrase] = 3          # 动态兜底词排最后（避免噪声置顶）
+
+        for cand in rest:
             phrase = cand["phrase"]
             score = 0.0
 
-            # 信号1：词频权重（最高优先级）
+            # 信号0：分层门槛（主导信号，远大于词频）
+            score += (4 - layer[phrase]) * 100.0
+
+            # 信号1：词频权重（含当代热词）
             freq = self.high_freq.get(phrase, 0)
-            score += freq * 2.0
+            score += freq * 0.5
 
             # 信号2：用户行为权重（用户选择是最高置信信号）
             user = self.user_weight.get(phrase, 0)
@@ -194,13 +288,13 @@ class SemanticRanker:
             cand["_score"] = score
 
         # 按分数降序排列
-        candidates.sort(key=lambda c: c["_score"], reverse=True)
+        rest.sort(key=lambda c: c["_score"], reverse=True)
 
         # 移除内部字段
         for cand in candidates:
             cand.pop("_score", None)
 
-        return candidates
+        return mru_first + rest
 
 
 # ------------------------------------------------------------------
