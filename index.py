@@ -4,11 +4,12 @@ CloudWubi 云端网关 - 腾讯云函数入口
 ====================================
 
 职责：接收端侧客户端 POST 的 JSON（五笔编码），查询五笔编码库，
-返回候选 Unicode 码点数组；支持五笔动态构词（阶段2）。
+返回候选 Unicode 码点数组；支持五笔动态构词（阶段2）与语义排序（阶段3）。
 
 请求体格式（端侧 -> 网关）：
     {"code": "wq"}                          # 单字查询
     {"code": "wqvb", "phrase": true}        # 动态构词查询
+    {"code": "wqvb", "phrase": true, "learn": "你好"}  # 构词 + 用户选词学习
 
 响应体格式（网关 -> 端侧）：
     {"code": "wq", "candidates": [20320]}
@@ -16,8 +17,9 @@ CloudWubi 云端网关 - 腾讯云函数入口
 
 版本演进：
 - 阶段1：编码查表（内存字典 + Redis热点缓存）
-- 阶段2：五笔动态构词引擎（无限组词，本版本新增）
-- 阶段3：语义排序、联邦自学习（规划中）
+- 阶段2：五笔动态构词引擎（无限组词）
+- 阶段3：语义排序 + 用户行为学习（本版本新增，实现"越用越准"）
+- 阶段4：场景语义、联邦自学习（规划中）
 """
 
 import json
@@ -25,6 +27,7 @@ import os
 import re
 
 from phrase_engine import PhraseEngine, CODE_RE
+from semantic_ranker import SemanticRanker
 
 
 # ------------------------------------------------------------------
@@ -61,9 +64,6 @@ DEFAULT_DICT = {
 }
 
 # 合法编码校验：1~4 位，a~y（从 phrase_engine 导入）
-
-# 全局构词引擎实例（懒加载）
-PHRASE_ENGINE = None
 
 
 # ------------------------------------------------------------------
@@ -102,6 +102,10 @@ def load_dict():
 
 
 WB_DICT = load_dict()
+
+# 全局构词引擎与语义排序引擎实例（懒加载）
+PHRASE_ENGINE = None
+RANKER = None
 
 
 # ------------------------------------------------------------------
@@ -155,6 +159,23 @@ def _get_phrase_engine():
     return PHRASE_ENGINE
 
 
+def _get_ranker():
+    """获取语义排序引擎实例（懒加载，用户数据存 /tmp 便于云函数复用）。"""
+    global RANKER
+    if RANKER is None:
+        user_data = os.environ.get("CLOUDWUBI_USER_DATA", "/tmp/cw_user_weights.json")
+        RANKER = SemanticRanker(user_data_path=user_data)
+        # 用规则库中的单字构建语料（提升流畅度统计）
+        corpus = []
+        for code, chars in WB_DICT.items():
+            for cp in chars:
+                ch = chr(cp)
+                if len(ch) == 1:
+                    corpus.append(ch)
+        RANKER.feed_corpus(corpus[:2000])
+    return RANKER
+
+
 def main_handler(event, context):
     """腾讯云函数统一入口。
 
@@ -175,6 +196,12 @@ def main_handler(event, context):
     except json.JSONDecodeError:
         return _resp(400, {"error": "invalid json"})
 
+    # 用户选词学习（独立接口：{"learn": "你好"}）
+    learn_phrase = req.get("learn")
+    if learn_phrase:
+        _get_ranker().learn_selection(learn_phrase)
+        return _resp(200, {"learned": learn_phrase, "status": "ok"})
+
     code = (req.get("code") or "").strip().lower()
     if not CODE_RE.match(code):
         return _resp(400, {"error": "invalid code, expect 1-4 of a-y"})
@@ -183,10 +210,13 @@ def main_handler(event, context):
     candidates = _query_with_cache(code)
     resp = {"code": code, "candidates": candidates}
 
-    # 阶段2扩展：动态构词（客户端请求 phrase=true 时启用）
+    # 阶段2扩展：动态构词 + 阶段3语义排序
     if req.get("phrase"):
         engine = _get_phrase_engine()
         phrase_candidates = engine.build_phrases(code, max_results=10)
+        # 阶段3：语义排序（高频词优先 + 用户行为学习 + 流畅度）
+        ranker = _get_ranker()
+        phrase_candidates = ranker.rank(phrase_candidates)
         phrases = [p["phrase"] for p in phrase_candidates]
         # 构词命中的汉字也并入候选码点
         for p in phrase_candidates:
