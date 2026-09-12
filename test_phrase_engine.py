@@ -26,6 +26,13 @@ TEST_DICT = {
     "gjk": [0x754C],  # 界
 }
 
+# 测试词组码表（词库层）
+TEST_PHRASE_DICT = {
+    "wqvb": ["你好", "您好"],
+    "kl": ["中国"],
+    "whog": ["企业"],
+}
+
 
 def test_code_valid():
     eng = PhraseEngine(TEST_DICT)
@@ -46,6 +53,22 @@ def test_two_char_word():
     eng = PhraseEngine(TEST_DICT)
     result = eng.build_phrases("wqvb")
     assert any(c["phrase"] == "你好" for c in result)
+
+
+def test_lexicon_priority():
+    """词库命中应优先于动态构词"""
+    eng = PhraseEngine(TEST_DICT, phrase_dict=TEST_PHRASE_DICT)
+    result = eng.build_phrases("wqvb")
+    assert result[0]["type"] == "lexicon", f"词库应优先，实际: {result[0]}"
+    assert result[0]["phrase"] == "你好"
+
+
+def test_lexicon_fallback():
+    """词库未收录时回退动态构词"""
+    eng = PhraseEngine(TEST_DICT, phrase_dict=TEST_PHRASE_DICT)
+    # "gjk" 不在词组表，走单字
+    result = eng.build_phrases("gjk")
+    assert any(c["phrase"] == "界" for c in result)
 
 
 def test_phrase_to_code():
@@ -77,6 +100,8 @@ if __name__ == "__main__":
     test_code_valid()
     test_single_char()
     test_two_char_word()
+    test_lexicon_priority()
+    test_lexicon_fallback()
     test_phrase_to_code()
     test_unknown_char()
     test_invalid_input()

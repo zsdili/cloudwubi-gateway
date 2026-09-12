@@ -101,7 +101,30 @@ def load_dict():
     return dict_data
 
 
+def load_phrase_dict():
+    """加载词组规则库（wubi86_phrases.txt）：编码 -> 词组列表。"""
+    phrase_data = {}
+    path = os.path.join(os.path.dirname(__file__), "wubi86_phrases.txt")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                parts = line.split()
+                if len(parts) < 2:
+                    continue
+                code = parts[0]
+                if not CODE_RE.match(code):
+                    continue
+                phrase_data[code] = parts[1:]
+    except FileNotFoundError:
+        pass  # 词组库不存在则仅用动态构词
+    return phrase_data
+
+
 WB_DICT = load_dict()
+PHRASE_DICT = load_phrase_dict()
 
 # 全局构词引擎与语义排序引擎实例（懒加载）
 PHRASE_ENGINE = None
@@ -152,10 +175,10 @@ def _query_with_cache(code):
 # 腾讯云函数入口
 # ------------------------------------------------------------------
 def _get_phrase_engine():
-    """获取构词引擎实例（懒加载，绑定单字码表）。"""
+    """获取构词引擎实例（懒加载，绑定单字码表+词组码表）。"""
     global PHRASE_ENGINE
     if PHRASE_ENGINE is None:
-        PHRASE_ENGINE = PhraseEngine(WB_DICT)
+        PHRASE_ENGINE = PhraseEngine(WB_DICT, phrase_dict=PHRASE_DICT)
     return PHRASE_ENGINE
 
 

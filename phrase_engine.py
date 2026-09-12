@@ -30,16 +30,20 @@ CODE_RE = re.compile(r"^[a-y]{1,4}$")
 
 
 class PhraseEngine:
-    """五笔动态构词引擎"""
+    """五笔构词引擎（词库优先 + 动态构词兜底，阶段2/3升级版）"""
 
-    def __init__(self, single_dict):
+    def __init__(self, single_dict, phrase_dict=None):
         """
         single_dict: 单字编码字典
             { "编码": [Unicode码点, ...], ... }
-            例如 { "wq": [20320], "vb": [22909], ... }
+        phrase_dict: 词组编码字典（词库层，可选）
+            { "编码": [词组字符串, ...], ... }
+            例如 { "wqvb": ["你好", ...], "kl": ["中国", ...], ... }
         """
         # 单字码表：编码 -> 汉字列表
         self.single_dict = single_dict
+        # 词组码表：编码 -> 词组列表（词库层，行业标准做法）
+        self.phrase_dict = phrase_dict or {}
         # 反向索引：汉字(码点) -> 编码（用于反向校验）
         self.char_to_code = {}
         self._build_reverse_index()
@@ -57,8 +61,10 @@ class PhraseEngine:
     # ------------------------------------------------------------------
     def build_phrases(self, code: str, max_results: int = 10) -> list:
         """
-        输入 1~4 码编码，动态生成候选词组。
-        返回 [{"phrase": "你好", "chars": [20320, 22909], "code": "wqvb"}, ...]
+        输入 1~4 码编码，生成候选词组。
+        策略：词库优先（权威词组表） + 动态构词兜底（未收录词组时拼字）。
+
+        返回 [{"phrase": "你好", "chars": [20320, 22909], "code": "wqvb", "type": "word2"}, ...]
         """
         code = code.lower().strip()
         if not CODE_RE.match(code):
@@ -67,24 +73,37 @@ class PhraseEngine:
         candidates = []
         used = set()
 
+        # 场景0（新增）：词库优先 —— 查权威词组表
+        if code in self.phrase_dict:
+            for phrase in self.phrase_dict[code]:
+                if phrase not in used:
+                    candidates.append({
+                        "phrase": phrase,
+                        "chars": [ord(ch) for ch in phrase],
+                        "code": code,
+                        "type": "lexicon",  # 词库命中
+                    })
+                    used.add(phrase)
+
         # 场景1：直接命中单字（1~4码都可能）
         if code in self.single_dict:
             for cp in self.single_dict[code]:
-                candidates.append({
-                    "phrase": chr(cp),
-                    "chars": [cp],
-                    "code": code,
-                    "type": "char",
-                })
-                used.add(chr(cp))
+                if chr(cp) not in used:
+                    candidates.append({
+                        "phrase": chr(cp),
+                        "chars": [cp],
+                        "code": code,
+                        "type": "char",
+                    })
+                    used.add(chr(cp))
 
-        # 场景2：二字词（4码 = 前2码 + 后2码）
-        if len(code) == 4:
+        # 场景2：二字词动态兜底（4码 = 前2码 + 后2码，仅当词库未命中时）
+        if len(code) == 4 and not any(c["type"] == "lexicon" for c in candidates):
             first2 = code[0:2]
             last2 = code[2:4]
             if first2 in self.single_dict and last2 in self.single_dict:
-                for cp1 in self.single_dict[first2]:
-                    for cp2 in self.single_dict[last2]:
+                for cp1 in self.single_dict[first2][:3]:
+                    for cp2 in self.single_dict[last2][:3]:
                         phrase = chr(cp1) + chr(cp2)
                         if phrase not in used:
                             candidates.append({
@@ -95,15 +114,16 @@ class PhraseEngine:
                             })
                             used.add(phrase)
 
-        # 场景3：三字词（4码 = 首+首+前2码）
-        if len(code) == 4:
+        # 场景3：三字词动态兜底（词库未命中时才拼字）
+        has_lex = any(c["type"] == "lexicon" for c in candidates)
+        if len(code) == 4 and not has_lex:
             c1 = code[0:1]
             c2 = code[1:2]
             c3 = code[2:4]
             if c1 in self.single_dict and c2 in self.single_dict and c3 in self.single_dict:
-                for cp1 in self.single_dict[c1]:
-                    for cp2 in self.single_dict[c2]:
-                        for cp3 in self.single_dict[c3]:
+                for cp1 in self.single_dict[c1][:2]:
+                    for cp2 in self.single_dict[c2][:2]:
+                        for cp3 in self.single_dict[c3][:2]:
                             phrase = chr(cp1) + chr(cp2) + chr(cp3)
                             if phrase not in used:
                                 candidates.append({
@@ -114,19 +134,18 @@ class PhraseEngine:
                                 })
                                 used.add(phrase)
 
-        # 场景4：四字词（4码 = 首+首+首+末首）—— 需要至少4个单字码
-        # 简化实现：用前3码的首码 + 第4码首码
-        if len(code) == 4:
+        # 场景4：四字词动态兜底（词库未命中时才拼字）
+        if len(code) == 4 and not has_lex:
             c1 = code[0:1]
             c2 = code[1:2]
             c3 = code[2:3]
             c4 = code[3:4]
             if (c1 in self.single_dict and c2 in self.single_dict and
                     c3 in self.single_dict and c4 in self.single_dict):
-                for cp1 in self.single_dict[c1][:2]:
-                    for cp2 in self.single_dict[c2][:2]:
-                        for cp3 in self.single_dict[c3][:2]:
-                            for cp4 in self.single_dict[c4][:2]:
+                for cp1 in self.single_dict[c1][:1]:
+                    for cp2 in self.single_dict[c2][:1]:
+                        for cp3 in self.single_dict[c3][:1]:
+                            for cp4 in self.single_dict[c4][:1]:
                                 phrase = chr(cp1) + chr(cp2) + chr(cp3) + chr(cp4)
                                 if phrase not in used:
                                     candidates.append({
