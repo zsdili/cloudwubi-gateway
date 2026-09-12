@@ -126,6 +126,15 @@ def load_phrase_dict():
 WB_DICT = load_dict()
 PHRASE_DICT = load_phrase_dict()
 
+# v0.4.8 中英对照词典（云端英文翻译，1055 条高频字词）
+EN_DICT = {}
+try:
+    _en_path = os.path.join(os.path.dirname(__file__), "en_dict.json")
+    with open(_en_path, "r", encoding="utf-8") as _f:
+        EN_DICT = json.load(_f)
+except Exception:
+    EN_DICT = {}
+
 # 全局构词引擎与语义排序引擎实例（懒加载）
 PHRASE_ENGINE = None
 RANKER = None
@@ -224,6 +233,19 @@ def main_handler(event, context):
     if learn_phrase:
         _get_ranker().learn_selection(learn_phrase)
         return _resp(200, {"learned": learn_phrase, "status": "ok"})
+
+    # v0.4.8 字后联想 + 英文翻译（独立接口：{"word":"钟"} / {"word":"钟","en":true}）
+    word = req.get("word")
+    if word:
+        resp = {"word": word}
+        # 联想：词库中含该字的词组（互联网热点话题）
+        engine = _get_phrase_engine()
+        phrases = engine.query_by_word(word, max_results=20)
+        resp["phrases"] = phrases
+        # 翻译：内置中英词典（en_dict.json）
+        if req.get("en"):
+            resp["en"] = EN_DICT.get(word, "")
+        return _resp(200, resp)
 
     code = (req.get("code") or "").strip().lower()
     if not CODE_RE.match(code):

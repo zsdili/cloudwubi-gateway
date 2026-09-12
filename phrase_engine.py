@@ -198,6 +198,30 @@ class PhraseEngine:
     def code_valid(code: str) -> bool:
         return bool(CODE_RE.match(code))
 
+    # ------------------------------------------------------------------
+    # v0.4.8 字后联想：给定单字 -> 词库中含该字的词组（互联网热点话题）
+    # ------------------------------------------------------------------
+    def query_by_word(self, word: str, max_results: int = 20) -> list:
+        """
+        输入单个汉字，返回词组库中含该字的词组（用于端侧上屏单字后的联想）。
+        优先返回词频靠前（按码表内顺序）且长度 2~4 的词组。
+        """
+        if not word or len(word) != 1:
+            return []
+        result = []
+        seen = set()
+        # 词组库扫描（56994 条，字符串匹配，可接受）
+        for phrases in self.phrase_dict.values():
+            for p in phrases:
+                if p in seen:
+                    continue
+                if len(p) >= 2 and word in p:
+                    seen.add(p)
+                    result.append(p)
+                    if len(result) >= max_results:
+                        return result
+        return result
+
 
 # ------------------------------------------------------------------
 # 便捷函数：供 index.py 调用
