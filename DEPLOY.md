@@ -33,10 +33,17 @@
 5. 保存后，会生成一个访问 URL，形如：
    `https://service-xxx.ap-guangzhou.apigateway.myqcloud.com/release/wubi/query`
 
-### 3. 配置编码规则库（可选）
-- 上传 `cloudwubi-rules/wubi86_basic.txt` 到函数所在目录
-- 或设置 `CLOUDWUBI_RULES` 指向该文件
-- 不配置则使用 `index.py` 内置默认字典（可跑通联调）
+### 方法B（推荐）：zip 部署包一键上传
+
+已为您打好完整部署包 `cloudwubi-gateway-scf.zip`（含 index.py + phrase_engine.py + semantic_ranker.py + 词库 wubi86_basic.txt + wubi86_phrases.txt + requirements.txt，约 555KB，SCF 个人高级版 0 元额度内）：
+
+1. 登录腾讯云控制台 → 搜索「云函数」→ 进入 SCF：https://console.cloud.tencent.com/scf
+2. 点「新建」→「从头开始」→「本地上传 zip 包」
+3. 上传 `cloudwubi-gateway-scf.zip`
+4. 运行环境：Python 3.9；函数名称：`cloudwubi-gateway`；执行方法：`index.main_handler`
+5. 内存：256MB（套餐默认）；超时时间：5 秒
+6. 创建完成后 →「触发管理」→「创建触发器」→ API 网关触发（POST，启用 CORS）
+7. 记录生成的访问 URL（形如 `https://service-xxx.ap-guangzhou.apigateway.myqcloud.com/release/wubi/query`）
 
 ## 三、测试
 
@@ -59,12 +66,12 @@ curl -X POST https://你的函数地址/release/wubi/query \
 
 ## 四、端侧对接
 
-把端侧 `main.c` 中的网关地址改为你的函数 URL：
-```c
-#define GATEWAY_HOST "你的函数域名"
-#define GATEWAY_PORT 443
-#define GATEWAY_PATH "/release/wubi/query"
+把端侧 Android `CloudWubiIME.java` 顶部的网关地址改为你的函数 URL：
+```java
+private static final String GATEWAY_URL =
+        "https://你的函数域名/release/wubi/query";
 ```
+改后推送 main，CI 自动构建新 APK；未部署前保持占位符（端侧自动跳过云端请求，离线词库正常可用）。
 
 ## 五、费用提示
 
