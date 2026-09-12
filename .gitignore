@@ -1,0 +1,5 @@
+# Python 缓存与临时文件
+__pycache__/
+*.pyc
+*_mru.json
+*_user_weights.json

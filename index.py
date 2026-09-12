@@ -257,7 +257,8 @@ def main_handler(event, context):
         # 阶段3：语义排序（分层：MRU置顶+高频优先+用户行为学习+流畅度）
         ranker = _get_ranker()
         phrase_candidates = ranker.rank(phrase_candidates, code_len=len(code))
-        phrases = [p["phrase"] for p in phrase_candidates]
+        # phrases 只含词组（长度>=2），单字仅并入 candidates（客户端显示分离）
+        phrases = [p["phrase"] for p in phrase_candidates if len(p["phrase"]) >= 2]
         # 构词命中的汉字也并入候选码点
         for p in phrase_candidates:
             for cp in p["chars"]:
