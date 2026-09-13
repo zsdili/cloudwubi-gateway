@@ -247,6 +247,13 @@ def main_handler(event, context):
             resp["en"] = EN_DICT.get(word, "")
         return _resp(200, resp)
 
+    # v0.4.9 连续联想（独立接口：{"prefix":"陈胜"} → 以该前缀开头的词组）
+    prefix = req.get("prefix")
+    if prefix:
+        engine = _get_phrase_engine()
+        phrases = engine.query_by_prefix(prefix, max_results=20)
+        return _resp(200, {"prefix": prefix, "phrases": phrases})
+
     code = (req.get("code") or "").strip().lower()
     if not CODE_RE.match(code):
         return _resp(400, {"error": "invalid code, expect 1-4 of a-y"})

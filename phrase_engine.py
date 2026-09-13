@@ -222,6 +222,26 @@ class PhraseEngine:
                         return result
         return result
 
+    # ------------------------------------------------------------------
+    # v0.4.9 连续联想：给定上屏前缀 -> 词库中以该前缀开头的词组
+    # （如"陈胜"→"陈胜吴广"），实现历史事件/顺承式联想
+    # ------------------------------------------------------------------
+    def query_by_prefix(self, prefix: str, max_results: int = 20) -> list:
+        if not prefix or len(prefix) < 1 or len(prefix) > 6:
+            return []
+        result = []
+        seen = set()
+        for phrases in self.phrase_dict.values():
+            for p in phrases:
+                if p in seen:
+                    continue
+                if len(p) > len(prefix) and p.startswith(prefix):
+                    seen.add(p)
+                    result.append(p)
+                    if len(result) >= max_results:
+                        return result
+        return result
+
 
 # ------------------------------------------------------------------
 # 便捷函数：供 index.py 调用
