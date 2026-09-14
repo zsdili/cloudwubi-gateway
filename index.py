@@ -26,7 +26,7 @@ import json
 import os
 import re
 
-from phrase_engine import PhraseEngine, CODE_RE
+from phrase_engine import PhraseEngine, CODE_RE, _PY_WORDS
 from semantic_ranker import SemanticRanker
 
 
@@ -332,6 +332,28 @@ def _load_freq():
 
 FREQ = _load_freq()
 
+HOT_DAILY = set("不等于 去哪里 反馈 辛苦了 谢谢你 对不起 不客气 没关系 没问题 来得及 舍不得 办公室 怎么办 为什么 怎么 可以 工作 学习 中国 人民 我们 你们 他们 今天 明天 昨天 现在 时候 知道 觉得 喜欢 希望 需要 应该 可以 能够 知道 了解 支持 帮助 成功 幸福 快乐 健康 加油 努力 谢谢 您好 你好 早上好 中午好 晚上好 再见 恭喜 欢迎 请问 谢谢 抱歉 感谢 大家 朋友 时间 生活 世界 国家 社会 发展 建设 创新 创业 科技 智能 未来".split())
+
+
+def _sort_phrases_by_freq(phrases):
+    """词组排序（v0.5.41 反馈②/⑥）：高频日常用语置顶 → 拼音词库词（真实常用词）→ 其他（字频和升序）。
+    非词典词/低频组合自动后移；3 码场景只保留常用词（过滤见 main_handler）。"""
+    try:
+        fr = _load_freq()
+        py = _PY_WORDS()
+        def wsum(w):
+            return sum(fr.get(ch, 99999) for ch in w)
+        hot = [p for p in phrases if p in HOT_DAILY]
+        rest = [p for p in phrases if p not in HOT_DAILY]
+        py_rest = [p for p in rest if p in py]
+        other = [p for p in rest if p not in py]
+        py_rest.sort(key=wsum)
+        other.sort(key=wsum)
+        return hot + py_rest + other
+    except Exception:
+        return phrases
+
+
 def _sort_by_freq(cands):
     """单字候选按高频字排名排序（排名小=高频在前；无频率字排后）"""
     if not cands or len(cands) < 2:
@@ -611,9 +633,33 @@ def main_handler(event, context):
         resp["cat_count"] = CATEGORY_CATS
         resp["cat_words"] = CATEGORY_TOTAL
 
-    # v0.5.36 反馈⑦：高频字统计推送——单字候选按字频排序（高频字优先显示）
+    # v0.5.36 反馈⑦ + v0.5.38 落实：高频字统计推送——单字候选按字频排序 + hot 字段推给前端
+    # v0.5.40 反馈⑦ + v0.5.41 反馈②：词组排序 + 3 码只保留常用词（HOT_DAILY + 拼音词库词），生僻组合不显示
+    if resp.get("phrases"):
+        if len(code) < 4:
+            py = _PY_WORDS()
+            resp["phrases"] = [p for p in resp["phrases"] if p in HOT_DAILY or p in py]
+        if len(resp["phrases"]) > 1:
+            resp["phrases"] = _sort_phrases_by_freq(resp["phrases"])
     if resp.get("candidates"):
         resp["candidates"] = _sort_by_freq(resp["candidates"])
+        # v0.5.41 反馈⑥：hot 优先取本编码 basic 单字（精确字频 top6，避免词库字符污染如 suf→无/相/场）
+        hot = []
+        for cp in WB_DICT.get(code, []):
+            ch = chr(cp)
+            if len(ch) == 1 and FREQ.get(ch):
+                hot.append(ch)
+            if len(hot) >= 6:
+                break
+        if not hot:
+            for cp in resp["candidates"]:
+                ch = chr(cp)
+                if len(ch) == 1 and FREQ.get(ch):
+                    hot.append(ch)
+                if len(hot) >= 6:
+                    break
+        if hot:
+            resp["hot"] = hot
     return _resp(200, resp)
 
 

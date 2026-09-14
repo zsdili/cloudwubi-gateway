@@ -47,13 +47,19 @@ class PhraseEngine:
         # 反向索引：汉字(码点) -> 编码（用于反向校验）
         self.char_to_code = {}
         self._build_reverse_index()
+        # v0.5.42 反馈①：3 码前缀索引——提示"第 4 码的高频词组"（如 uab → uabn 辛苦了）
+        self.phrase_prefix = {}
+        for pcode, plist in self.phrase_dict.items():
+            if len(pcode) >= 3:
+                self.phrase_prefix.setdefault(pcode[:3], []).extend((pcode, p) for p in plist)
 
     def _build_reverse_index(self):
-        """构建 汉字 -> 编码 反向索引。"""
+        """构建 汉字 -> 编码 反向索引。
+        v0.5.42（用户纠错）：词组按"全码规则"取码——保留最长编码（全码），非简码。
+        例：不=i(简码)/gi/gii → 取 gii；"不等于"=g(不首)+t(等首)+gf(于前二)=gtgf（非 itgf）"""
         for code, chars in self.single_dict.items():
             for cp in chars:
-                # 保留最短编码（一级简码优先）
-                if cp not in self.char_to_code or len(code) < len(self.char_to_code[cp]):
+                if cp not in self.char_to_code or len(code) > len(self.char_to_code[cp]):
                     self.char_to_code[cp] = code
 
     # ------------------------------------------------------------------
@@ -85,6 +91,20 @@ class PhraseEngine:
                     })
                     used.add(phrase)
 
+        # 场景0b（v0.5.42 反馈①）：3 码时提示"第 4 码的高频词组"（词组库 code 前缀匹配）
+        #   如输入 uab → 提示 uabn 辛苦了（显示"辛苦了"，选即上屏；4 码 uabn 精确命中同样显示）
+        if len(code) == 3:
+            for pcode, phrase in self.phrase_prefix.get(code, []):
+                if phrase in used:
+                    continue
+                candidates.append({
+                    "phrase": phrase,
+                    "chars": [ord(ch) for ch in phrase],
+                    "code": pcode,
+                    "type": "lexicon",
+                })
+                used.add(phrase)
+
         # 场景1：直接命中单字（1~4码都可能）
         if code in self.single_dict:
             for cp in self.single_dict[code]:
@@ -98,6 +118,7 @@ class PhraseEngine:
                     used.add(chr(cp))
 
         # 场景2：二字词动态兜底（4码 = 前2码 + 后2码，仅当词库未命中时）
+        #   v0.5.41 反馈②：动态拼词仅保留 py_full（拼音词库=真实常用词）中存在的词——非词典词（生造组合）一律过滤
         if len(code) == 4 and not any(c["type"] == "lexicon" for c in candidates):
             first2 = code[0:2]
             last2 = code[2:4]
@@ -105,14 +126,15 @@ class PhraseEngine:
                 for cp1 in self.single_dict[first2][:3]:
                     for cp2 in self.single_dict[last2][:3]:
                         phrase = chr(cp1) + chr(cp2)
-                        if phrase not in used:
-                            candidates.append({
-                                "phrase": phrase,
-                                "chars": [cp1, cp2],
-                                "code": code,
-                                "type": "word2",
-                            })
-                            used.add(phrase)
+                        if phrase in used or phrase not in _PY_WORDS():
+                            continue
+                        candidates.append({
+                            "phrase": phrase,
+                            "chars": [cp1, cp2],
+                            "code": code,
+                            "type": "word2",
+                        })
+                        used.add(phrase)
 
         # 场景3：三字词动态兜底（词库未命中时才拼字）
         has_lex = any(c["type"] == "lexicon" for c in candidates)
@@ -125,14 +147,15 @@ class PhraseEngine:
                     for cp2 in self.single_dict[c2][:2]:
                         for cp3 in self.single_dict[c3][:2]:
                             phrase = chr(cp1) + chr(cp2) + chr(cp3)
-                            if phrase not in used:
-                                candidates.append({
-                                    "phrase": phrase,
-                                    "chars": [cp1, cp2, cp3],
-                                    "code": code,
-                                    "type": "word3",
-                                })
-                                used.add(phrase)
+                            if phrase in used or phrase not in _PY_WORDS():
+                                continue
+                            candidates.append({
+                                "phrase": phrase,
+                                "chars": [cp1, cp2, cp3],
+                                "code": code,
+                                "type": "word3",
+                            })
+                            used.add(phrase)
 
         # 场景4：四字词动态兜底（词库未命中时才拼字）
         if len(code) == 4 and not has_lex:
@@ -147,14 +170,15 @@ class PhraseEngine:
                         for cp3 in self.single_dict[c3][:1]:
                             for cp4 in self.single_dict[c4][:1]:
                                 phrase = chr(cp1) + chr(cp2) + chr(cp3) + chr(cp4)
-                                if phrase not in used:
-                                    candidates.append({
-                                        "phrase": phrase,
-                                        "chars": [cp1, cp2, cp3, cp4],
-                                        "code": code,
-                                        "type": "word4",
-                                    })
-                                    used.add(phrase)
+                                if phrase in used or phrase not in _PY_WORDS():
+                                    continue
+                                candidates.append({
+                                    "phrase": phrase,
+                                    "chars": [cp1, cp2, cp3, cp4],
+                                    "code": code,
+                                    "type": "word4",
+                                })
+                                used.add(phrase)
 
         # 限制返回数量（语义排序在阶段3接入）
         return candidates[:max_results]
@@ -255,6 +279,26 @@ def get_engine(single_dict=None):
     if _engine is None:
         _engine = PhraseEngine(single_dict or {})
     return _engine
+
+
+_PY_WORDS_CACHE = None
+def _PY_WORDS():
+    """py_full.json 词集（懒加载一次）：作为"真实常用词"过滤基准——动态拼词只保留词典词。"""
+    global _PY_WORDS_CACHE
+    if _PY_WORDS_CACHE is None:
+        import json, os
+        _PY_WORDS_CACHE = set()
+        try:
+            p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "py_full.json")
+            d = json.load(open(p, encoding="utf-8"))
+            for v in d.values():
+                if isinstance(v, list):
+                    for w in v:
+                        if isinstance(w, str) and 2 <= len(w) <= 6:
+                            _PY_WORDS_CACHE.add(w)
+        except Exception:
+            pass
+    return _PY_WORDS_CACHE
 
 
 def build_phrases(code: str, single_dict=None, max_results: int = 10) -> list:
