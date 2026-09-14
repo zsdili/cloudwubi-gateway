@@ -299,6 +299,24 @@ def _cat_stats():
     return len(cats), tot
 
 CATEGORY_CATS, CATEGORY_TOTAL = _cat_stats()
+
+# v0.5.35 反馈⑥：拼音/简拼混打词库（py_full.json 全拼索引 + py_short.json 简拼索引）
+def _load_pinyin():
+    pyf, pys = {}, {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "py_full.json")):
+            _base = os.getcwd()
+        if os.path.exists(os.path.join(_base, "py_full.json")):
+            pyf = json.load(open(os.path.join(_base, "py_full.json"), encoding="utf-8"))
+        if os.path.exists(os.path.join(_base, "py_short.json")):
+            pys = json.load(open(os.path.join(_base, "py_short.json"), encoding="utf-8"))
+    except Exception:
+        pass
+    return pyf, pys
+
+PY_FULL, PY_SHORT = _load_pinyin()
+
 def _filter_pos(words):
     """过滤消极/阴暗词（用户固化：阳光、积极向上、有启发有感悟）"""
     return [w for w in words if not any(n in w for n in NEG_WORDS)]
@@ -473,6 +491,22 @@ def main_handler(event, context):
         phrases = context_associate(str(ctx))
         return _resp(200, {"context": str(ctx), "phrases": phrases})
 
+    # v0.5.35 反馈⑥：拼音/简拼混打（独立接口：{"py":"nihao"} / {"py":"ywb"}）
+    py = req.get("py")
+    if py:
+        pystr = str(py).strip().lower()
+        resp = {"py": pystr}
+        merged, seen = [], set()
+        if len(pystr) >= 2:
+            for w in PY_FULL.get(pystr, [])[:12]:
+                if w not in seen:
+                    seen.add(w); merged.append(w)
+            for w in PY_SHORT.get(pystr, [])[:10]:
+                if w not in seen:
+                    seen.add(w); merged.append(w)
+        resp["phrases"] = merged
+        return _resp(200, resp)
+
     # v0.4.9 连续联想（独立接口：{"prefix":"陈胜"} → 以该前缀开头的词组）
     prefix = req.get("prefix")
     if prefix:
@@ -534,7 +568,7 @@ def main_handler(event, context):
         phrases = [p["phrase"] for p in phrase_candidates
                    if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction")]
         # v0.5.31 分类词优先：带 cat 的分类词移到 phrases 最前（用户打码即见分类词）
-        cat_phrases = [p["phrase"] for p in phrase_candidates if p.get("cat")]
+        cat_phrases = [p["phrase"] for p in phrase_candidates if p.get("cat") and len(p["phrase"]) >= 2]
         if cat_phrases:
             phrases = cat_phrases + [p for p in phrases if p not in cat_phrases]
         gen = []
