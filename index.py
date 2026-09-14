@@ -216,6 +216,53 @@ NEG_WORDS = ("智障", "梦魇", "前功尽弃", "落魄", "倒霉", "糟糕", "
            "老态龙钟", "悬钟", "警钟")
 
 
+
+# ========== v0.5.25 云端热词 ==========
+# 互联网热点词（2025-2026 趋势 + 通用高频），按 86 规则自动算码并入候选
+HOT_WORDS = [
+    "人工智能", "大模型", "云计算", "算力", "新质生产力", "低空经济", "银发经济", "数字化转型",
+    "新能源", "芯片", "开源", "鸿蒙", "碳中和", "数字经济", "数据要素", "智能制造",
+    "机器人", "无人机", "直播", "短视频", "电商", "物流", "供应链", "创业", "融资", "投资",
+    "股权", "上市", "中概股", "元宇宙", "区块链", "自动驾驶", "智能驾驶", "固态电池", "折叠屏",
+    "卫星互联网", "脑机接口", "量子计算", "光刻机", "半导体", "国产替代", "专精特新", "独角兽",
+    "出海", "跨境电商", "情绪价值", "松弛感", "多巴胺", "首发经济", "谷子经济", "夜经济",
+    "实战", "落地", "干货", "爆款", "流量", "私域", "转化率", "商业模式"
+]
+
+def _load_hot_by_code():
+    """热点词按 86 规则算码：2字=前2+前2；3字=1+1+2；4字=1+1+1+1"""
+    code_map = {}
+    basic = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "wubi86_basic.txt")):
+            _base = os.getcwd()  # SCF 环境兜底
+        for line in open(os.path.join(_base, "wubi86_basic.txt"), encoding="utf-8"):
+            parts = line.strip().split()
+            if len(parts) >= 2:
+                for ch in parts[1:]:
+                    basic.setdefault(ch, parts[0])  # 字 -> 全码（规则库格式：码 字1 字2 ...）
+    except Exception:
+        pass
+    def fc(ch):
+        c = basic.get(ch)
+        return c if c else ""
+    for w in HOT_WORDS:
+        n = len(w)
+        if n == 2:
+            c = (fc(w[0])[:2] + fc(w[1])[:2])[:4]
+        elif n == 3:
+            c = (fc(w[0])[:1] + fc(w[1])[:1] + fc(w[2])[:2])
+        elif n >= 4:
+            c = fc(w[0])[:1] + fc(w[1])[:1] + fc(w[2])[:1] + fc(w[-1])[:1]  # 86 多字词：前3字各1码+末字1码
+        else:
+            continue
+        if len(c) == 4:
+            code_map.setdefault(c, []).append(w)
+    return code_map
+
+HOT_BY_CODE = _load_hot_by_code()
+
 def _filter_pos(words):
     """过滤消极/阴暗词（用户固化：阳光、积极向上、有启发有感悟）"""
     return [w for w in words if not any(n in w for n in NEG_WORDS)]
@@ -429,18 +476,26 @@ def main_handler(event, context):
         # 阶段3：语义排序（分层：MRU置顶+高频优先+用户行为学习+流畅度）
         ranker = _get_ranker()
         phrase_candidates = ranker.rank(phrase_candidates, code_len=len(code))
+        # v0.5.25 云端热词：同码热点词并入候选（排在构词/预测之后，语义联想之前）
+        for hw in HOT_BY_CODE.get(code, []):
+            if hw not in [p["phrase"] for p in phrase_candidates]:
+                phrase_candidates.append({"phrase": hw, "score": 90, "type": "lexicon",
+                                          "chars": [ord(ch) for ch in hw]})
         # phrases 只含词组（长度>=2），单字仅并入 candidates（客户端显示分离）
-        # v0.5.17 反馈②③（举一反三）：词组分组——真词组（lexicon/prediction）进 phrases（优先显示），
-        #   动态构词（word2/3/4）进 gen（排后，避免"渐法/水国法"等无意义组合挡道）
+        # v0.5.17 反馈②③（举一反三）：词组分组——真词组（lexicon/prediction）进 phrases（优先显示）
+        # v0.5.22（用户反馈"常用词库未正确显示"）：禁用动态构词 gen——
+        #   dugj 等无词库真词的编码不再返回"在立理/磁理"类无意义组合，宁可无候选提示打错，
+        #   词库真词（lexicon/prediction）照常显示；未来若需"无限组词"可恢复本分支
         phrases = [p["phrase"] for p in phrase_candidates
                    if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction")]
-        gen = [p["phrase"] for p in phrase_candidates
-               if len(p["phrase"]) >= 2 and p["type"] not in ("lexicon", "prediction")]
-        # 构词命中的汉字也并入候选码点
+        gen = []
+        # v0.5.22：候选码点只并入真词（lexicon/prediction）的汉字——动态构词字不再混入
+        #   （dugj 无真词时 candidates 保持单字表精确结果，不再出现"磁立理"类组合字）
         for p in phrase_candidates:
-            for cp in p["chars"]:
-                if cp not in resp["candidates"]:
-                    resp["candidates"].append(cp)
+            if p["type"] in ("lexicon", "prediction"):
+                for cp in p["chars"]:
+                    if cp not in resp["candidates"]:
+                        resp["candidates"].append(cp)
         resp["phrases"] = phrases
         if gen:
             resp["gen"] = gen
