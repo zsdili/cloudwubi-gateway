@@ -317,6 +317,31 @@ def _load_pinyin():
 
 PY_FULL, PY_SHORT = _load_pinyin()
 
+# v0.5.36 反馈⑦：高频字统计推送——freq.json（3500 常用字频排名）驱动单字候选排序
+def _load_freq():
+    fr = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "freq.json")):
+            _base = os.getcwd()
+        if os.path.exists(os.path.join(_base, "freq.json")):
+            fr = json.load(open(os.path.join(_base, "freq.json"), encoding="utf-8"))
+    except Exception:
+        pass
+    return fr
+
+FREQ = _load_freq()
+
+def _sort_by_freq(cands):
+    """单字候选按高频字排名排序（排名小=高频在前；无频率字排后）"""
+    if not cands or len(cands) < 2:
+        return cands
+    def keyf(cp):
+        ch = chr(cp)
+        r = FREQ.get(ch)
+        return (0 if r else 1, r if r else 99999)
+    return sorted(cands, key=keyf)
+
 def _filter_pos(words):
     """过滤消极/阴暗词（用户固化：阳光、积极向上、有启发有感悟）"""
     return [w for w in words if not any(n in w for n in NEG_WORDS)]
@@ -586,6 +611,9 @@ def main_handler(event, context):
         resp["cat_count"] = CATEGORY_CATS
         resp["cat_words"] = CATEGORY_TOTAL
 
+    # v0.5.36 反馈⑦：高频字统计推送——单字候选按字频排序（高频字优先显示）
+    if resp.get("candidates"):
+        resp["candidates"] = _sort_by_freq(resp["candidates"])
     return _resp(200, resp)
 
 
