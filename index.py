@@ -135,6 +135,70 @@ try:
 except Exception:
     EN_DICT = {}
 
+# v0.6 反馈①②：互联网热词 + 未来趋势词表（2025-2027，中性积极，科技/生活/发展）
+# 用于上下文连续联想（结合输入框上文，非单字联想）
+HOT_WORDS = [
+    "人工智能", "大模型", "智能体", "算力", "云计算", "云原生", "大数据", "机器学习", "深度学习",
+    "量子计算", "元宇宙", "数字人", "机器人", "自动驾驶", "低空经济", "具身智能", "无人机",
+    "新能源", "绿色能源", "双碳", "光伏", "储能", "新能源汽车", "芯片", "半导体",
+    "数字经济", "新质生产力", "高质量发展", "一带一路", "共同富裕", "中国式现代化",
+    "健康", "幸福", "美好生活", "创新", "创业", "奋斗", "梦想", "希望", "未来",
+    "成功", "成长", "进步", "发展", "合作", "共赢", "价值", "使命", "贡献",
+    "智慧城市", "数字中国", "智能制造", "工业互联网", "网络安全", "生物科技", "太空探索",
+    "文化自信", "科技创新", "人才强国", "教育强国", "体育强国", "健康中国",
+]
+
+
+def context_associate(text, max_results=20):
+    """v0.6 反馈①②：上下文连续联想（革命性核心）
+    输入：输入框光标前 N 字（整句上文）
+    返回：基于上文的连续联想——bigram 后缀 + 单字后缀 + 成语启发 + 热词趋势
+    不再单字联想，而是结合前后文语境。
+    """
+    text = (text or "").strip()
+    if not text:
+        return []
+    tail = text[-2:] if len(text) >= 2 else text[-1:]
+    last1 = tail[-1]
+    engine = _get_phrase_engine()
+    out = []
+    seen = set()
+
+    def add(w):
+        if w and len(w) >= 2 and w not in seen:
+            seen.add(w)
+            out.append(w)
+
+    # ① 成语/金句启发：含末 1 字的 4 字词（阳光向上，眼前一亮——用户 v0.6 反馈核心）
+    for p in engine.query_by_word(last1, 10):
+        if len(p) == 4:
+            add(p)
+    # ② 热词/趋势词：含末 1 字或末 2 字（互联网热点 + 未来趋势，与时俱进）
+    for w in HOT_WORDS:
+        if last1 in w or (len(tail) == 2 and tail in w):
+            add(w)
+    # ③ bigram 后缀：以末 2 字开头的词组（语境顺承：前进→前进浪潮/前进号角）
+    if len(tail) == 2:
+        for p in engine.query_by_prefix(tail, 8):
+            add(p)
+    # ④ 单字后缀：以末 1 字开头的常用搭配（兜底）
+    for p in engine.query_by_prefix(last1, 8):
+        add(p)
+    # ⑤ 用户近期学习词（云端 learn_selection 的 MRU 记录，最近在前）
+    try:
+        for w in _get_ranker().mru:
+            add(w)
+    except Exception:
+        pass
+    # ⑥ 消极/阴暗词过滤（用户固化：阳光、积极向上、有启发有感悟）
+    NEG = ("智障", "梦魇", "前功尽弃", "落魄", "倒霉", "糟糕", "失败", "完蛋", "悲剧",
+           "恐怖", "灾难", "痛苦", "绝望", "阴暗", "负能量", "沮丧", "抑郁", "疾病", "癌症",
+           "春梦", "魂牵梦萦", "黄粱", "南柯", "大梦初醒", "梦露", "梦游", "愚蠢", "愚昧",
+           "堕落", "沉沦", "骗子", "诈骗", "虚伪", "丑陋", "悲惨", "丧气")
+    out = [w for w in out if not any(n in w for n in NEG)]
+    return out[:max_results]
+
+
 # 全局构词引擎与语义排序引擎实例（懒加载）
 PHRASE_ENGINE = None
 RANKER = None
@@ -246,6 +310,12 @@ def main_handler(event, context):
         if req.get("en"):
             resp["en"] = EN_DICT.get(word, "")
         return _resp(200, resp)
+
+    # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
+    ctx = req.get("context")
+    if ctx:
+        phrases = context_associate(str(ctx))
+        return _resp(200, {"context": str(ctx), "phrases": phrases})
 
     # v0.4.9 连续联想（独立接口：{"prefix":"陈胜"} → 以该前缀开头的词组）
     prefix = req.get("prefix")
