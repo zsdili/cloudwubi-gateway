@@ -284,6 +284,17 @@ def _load_category_by_code():
 
 CAT_BY_CODE = _load_category_by_code()
 
+def _cat_stats():
+    """分类词库规模统计（词条数上报用）"""
+    cats = set()
+    tot = 0
+    for c, items in CAT_BY_CODE.items():
+        for w, cat in items:
+            cats.add(cat)
+            tot += 1
+    return len(cats), tot
+
+CATEGORY_CATS, CATEGORY_TOTAL = _cat_stats()
 def _filter_pos(words):
     """过滤消极/阴暗词（用户固化：阳光、积极向上、有启发有感悟）"""
     return [w for w in words if not any(n in w for n in NEG_WORDS)]
@@ -533,6 +544,9 @@ def main_handler(event, context):
         resp["phrases"] = phrases
         if gen:
             resp["gen"] = gen
+        # v0.5.31 词条数上报：云端分类词库规模（客户端"云五笔"弹窗显示）
+        resp["cat_count"] = CATEGORY_CATS
+        resp["cat_words"] = CATEGORY_TOTAL
 
     return _resp(200, resp)
 
