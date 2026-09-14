@@ -117,7 +117,11 @@ def load_phrase_dict():
                 code = parts[0]
                 if not CODE_RE.match(code):
                     continue
-                phrase_data[code] = parts[1:]
+                # v0.5.17 修复：同码多行合并（imlf 油墨 + imlf 没办法 → 两个都保留，= 覆盖会丢词）
+                if code in phrase_data:
+                    phrase_data[code].extend(parts[1:])
+                else:
+                    phrase_data[code] = parts[1:]
     except FileNotFoundError:
         pass  # 词组库不存在则仅用动态构词
     return phrase_data
@@ -426,13 +430,20 @@ def main_handler(event, context):
         ranker = _get_ranker()
         phrase_candidates = ranker.rank(phrase_candidates, code_len=len(code))
         # phrases 只含词组（长度>=2），单字仅并入 candidates（客户端显示分离）
-        phrases = [p["phrase"] for p in phrase_candidates if len(p["phrase"]) >= 2]
+        # v0.5.17 反馈②③（举一反三）：词组分组——真词组（lexicon/prediction）进 phrases（优先显示），
+        #   动态构词（word2/3/4）进 gen（排后，避免"渐法/水国法"等无意义组合挡道）
+        phrases = [p["phrase"] for p in phrase_candidates
+                   if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction")]
+        gen = [p["phrase"] for p in phrase_candidates
+               if len(p["phrase"]) >= 2 and p["type"] not in ("lexicon", "prediction")]
         # 构词命中的汉字也并入候选码点
         for p in phrase_candidates:
             for cp in p["chars"]:
                 if cp not in resp["candidates"]:
                     resp["candidates"].append(cp)
         resp["phrases"] = phrases
+        if gen:
+            resp["gen"] = gen
 
     return _resp(200, resp)
 
