@@ -226,7 +226,9 @@ HOT_WORDS = [
     "股权", "上市", "中概股", "元宇宙", "区块链", "自动驾驶", "智能驾驶", "固态电池", "折叠屏",
     "卫星互联网", "脑机接口", "量子计算", "光刻机", "半导体", "国产替代", "专精特新", "独角兽",
     "出海", "跨境电商", "情绪价值", "松弛感", "多巴胺", "首发经济", "谷子经济", "夜经济",
-    "实战", "落地", "干货", "爆款", "流量", "私域", "转化率", "商业模式"
+    "实战", "落地", "干货", "爆款", "流量", "私域", "转化率", "商业模式",
+    "钟志胜", "云五笔", "豆包", "抖音", "微信", "小红书", "自媒体", "广东", "通达",
+    "创业加速器", "钟总", "大湾区", "直播带货", "出海"
 ]
 
 def _load_hot_by_code():
@@ -262,6 +264,25 @@ def _load_hot_by_code():
     return code_map
 
 HOT_BY_CODE = _load_hot_by_code()
+
+def _load_category_by_code():
+    """v0.5.31 分类词库（category_words.json 已按 86 规则预计算码）：码 -> [(词, 分类)]"""
+    cat_map = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "category_words.json")):
+            _base = os.getcwd()  # SCF 容器兜底
+        data = json.load(open(os.path.join(_base, "category_words.json"), encoding="utf-8"))
+        for cat, items in data.items():
+            for it in items:
+                c = it.get("c", "")
+                if len(c) == 4:
+                    cat_map.setdefault(c, []).append((it["w"], cat))
+    except Exception:
+        pass
+    return cat_map
+
+CAT_BY_CODE = _load_category_by_code()
 
 def _filter_pos(words):
     """过滤消极/阴暗词（用户固化：阳光、积极向上、有启发有感悟）"""
@@ -476,6 +497,15 @@ def main_handler(event, context):
         # 阶段3：语义排序（分层：MRU置顶+高频优先+用户行为学习+流畅度）
         ranker = _get_ranker()
         phrase_candidates = ranker.rank(phrase_candidates, code_len=len(code))
+        # v0.5.31 分类词库：同码分类词并入（每码最多3条，优先于热词/基础词，带分类名）
+        cat_added = 0
+        for cw, ccat in CAT_BY_CODE.get(code, []):
+            if cw not in [p["phrase"] for p in phrase_candidates]:
+                phrase_candidates.append({"phrase": cw, "score": 95, "type": "lexicon",
+                                          "chars": [ord(ch) for ch in cw], "cat": ccat})
+                cat_added += 1
+                if cat_added >= 3:
+                    break
         # v0.5.25 云端热词：同码热点词并入候选（排在构词/预测之后，语义联想之前）
         for hw in HOT_BY_CODE.get(code, []):
             if hw not in [p["phrase"] for p in phrase_candidates]:
@@ -488,6 +518,10 @@ def main_handler(event, context):
         #   词库真词（lexicon/prediction）照常显示；未来若需"无限组词"可恢复本分支
         phrases = [p["phrase"] for p in phrase_candidates
                    if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction")]
+        # v0.5.31 分类词优先：带 cat 的分类词移到 phrases 最前（用户打码即见分类词）
+        cat_phrases = [p["phrase"] for p in phrase_candidates if p.get("cat")]
+        if cat_phrases:
+            phrases = cat_phrases + [p for p in phrases if p not in cat_phrases]
         gen = []
         # v0.5.22：候选码点只并入真词（lexicon/prediction）的汉字——动态构词字不再混入
         #   （dugj 无真词时 candidates 保持单字表精确结果，不再出现"磁立理"类组合字）
