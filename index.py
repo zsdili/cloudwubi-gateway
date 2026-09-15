@@ -732,6 +732,10 @@ def main_handler(event, context):
         phrases = context_associate(str(ctx))
         return _resp(200, {"context": str(ctx), "phrases": phrases})
 
+    # v0.6.3 CCA 联动增强：客户端拉取全量衔接映射表（云端规则实时生效，免发版）
+    if req.get("linkmap"):
+        return _resp(200, {"links": NGRAM_LINK})
+
     # v0.5.35 反馈⑥：拼音/简拼混打（独立接口：{"py":"nihao"} / {"py":"ywb"}）
     py = req.get("py")
     if py:
