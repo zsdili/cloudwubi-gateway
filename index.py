@@ -137,13 +137,20 @@ WB_DICT = load_dict()
 PHRASE_DICT = load_phrase_dict()
 
 # v0.4.8 中英对照词典（云端英文翻译，121297 条，CC-CEDICT 开源）
-EN_DICT = {}
-try:
-    _en_path = os.path.join(os.path.dirname(__file__), "en_dict.json")
-    with open(_en_path, "r", encoding="utf-8") as _f:
-        EN_DICT = json.load(_f)
-except Exception:
-    EN_DICT = {}
+# v0.6 优化：懒加载（SCF 128MB 内存门禁——en 接口命中才载入，省 ~80MB）
+EN_DICT = None
+
+
+def _get_en_dict():
+    global EN_DICT
+    if EN_DICT is None:
+        try:
+            _en_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "en_dict.json")
+            with open(_en_path, "r", encoding="utf-8") as _f:
+                EN_DICT = json.load(_f)
+        except Exception:
+            EN_DICT = {}
+    return EN_DICT
 
 # v0.6.x TMT 兜底：词典未命中时调腾讯云机器翻译（Key 存 SCF 环境变量，不落代码/仓库）
 def _tmt_translate(text):
@@ -712,7 +719,7 @@ def main_handler(event, context):
         resp["phrases"] = _filter_pos(phrases)
         # 翻译：内置中英词典命中 → 返回；未命中 → TMT → 百度（三层 failover）
         if req.get("en"):
-            resp["en"] = EN_DICT.get(word, "")
+            resp["en"] = _get_en_dict().get(word, "")
             if not resp["en"]:
                 resp["en"] = _tmt_translate(word)
             if not resp["en"]:
