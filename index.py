@@ -269,6 +269,11 @@ def _load_hot_by_code():
 
 HOT_BY_CODE = _load_hot_by_code()
 
+# v0.5.47：86 版 25 键一级简码（1 码 hot 强制第一）
+SIMPLE1 = {"g":"一","f":"地","d":"在","s":"要","a":"工","h":"上","j":"是","k":"中","l":"国",
+           "m":"同","t":"和","r":"的","e":"有","w":"人","q":"我","y":"主","u":"产","i":"不",
+           "o":"为","p":"这","n":"民","b":"了","v":"发","c":"以","x":"经"}
+
 def _load_category_by_code():
     """v0.5.31 分类词库（category_words.json 已按 86 规则预计算码）：码 -> [(词, 分类)]"""
     cat_map = {}
@@ -644,6 +649,7 @@ def main_handler(event, context):
     if resp.get("candidates"):
         resp["candidates"] = _sort_by_freq(resp["candidates"])
         # v0.5.41 反馈⑥：hot 优先取本编码 basic 单字（精确字频 top6，避免词库字符污染如 suf→无/相/场）
+        # v0.5.47 顽疾根治：1 码时一级简码字强制 hot 第一（打 r → hot 第一必为"的"，键名字/字根字不得压过简码）
         hot = []
         for cp in WB_DICT.get(code, []):
             ch = chr(cp)
@@ -659,6 +665,8 @@ def main_handler(event, context):
                 if len(hot) >= 6:
                     break
         if hot:
+            hot.sort(key=lambda ch: (0 if (len(code) == 1 and SIMPLE1.get(code) == ch) else 1,
+                                     FREQ.get(ch, 9999)))
             resp["hot"] = hot
     return _resp(200, resp)
 

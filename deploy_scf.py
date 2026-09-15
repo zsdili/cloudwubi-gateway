@@ -45,7 +45,8 @@ host = "scf.tencentcloudapi.com"
 service = "scf"
 version = "2018-04-16"
 region = "ap-guangzhou"
-zipfile_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cloudwubi-gateway-scf.zip")
+# v0.5.47 修复：支持命令行第 3 参数指定 zip（否则用固定路径）
+zipfile_path = sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "cloudwubi-gateway-scf.zip")
 zip_b64 = base64.b64encode(open(zipfile_path, "rb").read()).decode("ascii")
 payload = json.dumps({
     "FunctionName": "cloudwubi-gateway",
