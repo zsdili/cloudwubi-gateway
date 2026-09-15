@@ -102,6 +102,28 @@ python3 test_phrase_engine.py
 
 MIT License · 贡献规范见 [CONTRIBUTING.md](CONTRIBUTING.md)
 
+## 开放词库（人人可贡献，云端实时生效）
+
+> 🌍 **云五笔词库对所有人开放**：任何人可贡献新词，CI 自动校验 + 人工复核后上线，
+> 客户端**免更新实时生效**（云端规则即改即用）。
+
+| 词库 | 规模 | 内容 |
+| ---- | ---- | ---- |
+| wubi86_basic | 26,281 单字 | 字根字/简码/全码 |
+| wubi86_phrases | 112,139 | 基础词组 |
+| wubi86_daily | 4,747 | 日常高频 |
+| wubi86_classics | 910 | 孙子兵法/毛选/论语名句 |
+| wubi86_geo | 6,503 | 全国省市县区名 |
+| wubi86_life | 233 | 美食/品牌/百强企业 |
+| wubi86_mil | 136 | 军事/科技/地缘热词 |
+| wubi86_poem | 625 | 诗词名句/道德经 |
+| wubi86_contrib | 开放 | **你贡献的词** |
+
+**贡献三步**：① Fork → ② `echo "ywnt 为人民服务" >> wubi86_contrib.txt` → ③ 提交 PR。
+自动校验（编码/负面词/重复/格式/50次随机）通过即合并上线。
+**安全红线**：色情/赌博/暴力/违法/辱骂/敏感词一票否决 + 人工复核。
+完整规则见 [CONTRIBUTING-WORDS.md](CONTRIBUTING-WORDS.md)。
+
 ## 相关仓库
 
 - [cloudwubi-client](https://github.com/zsdili/cloudwubi-client) - 端侧内核

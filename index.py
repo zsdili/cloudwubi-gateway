@@ -110,7 +110,7 @@ def load_phrase_dict():
     phrase_data = {}
     base = os.path.dirname(os.path.abspath(__file__))
     for fname in ("wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt",
-                  "wubi86_geo.txt", "wubi86_life.txt"):
+                  "wubi86_geo.txt", "wubi86_life.txt", "wubi86_mil.txt", "wubi86_poem.txt"):
         path = os.path.join(base, fname)
         try:
             with open(path, "r", encoding="utf-8") as f:
