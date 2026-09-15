@@ -73,6 +73,7 @@ import time as _time
 _time.sleep(25)  # 等 UpdateFunctionCode 完成后函数不再处于 Updating 状态
 _env_payload = json.dumps({
     "FunctionName": "cloudwubi-gateway",
+    "Timeout": 30,   # v0.6.8：冷启动加载 8MB 词库+12万词典需 >3s，默认 3s 超时导致 en/words 接口间歇失败
     "Environment": {"Variables": [
         {"Key": "TMT_SECRET_ID", "Value": SECRET_ID},
         {"Key": "TMT_SECRET_KEY", "Value": SECRET_KEY},

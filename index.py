@@ -763,13 +763,19 @@ def main_handler(event, context):
         engine = _get_phrase_engine()
         phrases = engine.query_by_word(word, max_results=20)
         resp["phrases"] = _filter_pos(phrases)
-        # 翻译：内置中英词典命中 → 返回；未命中 → TMT → 百度（三层 failover）
+        # 翻译：v0.6.8 候选数组整词优先（{"words":["是国庆节","国庆节","庆节","节"],"en":true}）
+        #   逐个查词典，第一个命中返回（国庆节→PRC National Day）；全未命中→末字 TMT/百度兜底（不翻整句）
         if req.get("en"):
-            resp["en"] = _get_en_dict().get(word, "")
-            if not resp["en"]:
-                resp["en"] = _tmt_translate(word)
-            if not resp["en"]:
-                resp["en"] = _baidu_translate(word)
+            cands = req.get("words") or ([word] if word else [])
+            en_out = ""
+            for cw in cands:
+                if not cw: continue
+                en_out = _get_en_dict().get(cw, "")
+                if en_out: break
+            if not en_out and cands:
+                last = cands[-1]
+                en_out = _get_en_dict().get(last, "") or _tmt_translate(last) or _baidu_translate(last)
+            resp["en"] = en_out
         return _resp(200, resp)
 
     # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
