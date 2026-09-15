@@ -76,6 +76,8 @@ _env_payload = json.dumps({
     "Environment": {"Variables": [
         {"Key": "TMT_SECRET_ID", "Value": SECRET_ID},
         {"Key": "TMT_SECRET_KEY", "Value": SECRET_KEY},
+        {"Key": "BAIDU_APPID", "Value": sys.argv[4] if len(sys.argv) > 4 else ""},
+        {"Key": "BAIDU_KEY", "Value": sys.argv[5] if len(sys.argv) > 5 else ""},
     ]},
 })
 _env_headers = sign_request(SECRET_ID, SECRET_KEY, service, host, "UpdateFunctionConfiguration", version, region, _env_payload)

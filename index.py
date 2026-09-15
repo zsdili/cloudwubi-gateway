@@ -181,6 +181,29 @@ def _tmt_translate(text):
     except Exception:
         return ""
 
+# v0.6.x 百度翻译兜底：TMT 未命中/失败时调用（标准版免费额度，Key 存 SCF 环境变量）
+def _baidu_translate(text):
+    """词典→TMT 都未命中 → 百度通用翻译 API（MD5 签名）"""
+    appid = os.environ.get("BAIDU_APPID", "")
+    key = os.environ.get("BAIDU_KEY", "")
+    if not appid or not key:
+        return ""
+    import urllib.parse
+    salt = str(int(time.time() * 1000))
+    sign = hashlib.md5((appid + text + salt + key).encode("utf-8")).hexdigest()
+    params = urllib.parse.urlencode({"q": text, "from": "zh", "to": "en",
+                                     "appid": appid, "salt": salt, "sign": sign})
+    url = "https://fanyi-api.baidu.com/api/trans/vip/translate?" + params
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            d = json.loads(r.read())
+            res = d.get("trans_result")
+            if res:
+                return res[0].get("dst", "")
+    except Exception:
+        pass
+    return ""
+
 # v0.5.15 反馈①：前后文顺承联想表（N-gram：前文末尾 → 后续常用词）
 # 原理同豆包/微信/讯飞/百度/微软输入法联想核心（N-gram 语言模型），先科学后先进；
 # 当前为常见中文搭配（模拟数据，后续用真实语料/用户输入记录升级），阳光积极向上。
@@ -574,11 +597,13 @@ def main_handler(event, context):
         engine = _get_phrase_engine()
         phrases = engine.query_by_word(word, max_results=20)
         resp["phrases"] = _filter_pos(phrases)
-        # 翻译：内置中英词典命中 → 返回；未命中 → TMT 机器翻译兜底（免费额度）
+        # 翻译：内置中英词典命中 → 返回；未命中 → TMT → 百度（三层 failover）
         if req.get("en"):
             resp["en"] = EN_DICT.get(word, "")
             if not resp["en"]:
                 resp["en"] = _tmt_translate(word)
+            if not resp["en"]:
+                resp["en"] = _baidu_translate(word)
         return _resp(200, resp)
 
     # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
