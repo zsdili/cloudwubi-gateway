@@ -1,0 +1,24 @@
+name: 词库贡献校验
+
+on:
+  pull_request:
+    paths: ['wubi86_contrib.txt']
+  workflow_dispatch:
+
+jobs:
+  validate-words:
+    name: 词库校验（编码/负面词/重复）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 运行词库校验（50 次随机 + 负面词 + 重复 + 格式）
+        run: |
+          python3 tools/verify_codes.py wubi86_contrib.txt --strict
+        env:
+          PYTHONIOENCODING: utf-8
