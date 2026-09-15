@@ -774,7 +774,9 @@ def main_handler(event, context):
                 if en_out: break
             if not en_out and cands:
                 last = cands[-1]
-                en_out = _get_en_dict().get(last, "") or _tmt_translate(last) or _baidu_translate(last)
+                # v0.5.74：末字非中文（数字/符号）不兜底——"不是字就不翻译"
+                if last and re.search(r'[\u4e00-\u9fff]', last):
+                    en_out = _get_en_dict().get(last, "") or _tmt_translate(last) or _baidu_translate(last)
             resp["en"] = en_out
         return _resp(200, resp)
 
