@@ -67,3 +67,25 @@ try:
 except urllib.error.HTTPError as e:
     print("HTTP %s: %s" % (e.code, e.read().decode("utf-8", errors="replace")[:500]))
     sys.exit(1)
+
+# v0.6.x：设置函数环境变量（TMT 机器翻译兜底 Key 存 SCF 环境变量，不落代码/仓库）
+import time as _time
+_time.sleep(25)  # 等 UpdateFunctionCode 完成后函数不再处于 Updating 状态
+_env_payload = json.dumps({
+    "FunctionName": "cloudwubi-gateway",
+    "Environment": {"Variables": [
+        {"Key": "TMT_SECRET_ID", "Value": SECRET_ID},
+        {"Key": "TMT_SECRET_KEY", "Value": SECRET_KEY},
+    ]},
+})
+_env_headers = sign_request(SECRET_ID, SECRET_KEY, service, host, "UpdateFunctionConfiguration", version, region, _env_payload)
+_env_req = urllib.request.Request("https://" + host + "/", data=_env_payload.encode("utf-8"), headers=_env_headers, method="POST")
+try:
+    with urllib.request.urlopen(_env_req, timeout=120) as r:
+        _d = json.loads(r.read().decode("utf-8"))
+        if "Response" in _d and _d["Response"].get("Error"):
+            print("环境变量设置失败:", _d["Response"]["Error"])
+        else:
+            print("✅ 环境变量已设置: TMT_SECRET_ID/TMT_SECRET_KEY")
+except urllib.error.HTTPError as e:
+    print("环境变量设置 HTTP %s: %s" % (e.code, e.read().decode("utf-8", errors="replace")[:400]))

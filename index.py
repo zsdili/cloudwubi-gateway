@@ -25,6 +25,10 @@ CloudWubi 云端网关 - 腾讯云函数入口
 import json
 import os
 import re
+import time
+import hmac
+import hashlib
+import urllib.request
 
 from phrase_engine import PhraseEngine, CODE_RE, _PY_WORDS
 from semantic_ranker import SemanticRanker
@@ -130,7 +134,7 @@ def load_phrase_dict():
 WB_DICT = load_dict()
 PHRASE_DICT = load_phrase_dict()
 
-# v0.4.8 中英对照词典（云端英文翻译，1055 条高频字词）
+# v0.4.8 中英对照词典（云端英文翻译，121297 条，CC-CEDICT 开源）
 EN_DICT = {}
 try:
     _en_path = os.path.join(os.path.dirname(__file__), "en_dict.json")
@@ -138,6 +142,44 @@ try:
         EN_DICT = json.load(_f)
 except Exception:
     EN_DICT = {}
+
+# v0.6.x TMT 兜底：词典未命中时调腾讯云机器翻译（Key 存 SCF 环境变量，不落代码/仓库）
+def _tmt_translate(text):
+    """词典未命中 → 腾讯云 TMT 文本翻译（TC3-HMAC-SHA256 官方签名 v3）"""
+    sid = os.environ.get("TMT_SECRET_ID", "")
+    skey = os.environ.get("TMT_SECRET_KEY", "")
+    if not sid or not skey:
+        return ""
+    host = "tmt.tencentcloudapi.com"; service = "tmt"
+    action = "TextTranslate"; version = "2018-03-21"; region = "ap-guangzhou"
+    ts = str(int(time.time()))
+    date = time.strftime("%Y-%m-%d", time.gmtime(int(ts)))
+    body = json.dumps({"SourceText": text, "Source": "zh", "Target": "en", "ProjectId": 0}, ensure_ascii=False)
+    ct = "application/json; charset=utf-8"
+    ch = "content-type:%s\nhost:%s\nx-tc-action:%s\n" % (ct, host, action.lower())
+    sh = "content-type;host;x-tc-action"
+    hp = hashlib.sha256(body.encode("utf-8")).hexdigest()
+    cr = "\n".join(["POST", "/", "", ch, sh, hp])
+    scope = "%s/%s/tc3_request" % (date, service)
+    hc = hashlib.sha256(cr.encode("utf-8")).hexdigest()
+    sts = "\n".join(["TC3-HMAC-SHA256", ts, scope, hc])
+    def _hm(k, m):
+        return hmac.new(k, m.encode("utf-8"), hashlib.sha256).digest()
+    sd = _hm(("TC3" + skey).encode("utf-8"), date)
+    ss = _hm(sd, service)
+    sgn = _hm(ss, "tc3_request")
+    sig = hmac.new(sgn, sts.encode("utf-8"), hashlib.sha256).hexdigest()
+    auth = "TC3-HMAC-SHA256 Credential=%s/%s, SignedHeaders=%s, Signature=%s" % (sid, scope, sh, sig)
+    headers = {"Authorization": auth, "Content-Type": ct, "Host": host,
+               "X-TC-Action": action, "X-TC-Version": version,
+               "X-TC-Timestamp": ts, "X-TC-Region": region}
+    req = urllib.request.Request("https://%s/" % host, data=body.encode("utf-8"), headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as r:
+            d = json.loads(r.read())
+            return d.get("Response", {}).get("TargetText", "")
+    except Exception:
+        return ""
 
 # v0.5.15 反馈①：前后文顺承联想表（N-gram：前文末尾 → 后续常用词）
 # 原理同豆包/微信/讯飞/百度/微软输入法联想核心（N-gram 语言模型），先科学后先进；
@@ -532,9 +574,11 @@ def main_handler(event, context):
         engine = _get_phrase_engine()
         phrases = engine.query_by_word(word, max_results=20)
         resp["phrases"] = _filter_pos(phrases)
-        # 翻译：内置中英词典（en_dict.json）
+        # 翻译：内置中英词典命中 → 返回；未命中 → TMT 机器翻译兜底（免费额度）
         if req.get("en"):
             resp["en"] = EN_DICT.get(word, "")
+            if not resp["en"]:
+                resp["en"] = _tmt_translate(word)
         return _resp(200, resp)
 
     # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
