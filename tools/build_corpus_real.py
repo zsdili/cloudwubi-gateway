@@ -9,7 +9,10 @@ import csv, random, re
 import jieba
 from build_corpus import PROTECT, scenes, tokenize, build
 
-def add_real(lines, csv_path='/tmp/ChnSentiCorp_htl_all.csv', max_rows=7000):
+def add_real(lines, csv_path=None, max_rows=7000):
+    """酒店评论语料（项目内 corpus/ 固化，可复现）"""
+    if csv_path is None:
+        csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "corpus", "ChnSentiCorp_htl_all.csv")
     n = 0
     with open(csv_path, encoding='utf-8') as f:
         for row in csv.reader(f):
@@ -23,8 +26,10 @@ def add_real(lines, csv_path='/tmp/ChnSentiCorp_htl_all.csv', max_rows=7000):
             n += 1
     return lines
 
-def add_waimai(lines, csv_path='/tmp/waimai_10k.csv', max_rows=10000):
-    """v0.6.2：外卖评论语料（口语化，贴近日常输入场景）"""
+def add_waimai(lines, csv_path=None, max_rows=10000):
+    """v0.6.2：外卖评论语料（口语化，贴近日常输入场景；项目内固化）"""
+    if csv_path is None:
+        csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "corpus", "waimai_10k.csv")
     n = 0
     with open(csv_path, encoding='utf-8') as f:
         for row in csv.reader(f):
@@ -40,18 +45,20 @@ def main():
     lines = build(6000)
     lines = add_real(lines)
     lines = add_waimai(lines)
-    with open('/tmp/corpus_tok.txt', 'w', encoding='utf-8') as f:
+    # 输出固化到 corpus/（不依赖 /tmp）
+    base = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "corpus")
+    with open(os.path.join(base, 'corpus_tok.txt'), 'w', encoding='utf-8') as f:
         for ln in lines:
             f.write(" ".join(tokenize(ln)) + "\n")
     # 字级
     def chars(tok):
         return list(tok) if re.match(r'^[\u4e00-\u9fff]+$', tok) else [tok]
-    with open('/tmp/corpus_char.txt', 'w', encoding='utf-8') as f:
+    with open(os.path.join(base, 'corpus_char.txt'), 'w', encoding='utf-8') as f:
         for ln in lines:
             cs = []
             for t in tokenize(ln): cs.extend(chars(t))
             f.write(" ".join(cs) + "\n")
-    print("✅ 真实语料增强:", len(lines), "行")
+    print("✅ 真实语料增强:", len(lines), "行 → corpus/ 固化")
 
 if __name__ == '__main__':
     main()

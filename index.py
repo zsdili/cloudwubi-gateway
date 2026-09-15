@@ -109,7 +109,7 @@ def load_phrase_dict():
     """加载词组规则库（wubi86_phrases.txt + wubi86_daily.txt 日常高频词库）：编码 -> 词组列表。"""
     phrase_data = {}
     base = os.path.dirname(os.path.abspath(__file__))
-    for fname in ("wubi86_phrases.txt", "wubi86_daily.txt"):
+    for fname in ("wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt"):
         path = os.path.join(base, fname)
         try:
             with open(path, "r", encoding="utf-8") as f:
