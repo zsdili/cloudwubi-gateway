@@ -106,28 +106,30 @@ def load_dict():
 
 
 def load_phrase_dict():
-    """加载词组规则库（wubi86_phrases.txt）：编码 -> 词组列表。"""
+    """加载词组规则库（wubi86_phrases.txt + wubi86_daily.txt 日常高频词库）：编码 -> 词组列表。"""
     phrase_data = {}
-    path = os.path.join(os.path.dirname(__file__), "wubi86_phrases.txt")
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#"):
-                    continue
-                parts = line.split()
-                if len(parts) < 2:
-                    continue
-                code = parts[0]
-                if not CODE_RE.match(code):
-                    continue
-                # v0.5.17 修复：同码多行合并（imlf 油墨 + imlf 没办法 → 两个都保留，= 覆盖会丢词）
-                if code in phrase_data:
-                    phrase_data[code].extend(parts[1:])
-                else:
-                    phrase_data[code] = parts[1:]
-    except FileNotFoundError:
-        pass  # 词组库不存在则仅用动态构词
+    base = os.path.dirname(os.path.abspath(__file__))
+    for fname in ("wubi86_phrases.txt", "wubi86_daily.txt"):
+        path = os.path.join(base, fname)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    parts = line.split()
+                    if len(parts) < 2:
+                        continue
+                    code = parts[0]
+                    if not CODE_RE.match(code):
+                        continue
+                    # v0.5.17 修复：同码多行合并（imlf 油墨 + imlf 没办法 → 两个都保留，= 覆盖会丢词）
+                    if code in phrase_data:
+                        phrase_data[code].extend(parts[1:])
+                    else:
+                        phrase_data[code] = parts[1:]
+        except FileNotFoundError:
+            pass  # 词组库不存在则仅用动态构词
     return phrase_data
 
 
@@ -280,7 +282,8 @@ NEG_WORDS = ("智障", "梦魇", "前功尽弃", "落魄", "倒霉", "糟糕", "
            "恐怖", "灾难", "痛苦", "绝望", "阴暗", "负能量", "沮丧", "抑郁", "疾病", "癌症",
            "春梦", "魂牵梦萦", "黄粱", "南柯", "大梦初醒", "梦露", "梦游", "愚蠢", "愚昧",
            "堕落", "沉沦", "骗子", "诈骗", "虚伪", "丑陋", "悲惨", "丧气", "丧钟", "毁弃",
-           "老态龙钟", "悬钟", "警钟")
+           "老态龙钟", "悬钟", "警钟", "死人", "火葬场", "走后门", "尸体", "丧事", "凶杀",
+           "抢劫", "偷窃", "殴打", "吸毒", "赌博", "嫖娼", "卖淫", "强奸", "猥亵")
 
 
 
@@ -321,6 +324,29 @@ try:
         ASSOC_LINK = json.load(open(_alp, encoding="utf-8"))
 except Exception:
     pass
+
+# v0.6 革命性：n-gram 概率映射表（离线自动学习自训练语料，213 条 9.6KB）
+#   生病了→看医生/想去医院；前进→方向/号角/浪潮；想→办法/一下/你
+NGRAM_LINK = {}
+try:
+    _nlp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ngram_link.json")
+    if os.path.exists(_nlp):
+        NGRAM_LINK = json.load(open(_nlp, encoding="utf-8"))
+except Exception:
+    pass
+
+
+def _ngram_link_associate(text, max_results=6):
+    """n-gram 概率映射查询：末尾 3→1 字子串最长匹配（词级键+字级退化都覆盖）
+    返回语义衔接后续词（概率排序）"""
+    t = (text or "").strip()
+    if not t:
+        return []
+    for n in (3, 2, 1):
+        key = t[-n:] if len(t) >= n else t
+        if key in NGRAM_LINK:
+            return [w for w in NGRAM_LINK[key] if len(w) >= 1][:max_results]
+    return []
 
 def _load_hot_by_code():
     """热点词按 86 规则算码：2字=前2+前2；3字=1+1+2；4字=1+1+1+1"""
@@ -484,6 +510,11 @@ def context_associate(text, max_results=20):
         key = text[-n:] if len(text) >= n else text
         if key in ASSOC_LINK:
             return [w for w in ASSOC_LINK[key]][:max_results]
+    # v0.6 革命性：n-gram 概率映射层（自动学习自训练语料，比手写表覆盖更大）
+    #   生病了→看医生/想去医院；想→办法/一下/你；学习→知识/向上/奋斗
+    _ng = _ngram_link_associate(text, max_results)
+    if _ng:
+        return _ng
     tail = text[-2:] if len(text) >= 2 else text[-1:]
     last1 = tail[-1]
     engine = _get_phrase_engine()
@@ -516,12 +547,65 @@ def context_associate(text, max_results=20):
             add(w)
     except Exception:
         pass
-    return _filter_pos(out)[:max_results]
+    # v0.6 革命性：kenlm n-gram 概率重排——语义衔接词前移、组词/无关词垫底
+    #   验证数据：前进+方向=-2.2 / 前进+进行=-102（语料从未共现 → 自动过滤）
+    _pool = _filter_pos(out)[:max_results]
+    _pool = _ngram_rescore(text, _pool)
+    return _pool[:max_results]
 
 
 # 全局构词引擎与语义排序引擎实例（懒加载）
 PHRASE_ENGINE = None
 RANKER = None
+
+
+# ------------------------------------------------------------------
+# v0.6 革命性：kenlm n-gram 概率联想层（LGPL-2.1，开源免费）
+#   作用：对候选池做条件概率重排——语义衔接词前移、组词/无关词垫底
+#   model2.arpa 为纯 Python 训练器（MLE+回退）产物，46KB
+# ------------------------------------------------------------------
+KENLM_MODEL = None
+
+
+def _get_kenlm():
+    """懒加载 kenlm 模型（SCF 环境有包则启用，无则静默降级）"""
+    global KENLM_MODEL
+    if KENLM_MODEL is None:
+        try:
+            import kenlm
+            _mp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "model2.arpa")
+            if os.path.exists(_mp):
+                KENLM_MODEL = kenlm.Model(_mp)
+                print("kenlm n-gram 模型已加载:", os.path.getsize(_mp), "B")
+        except Exception as e:  # 包缺失/加载失败 → 降级手写表
+            print("kenlm 不可用(降级):", e)
+            KENLM_MODEL = False
+    return KENLM_MODEL if KENLM_MODEL else None
+
+
+def _ngram_rescore(ctx_text, cands, topk=8):
+    """kenlm 字级 3-gram 条件概率重排（无分词、无 OOV，中文主流做法）
+    P(候选前2字|上文末1字) + 0.5·P(候选首字|上文末2字)
+    语义衔接词前移；-100 级（语料从未共现）垫底过滤"""
+    km = _get_kenlm()
+    if km is None or not cands:
+        return cands
+    tail2 = ctx_text[-2:] if len(ctx_text) >= 2 else ctx_text
+    tail1 = ctx_text[-1:] if ctx_text else ""
+    scored = []
+    for w in cands:
+        if len(w) >= 2:
+            s = km.score("%s %s" % (tail1, w[:2]), bos=False, eos=False)
+        else:
+            s = km.score("%s %s" % (tail1, w), bos=False, eos=False)
+        s3 = km.score("%s %s %s" % (tail2[0], tail2[1], w[0]), bos=False, eos=False)
+        scored.append((w, s + 0.5 * s3))
+    scored.sort(key=lambda x: -x[1])
+    kept = [w for w, s in scored if s > -90]
+    for w, s in scored:  # 保底：不足时补回
+        if w not in kept:
+            kept.append(w)
+    return kept[:topk]
 
 
 # ------------------------------------------------------------------
