@@ -137,6 +137,51 @@ def load_phrase_dict():
 WB_DICT = load_dict()
 PHRASE_DICT = load_phrase_dict()
 
+# v0.6.6 逗号补全联想（前句→下半句/下半段，212 组公共知识对，懒加载）
+COMMA_PAIRS = None
+
+
+def _get_comma_pairs():
+    global COMMA_PAIRS
+    if COMMA_PAIRS is None:
+        try:
+            with open("corpus/comma_pairs.json", encoding="utf-8") as f:
+                COMMA_PAIRS = json.load(f)
+        except Exception:
+            COMMA_PAIRS = {}
+    return COMMA_PAIRS
+
+
+def comma_complete(prefix):
+    """逗号后补全：精确匹配 → 前缀匹配 → 包含匹配（≤8 候选）"""
+    pairs = _get_comma_pairs()
+    if not pairs or not prefix:
+        return []
+    prefix = re.sub(r"[，,。！？、\s]", "", str(prefix))
+    if len(prefix) < 2:
+        return []
+    out, seen = [], set()
+    for s in pairs.get(prefix, []):
+        if s not in seen:
+            seen.add(s); out.append(s)
+    if len(out) < 6:
+        for k, vs in pairs.items():
+            if k.startswith(prefix):
+                for s in vs:
+                    if s not in seen:
+                        seen.add(s); out.append(s)
+            if len(out) >= 8:
+                break
+    if len(out) < 6 and len(prefix) >= 3:
+        for k, vs in pairs.items():
+            if prefix in k:
+                for s in vs:
+                    if s not in seen:
+                        seen.add(s); out.append(s)
+            if len(out) >= 8:
+                break
+    return out[:8]
+
 # v0.4.8 中英对照词典（云端英文翻译，121297 条，CC-CEDICT 开源）
 # v0.6 优化：懒加载（SCF 128MB 内存门禁——en 接口命中才载入，省 ~80MB）
 EN_DICT = None
@@ -732,6 +777,11 @@ def main_handler(event, context):
     if ctx:
         phrases = context_associate(str(ctx))
         return _resp(200, {"context": str(ctx), "phrases": phrases})
+
+    # v0.6.6 逗号补全联想（独立接口：{"comma":"床前明月光"} → 下半句/下半段）
+    cma = req.get("comma")
+    if cma:
+        return _resp(200, {"comma": str(cma), "phrases": comma_complete(str(cma))})
 
     # v0.6.3 CCA 联动增强：客户端拉取全量衔接映射表（云端规则实时生效，免发版）
     if req.get("linkmap"):
