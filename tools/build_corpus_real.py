@@ -23,9 +23,23 @@ def add_real(lines, csv_path='/tmp/ChnSentiCorp_htl_all.csv', max_rows=7000):
             n += 1
     return lines
 
+def add_waimai(lines, csv_path='/tmp/waimai_10k.csv', max_rows=10000):
+    """v0.6.2：外卖评论语料（口语化，贴近日常输入场景）"""
+    n = 0
+    with open(csv_path, encoding='utf-8') as f:
+        for row in csv.reader(f):
+            if n == 0: n += 1; continue
+            if len(row) < 2 or n > max_rows: break
+            txt = row[1].strip()
+            if len(txt) < 6: n += 1; continue
+            lines.append(txt)
+            n += 1
+    return lines
+
 def main():
     lines = build(6000)
     lines = add_real(lines)
+    lines = add_waimai(lines)
     with open('/tmp/corpus_tok.txt', 'w', encoding='utf-8') as f:
         for ln in lines:
             f.write(" ".join(tokenize(ln)) + "\n")
