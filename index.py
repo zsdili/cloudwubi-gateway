@@ -299,6 +299,19 @@ HOT_WORDS = [
     # v0.5.33 每日热词层（2026-09-14 真实热点，fetch_daily_hot.py 固化机制）
     "服务贸易", "秋粮生产", "金砖合作", "全球南方", "统筹监测", "复合型人才", "服贸会", "算力统筹"
 ]
+# v0.5.64 修复：每日热词文件（fetch_hot_daily.py 自动入库）与硬编码合并加载
+try:
+    import os as _os
+    _dhp = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "daily_hot_words.json")
+    if not _os.path.exists(_dhp):
+        _dhp = _os.path.join(_os.getcwd(), "daily_hot_words.json")
+    if _os.path.exists(_dhp):
+        _dh = json.load(open(_dhp, encoding="utf-8"))
+        for _w in _dh.keys():
+            if _w not in HOT_WORDS:
+                HOT_WORDS.append(_w)
+except Exception:
+    pass
 
 def _load_hot_by_code():
     """热点词按 86 规则算码：2字=前2+前2；3字=1+1+2；4字=1+1+1+1"""
