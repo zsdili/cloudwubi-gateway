@@ -313,6 +313,15 @@ try:
 except Exception:
     pass
 
+ASSOC_LINK = {}
+try:
+    import os as _os2
+    _alp = _os2.path.join(_os2.path.dirname(_os2.path.abspath(__file__)), "assoc_link.json")
+    if _os2.path.exists(_alp):
+        ASSOC_LINK = json.load(open(_alp, encoding="utf-8"))
+except Exception:
+    pass
+
 def _load_hot_by_code():
     """热点词按 86 规则算码：2字=前2+前2；3字=1+1+2；4字=1+1+1+1"""
     code_map = {}
@@ -468,6 +477,13 @@ def context_associate(text, max_results=20):
         key = text[-n:] if len(text) >= n else text
         if key in SUCCESSION:
             return SUCCESSION[key][:max_results]
+    # v0.5.66 创新：意思衔接表（ima 语义级 + Kimi 打分思想的本地实现）——
+    #   末 3 字/末 2 字/末 1 字查 ASSOC_LINK（辛苦了→钟总/大家/你；前进→方向/道路/号角/浪潮/脚步），
+    #   排位在成语/热词/bigram 之前（"衔接"比"组词"更贴语义延续）
+    for n in (3, 2, 1):
+        key = text[-n:] if len(text) >= n else text
+        if key in ASSOC_LINK:
+            return [w for w in ASSOC_LINK[key]][:max_results]
     tail = text[-2:] if len(text) >= 2 else text[-1:]
     last1 = tail[-1]
     engine = _get_phrase_engine()
