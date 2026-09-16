@@ -500,13 +500,40 @@ def _load_3char_by_code():
             _base = os.getcwd()
         data = json.load(open(os.path.join(_base, "wubi86_3char.json"), encoding="utf-8"))
         for c, words in data.items():
-            if len(c) == 3:
+            if len(c) == 4:  # 三字词码长=首+首+前二=4 码（fide→都没有）
                 c3.setdefault(c, []).extend(w for w in words if w not in c3.get(c, []))
     except Exception:
         pass
     return c3
 
 CHAR3_BY_CODE = _load_3char_by_code()
+
+def _load_code_words(fname):
+    """v0.7.10 通用云端词库加载器：{code(4位) -> [词]}（歌名/网红/街道/小区/小吃/品牌/名言/歇后语/明清/迁移）"""
+    d = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, fname)):
+            _base = os.getcwd()
+        data = json.load(open(os.path.join(_base, fname), encoding="utf-8"))
+        for c, words in data.items():
+            if len(c) == 4:
+                d.setdefault(c, []).extend(w for w in words if w not in d.get(c, []))
+    except Exception:
+        pass
+    return d
+
+# v0.7.10 用户固化：三字及以上词全部云端（瘦客户端）
+MIGRATED_BY_CODE = _load_code_words("wubi86_migrated.json")   # 端侧迁移：对不起/大学生/有时候/南京市…
+SONG_BY_CODE     = _load_code_words("wubi86_song.json")       # 歌名
+WEBSTAR_BY_CODE  = _load_code_words("wubi86_webstar.json")    # 网红/明星名
+STREET_BY_CODE   = _load_code_words("wubi86_street.json")     # 街道/地标
+ESTATE_BY_CODE   = _load_code_words("wubi86_estate.json")     # 小区/楼盘
+FOOD_BY_CODE     = _load_code_words("wubi86_food.json")       # 小吃/美食
+BRAND_BY_CODE    = _load_code_words("wubi86_brand.json")      # 知名品牌
+MINGYAN_BY_CODE  = _load_code_words("wubi86_mingyan.json")    # 名言名句
+XIEHOUYU_BY_CODE = _load_code_words("wubi86_xiehouyu.json")   # 歇后语/典故
+QINGMING_BY_CODE = _load_code_words("wubi86_qingming.json")   # 明清短句/古典
 
 # v0.7.9 用户固化：严禁繁体——真正繁体字形表（简体不存在的字形；简繁同形不算）
 TRAD_CHARS = "國萬鍾龍鳳雲東車門關開說誰們華會來還進過時後學問題體氣機電風視話書報紙錢銀號碼數間愛親邊這樣點頭張長陽陰聲見讀寫語言漢簡繁臺灣港澳廣兩點個動幹麼裡來殺鬥買賣飛鳥魚馬車聽聞練習題機會"
@@ -1023,6 +1050,15 @@ def main_handler(event, context):
             if w3 not in [p["phrase"] for p in phrase_candidates]:
                 phrase_candidates.append({"phrase": w3, "score": 94, "type": "lexicon",
                                           "chars": [ord(ch) for ch in w3]})
+        # v0.7.10 全量云端词库：迁移常用词(93) > 实体名(歌/网红/街/小区/小吃/品牌 91) > 联想句(名言/歇后语/明清 88)
+        for _cw, _score in [(MIGRATED_BY_CODE, 93), (SONG_BY_CODE, 91), (WEBSTAR_BY_CODE, 91),
+                            (STREET_BY_CODE, 91), (ESTATE_BY_CODE, 91), (FOOD_BY_CODE, 91),
+                            (BRAND_BY_CODE, 91), (MINGYAN_BY_CODE, 88), (XIEHOUYU_BY_CODE, 88),
+                            (QINGMING_BY_CODE, 88)]:
+            for _w in _cw.get(code, []):
+                if _w not in [p["phrase"] for p in phrase_candidates]:
+                    phrase_candidates.append({"phrase": _w, "score": _score, "type": "lexicon",
+                                              "chars": [ord(ch) for ch in _w]})
         # v0.5.64 每日热词 86 码出词（thta→延长；type=hot 优先显示、不并入单字候选避免类型污染）
         if DAILY_HOT:
             for _w, _c in DAILY_HOT.items():
