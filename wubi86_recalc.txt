@@ -22,7 +22,6 @@ aabb 式子
 aabg 草草了事
 aabi 芙蓉出水
 aabk 茄藤子上上吊 茕茕孑立形影相吊
-aabs 剗草除根
 aabu 茕茕孑立
 aabw 戒除 茄藤子上上吊难死人
 aacb 蔓草难除
@@ -233,7 +232,7 @@ aawi 勤工俭学 攻苦食淡
 aawk 攻苦食啖
 aawn 劳燕分飞 菩萨低眉
 aawp 芦花做棉被
-aawq 幕燕釜鱼 草藄禽猘
+aawq 幕燕釜鱼
 aawr 工件
 aaws 欧共体 芝艾俱焚 葫芦依样 蒹葭倚玉树
 aawt 工作 芸芸众生
@@ -382,7 +381,6 @@ acal 鞍马劳困
 acap 鞍马劳神
 acaq 苔藓
 acaw 芭蕉 鞍马劳倦
-acay 戎马劻勷
 acck 茅台
 acdd 斯巴达克
 acdm 茅厕
@@ -509,7 +507,6 @@ adht 草原上放牧
 adhu 草原上的天气变化多端 革故鼎新
 adhv 惹眼 草原上的狍子三五成群
 adhw 期盼 荣古虐今
-adhx 藉此
 adhy 苏三上公堂句句真言
 adia 期满 綦江 黄石港 黄石港区
 adic 莽汉
@@ -548,7 +545,6 @@ adlu 项圈
 adlx 苦累
 adly 薄唇轻言
 admd 基岩
-admh 藉由
 admm 卧龙山
 admq 卧龙凤雏
 admr 蔚成风气
@@ -695,7 +691,7 @@ aeai 散落
 aeaj 藤蔓
 aeal 藤萝
 aeam 黄月英
-aean 花貎蓬心 菜蔬
+aean 菜蔬
 aeaq 东胜区
 aeaw 菜花
 aeay 尧舜其犹病诸
@@ -929,7 +925,6 @@ aflf 攻城略地
 aflh 某甲
 afll 某男
 aflt 劳动力
-afly 黄干黑廲
 afma 七十岁婆婆学绣花 七十岁学巧 七十岁学气功
 afmc 七十岁演活报剧非同儿戏
 afmd 七十岁婆婆学绣花老来发奋
@@ -1022,7 +1017,6 @@ afuo 劳动资料
 afuq 某次
 afur 蒜瓣
 afus 革新
-afut 敬老慈穉
 afuv 鞭痕
 afux 敬老慈幼 茫无头绪 茫无端绪
 afvi 甘肃 著录
@@ -1112,7 +1106,6 @@ aggj 敬事不暇
 aggk 巧事
 aggm 荆棘
 aggo 划不来
-aggy 切瑳琢磨
 agha 黄一彪
 aghb 荞麦皮打糨子
 aghd 荞麦皮榨油无中生有 蓝天上的白云自由自在
@@ -1131,7 +1124,6 @@ agip 巧学
 agiu 世事洞明皆学问
 agiw 荆棘满途
 agjg 莫不是
-agjh 花下晒裻
 agjj 七日
 agjm 巧遇
 agjs 苹果
@@ -1261,7 +1253,6 @@ ahga 萝卜青菜
 ahgc 雅致
 ahge 萝卜青菜各人所爱各有所爱 雅静
 ahgh 雅正
-ahgj 其上不皦其下不昧
 ahgm 雅丽
 ahgo 邪恶
 ahgx 邪毒
@@ -1306,7 +1297,6 @@ ahow 牙粉
 ahpf 七步之才 牙冠
 ahpg 卧室
 ahpv 雅安
-ahpy 黄皮寡廲
 ahqa 匡鼎解颐
 ahqc 牙色
 ahqg 卧铺
@@ -1339,7 +1329,6 @@ ahtr 牙齿和舌头打架伤不了和气
 ahts 工具箱
 ahtu 牙科
 ahtw 牙签
-ahty 黄皮刮廲
 ahuc 牙痛
 ahud 牙关
 ahug 卧病
@@ -1368,7 +1357,7 @@ ahyn 切齿腐心 卧房
 ahyp 牙膏
 ahyq 卧底
 ahys 牙床
-ahyu 剗旧谋新 邪说
+ahyu 邪说
 ahyw 雅座
 ahyy 雅言
 aiaa 苦海茫茫 范式
@@ -1545,7 +1534,6 @@ aitg 东征
 aith 薄片
 aiti 燕雀处堂 黄河入海流
 aitj 落得 薄利
-aitk 綦溪利跂
 aitl 巫婆和鬼打架
 aitm 东向
 aitt 落笔
@@ -1846,7 +1834,6 @@ akam 薮中荆曲
 akap 勤劳
 akaq 东川区
 akar 莺吟燕舞
-akaw 莺吟燕儛
 akay 莺啼燕语
 akbb 黄口孺子 黄忠出阵
 akbf 黄忠出阵不服老
@@ -2600,7 +2587,6 @@ aprw 警察打他爹
 apry 燕窝掉地家破人亡
 apsa 劳模
 apsd 蒙顶
-apsg 燕安醙毒
 apso 黄鹤楼
 apsr 东完西缺 东穿西撞 蒙板
 apst 荣格
@@ -2930,7 +2916,6 @@ arii 其势汹汹 暮气沉沉 欧气满满 落魄江湖
 aris 黄瓜当棒槌
 arit 黄瓜当棒槌越打越短
 arja 茅缸里泡豆芽
-arje 茅缸里泡豆芽腌臜
 arjh 苦瓜虫
 arjq 苦瓜虫吃内不吃外
 arjr 苦鬼遇饿鬼 英年早逝
@@ -2967,8 +2952,8 @@ arsd 东抄西袭
 arsi 东抹西涂 东播西流
 arsl 东搜西罗 苦瓜攀苦藤苦相连 苦瓜树上结黄连
 arsp 东投西窜
-arsr 东扭西捏 东扯西拉 东扯西拽 东拉西扯 东挦西扯 东挨西撞 东挪西撮 东捞西摸 东摇西摆
-arsu 东拼西凑 东挪西凑 东捱西问
+arsr 东扭西捏 东扯西拉 东扯西拽 东拉西扯 东挨西撞 东挪西撮 东捞西摸 东摇西摆
+arsu 东拼西凑 东挪西凑
 arsw 东扶西倒 东挪西借 东踅西倒
 arsy 东掩西遮
 artj 鞭擗向里
@@ -3403,7 +3388,7 @@ aupn 蒙着被子放屁
 aupp 芝兰之室
 aupu 莫逆之交
 aupw 燕窝
-aupy 东道之谊 或问禘之说
+aupy 东道之谊
 auqf 黄头鸟金丝鸟搭窝得过且过
 auqh 巧立名目
 auqi 燕尔
@@ -3511,7 +3496,7 @@ aviv 切当
 avjg 切题
 avkh 切中
 avkk 切口
-avmh 欺君罔上 燕巢幙上
+avmh 欺君罔上
 avmm 萧山
 avmw 切肉
 avna 燕巢飞幕
@@ -3568,7 +3553,6 @@ avvn 鹊巢鸠居
 avvq 巧媳妇打扮囡咖小孩儿
 avvr 鹊巢鸠据
 avvv 巧媳妇
-avvw 鹊巢鸠佔
 avvy 鹊巢鸠主
 avwg 切合
 avwv 切分
@@ -3930,7 +3914,7 @@ axou 药料
 axow 药粉
 axpb 黄绵袄子
 axpe 药农
-axpi 鞋弓袜小 鞋弓袜浅 鞋弓襪小 鞋弓襪浅
+axpi 鞋弓袜小 鞋弓袜浅
 axpu 药补
 axpy 划粥割齑
 axqg 药铺
@@ -4150,7 +4134,7 @@ aywg 节度使 草率从事
 aywi 芝麻做饼点子不少
 aywn 荒僻
 aywq 巧言令色 芝麻做饼
-aywr 七弯八拐 七鄐八手
+aywr 七弯八拐
 aywt 巧言偏辞 蓬户瓮牖
 aywv 东床佳婿
 ayww 七高八低 荒谷
@@ -4494,7 +4478,6 @@ bdgw 陈古刺今
 bdhh 承上
 bdip 随常
 bdiq 随大溜
-bdis 陆詟水栗
 bdit 陇海
 bdiv 承当
 bdiy 随大流
@@ -4851,7 +4834,7 @@ bgoo 隔火
 bgoy 出死断亡
 bgpf 耳塞
 bgpg 聊天室
-bgpp 承天之祐 承天之祜 隐形冠军
+bgpp 承天之祜 隐形冠军
 bgpw 承天之佑 耳穴
 bgpy 卫视
 bgqn 耳饰
@@ -5173,7 +5156,6 @@ bktl 职务
 bktq 职称
 bktr 出口管制
 bkue 职前
-bkwa 子路从而后遇丈人以杖荷蓧
 bkwq 隔口袋买猫儿
 bkwr 隔口袋买猫儿不知是黑是白
 bkwu 职位
@@ -6520,7 +6502,6 @@ caoj 劲爆
 caop 戏迷
 capf 驱寒
 capo 柔茹寡断
-caqi 歠菽饮水
 caqn 戏馆
 caqr 矜功负气
 caqt 劲儿
@@ -6780,7 +6761,7 @@ cchg 戏台上扮夫妻 戏台上的夫妻 戏台上的小生能文能武
 cchh 双目 戏台上堵枪眼 戏台上的灯光引人注目 戏台上的花旦引人注目 马马虎虎
 cchi 双频 戏台上的媒婆 戏台上的灯光 戏台上的父子没大没小 戏台上讨老婆
 cchj 戏台上娶亲欢乐一时说一时 戏台上拜天地快活一时 戏台上的将军神气一时 戏台上的花旦
-cchk 戏台上的娄罗轮不到你我唱 戏台上的攔头叫干啥就干啥 戏台上的演员 戏台上赌咒 戏台上起年号
+cchk 戏台上的娄罗轮不到你我唱 戏台上的演员 戏台上赌咒 戏台上起年号
 cchl 戏台上打架 戏台上的娄罗
 cchm 戏台上的皇帝假威风 骑马上天山 骑马上山
 cchn 戏台上送诏书
@@ -6789,7 +6770,7 @@ cchq 戏台上卖螃蟹 戏台上的服饰
 cchr 戏台上的刀枪全是假的 戏台上的娄罗兵 戏台上的媒婆妖里妖气 戏台上的绸子舞 戏台上的钟旭不怕鬼 戏台上讨老婆假的
 cchs 戏台上的刀枪 戏台上的鼓槌 骑马上独木桥 骑驴瞧账本
 ccht 戏台上的小生 戏台上的服饰好景不长 戏台上的韦生
-cchu 戏台上娶亲 戏台上的攔头 戏台上的皇帝 戏台上谈恋爱假情假意 骑马上独木桥回不得头
+cchu 戏台上娶亲 戏台上的皇帝 戏台上谈恋爱假情假意 骑马上独木桥回不得头
 cchv 双眼 戏台上的钟旭
 cchw 戏台上死人 骑马上天山回头见高低
 cchx 戏台上送诏书假传圣旨
@@ -6970,7 +6951,6 @@ cdgq 柔而不犯 鸡犬不留
 cdgu 鸡犬不闻
 cdhh 骑上
 cdhk 参战
-cdii 骄奢淫泆 骄泰淫泆
 cdip 参演
 cdiq 骄奢淫逸
 cdiw 骄奢淫佚
@@ -7495,7 +7475,6 @@ ciqb 骈兴错出
 ciqy 台湾岛
 cira 巴掌打空气劳而无功
 cirb 鸡婆抱鸭子
-ciri 马浡牛溲
 cirr 巴掌打空气
 cirw 鸡婆抱鸭子舍己为人
 cisf 双水村 马湖村
@@ -7620,7 +7599,6 @@ ckpf 桑中之喜
 ckpv 台安
 ckpx 桑中之约
 ckqa 台钳
-ckqd 鸡鸣馌耕
 ckqk 台钟 驴鸣狗吠 鸡鸣狗吠
 ckqr 怠忽
 ckqt 台独
@@ -7956,7 +7934,6 @@ cpdq 马赛克
 cpdu 鸡穿大褂狗戴帽衣冠禽兽
 cpeg 台安县 牟定县
 cpfb 驷之过隙
-cpfj 驷之过蠙
 cpft 参赛者
 cphr 骑鹤上扬 骑鹤上维扬
 cphy 骑鹤上扬州
@@ -8238,7 +8215,6 @@ cswi 马桶倒进臭水沟 马桶倒进臭水沟同流合污
 cswt 桑枢瓮牖
 csym 鸡西市
 csyr 桑木扁担
-csyt 桑枢畒牖
 csyy 桑木扁担宁折不弯
 ctac 难乎其难
 ctah 鸡毛蒜皮
@@ -8275,7 +8251,6 @@ ctho 鸡毛点灯
 cthp 鸡毛点灯十有九空
 cths 鸡毛上天轻飘
 ctjb 鸡笼里过日子
-ctjd 马毛蝟磔
 ctjf 马德里
 ctji 鸡笼里睡觉
 ctjn 台积电
@@ -8444,7 +8419,7 @@ cuym 台北市
 cuyn 骈首就戮
 cuyt 骈首就系
 cuyv 骈首就逮
-cuyw 马前卒 骈首就僯
+cuyw 马前卒
 cuyy 巴音郭楞蒙古自治州 骈文
 cvad 艰苦
 cvan 艰巨
@@ -8555,7 +8530,6 @@ cwqk 难免
 cwqp 骚人逸客
 cwqx 参伍错纵 参伍错综
 cwra 难找
-cwrd 难捱
 cwrh 难看
 cwrl 双人舞
 cwsa 驿使梅花
@@ -8703,7 +8677,6 @@ cysa 对话框
 cysc 圣诞树
 cysm 对讲机
 cysq 巴高枝儿
-cyss 桑户棬枢
 cysy 骗术
 cyta 参谋长
 cyti 通讯簿
@@ -9139,7 +9112,6 @@ dcfj 三叉戟
 dcfl 友协
 dcfq 码元
 dcft 雄才
-dcfu 布颿无恙
 dcfy 有勇无谋
 dcga 雄武
 dcgc 有马不骑有车不坐练腿劲
@@ -9309,7 +9281,7 @@ ddfb 大地 石灰堆里的耗子
 ddfc 大劫 碌碌无能
 ddfd 大城 大震 碌碌无奇
 ddfe 硕大无朋
-ddff 兢兢乾乾 兢兢干干 大款
+ddff 兢兢干干 大款
 ddfg 大埔 大雨 硕士
 ddfi 大而无当
 ddfj 大堤
@@ -9357,7 +9329,7 @@ ddia 万古流芳 大江 大漠 龙感湖管理区
 ddic 大汉
 ddid 大湖 秦克湖
 ddif 大法 大洼 大潮
-ddig 大清 磇硄混玉 龙感湖管理
+ddig 大清 龙感湖管理
 ddih 大小 石灰水泼到青石板上
 ddii 大大小小 大水 郁郁沉沉
 ddim 大洞
@@ -9438,7 +9410,7 @@ ddpd 厉害
 ddpe 大家 故有之以为利无之以为用
 ddpf 大宗 大寨 大赛
 ddpg 大写 大宝 石灰窑里打跟头白走一遭
-ddpj 破大褂没理里 硁硁之愚
+ddpj 破大褂没理里
 ddpl 大军
 ddpn 大官
 ddpo 大灾 石灰窑里安电灯
@@ -9592,7 +9564,7 @@ ddyg 套语
 ddyi 戊戌变法
 ddyj 大课
 ddyl 大为
-ddym 大调 太原市 砲龙烹凤
+ddym 大调 太原市
 ddyn 大户 石寿永
 ddyo 大变
 ddyp 大而言之
@@ -9739,7 +9711,7 @@ deqe 鬓角
 deqg 有钱
 deqk 三脚猫到处跑 有名
 deqt 三脚猫 刳胎杀夭 大胆包身
-dera 三月的樱花 三月的菜薹
+dera 三月的樱花
 derb 三月的樱花谢了
 derc 胡瓜
 dere 牵肠挂肚
@@ -9752,7 +9724,7 @@ dern 有所
 derq 三月的樱桃红火一片红不久 有的
 ders 三月的樱桃
 deru 三月的冰河开了动冻
-derv 三月的菜薹早有心不嫩 郁热
+derv 郁热
 derw 有失
 dery 胡搞
 desa 大肠杆菌
@@ -10011,7 +9983,7 @@ dfsn 百无禁忌
 dfsp 压榨
 dfsq 破鼓配上破锣
 dfsr 压板 石地板铁扫把
-dfst 大才榱槃 大才榱盘 奔走相告 有无相生
+dfst 大才榱盘 奔走相告 有无相生
 dfsv 压根
 dfsw 百载树人
 dftd 唇舌
@@ -10024,7 +9996,7 @@ dftj 夺得
 dftm 奔向
 dftr 夸特 破鼓乱人捶
 dfts 压条 达地知根
-dftt 大才槃槃 大才盘盘
+dftt 大才盘盘
 dfub 邦无道富且贵焉耻也
 dfuc 压痛
 dfud 有志竟成 砖头 磕头
@@ -10426,7 +10398,7 @@ dgyn 三户 厂房 厨房 威望 石刻
 dgyo 万平方米 古迹
 dgyp 石膏
 dgyq 大政方针 戛玉敲金
-dgys 斫琱为朴 研磨
+dgys 研磨
 dgyt 感谢 破死忘生
 dgyu 大开方便之门 威廉 戛玉敲冰 硬说
 dgyv 硬朗
@@ -11021,7 +10993,6 @@ djsh 厚朴
 djsk 悲歌
 djsl 夏日可畏
 djso 太师椅着了火
-djst 有蠙可乘
 djsv 非要
 djte 百般
 djtf 万里长城 厚待
@@ -11087,7 +11058,7 @@ djyu 夏虫语冰
 djyx 太监读圣旨
 djyy 非议
 dkaj 右划
-dkaq 大足区 硚口区 达川区
+dkaq 大足区 达川区
 dkau 厕足其间 百口莫辩 百喙莫辩
 dkcn 大嘴巴
 dkct 百喙难辞
@@ -11120,7 +11091,7 @@ dkgn 大吃一惊
 dkgt 万口一辞
 dkgw 百足不僵
 dkgy 万口一词 万口一谈 右玉 百喙一词
-dkha 大路上栽葱 大路上长青草 龙跳虎卧 龙踚虎卧
+dkha 大路上栽葱 大路上长青草 龙跳虎卧
 dkhb 耍嘴皮子
 dkhe 龙嘴上拔胡须
 dkhf 大路上栽葱白费功夫
@@ -11538,7 +11509,7 @@ dmxt 而终
 dmxy 布纹
 dmya 大幅度 面试
 dmyb 面熟
-dmyd 砲凤烹龙 面庞
+dmyd 面庞
 dmye 布衣
 dmyh 布店 成则为王败则为虏
 dmyl 面禀
@@ -11556,7 +11527,7 @@ dnad 威尼斯 尤其
 dnai 面壁功深
 dnal 慧心巧思 成功
 dnan 万世 盛世
-dnap 万荣 丰屋蔀家
+dnap 万荣
 dnax 成药
 dnbb 碾子
 dnbm 迈出
@@ -11694,7 +11665,7 @@ dnrb 丰收年景的粮囤子
 dnrd 成排 迈拓
 dnrh 万年 成年
 dnri 丰收年景的粮囤子冒尖
-dnrn 尨眉皓发 盛气
+dnrn 盛气
 dnrq 大惊失色
 dnrt 万斤 研发投入
 dnrx 成批
@@ -11729,7 +11700,6 @@ dnut 有以善处 盛产
 dnuu 成立 破屋门老得用棍儿顶着
 dnuy 破屋门
 dnvc 盛怒
-dnvg 破璧毁珪
 dnvk 尤如
 dnvq 成婚
 dnvt 慧心妙舌 成群
@@ -11823,7 +11793,6 @@ dopw 龙断之登
 doqb 大米饭串烟变味了
 doqc 灰色
 doqi 研精钩深 雁断鱼沉
-doqn 刳精鉥心
 doqo 大米饭串烟
 dorb 砍断的竹子
 dord 面粉搀石灰 龙灯的脑壳任人耍由人摆布
@@ -11960,7 +11929,6 @@ dpqc 灰褐色
 dpqe 丰富多彩 丰富多采
 dpqi 胡塞尔
 dpqk 百家争鸣
-dpqq 石室金鐀
 dpqu 破军杀将
 dprb 大字报
 dprf 牵挂
@@ -12738,7 +12706,7 @@ dtga 故弄
 dtgd 奋身不顾
 dtgf 有利于
 dtgh 三牲五鼎 非利不动非得不用非危不战
-dtgi 万科瑧湾汇 大船开到小河沟 大船开到小河沟搁浅 大船开到小河里搁浅
+dtgi 大船开到小河沟 大船开到小河沟搁浅 大船开到小河里搁浅
 dtgj 在物理学中阳电和阴电 大船开到小河里
 dtgk 故事
 dtgl 龚行天罚
@@ -12762,7 +12730,6 @@ dthp 龙御上宾
 dthq 大街上的挂钟
 dtht 大街上的行人有来有往 磅秤上放粒芝麻无足轻重
 dthu 大街上相亲 面条点灯犯饭不着
-dthv 龙盘虎拏
 dthw 大街上弹琴听不听随你 大街上的行人
 dthx 故此
 dthy 磅秤上放粒芝麻 龙行虎变
@@ -12785,7 +12752,7 @@ dtjs 百香果
 dtjt 寿星
 dtkc 故知足之足常足矣
 dtkh 夏赞忠
-dtkk 帮口 硚口
+dtkk 帮口
 dtlf 万科四季花城 故园
 dtlg 故国
 dtlj 有生力量
@@ -12902,7 +12869,6 @@ dtyo 非我族类
 dtyp 面筋放在油锅里越大越空
 dtyq 砥行磨名
 dtyt 大船离港外行航 寿诞 破愁为笑 碎身糜躯
-dtyu 臧穣亡羊
 dtyw 大廷广众
 duad 有效期
 duag 碰巧
@@ -13187,8 +13153,6 @@ dvgu 三好两歉
 dvgw 三九天种小麦不是时候 三九天穿裙子美丽又动冻人
 dvgy 三九天谈心冷言冷语
 dvha 肆虐
-dvhk 龙拏虎跳
-dvhr 龙拏虎攫
 dvie 面如满月
 dvim 大好河山
 dvit 三好学生
@@ -13465,7 +13429,7 @@ dwrg 奏捷
 dwrh 春牛
 dwrj 三个指头捡田螺
 dwrm 百分制
-dwrn 砍倒的柳树死不甘干心 破斧缺斨
+dwrn 砍倒的柳树死不甘干心
 dwrr 奏折
 dwrs 砍倒的柳树
 dwrt 万公斤 三个指头捡田螺十拿九稳 春播
@@ -13490,7 +13454,7 @@ dwth 大爷和太爷只差一点差一点
 dwti 故伎重演
 dwtj 三人行必有我师
 dwtk 泰和 百舍重趼
-dwto 太仓稊米 春秋
+dwto 春秋
 dwtp 春华秋实
 dwtq 三个鼻孔眼儿
 dwtr 三个鼻孔眼儿多一股子气 大人物
@@ -13516,7 +13480,7 @@ dwux 雁北
 dwvi 三仙姑传道一人一个说法 三仙姑撒泼 奉公如法
 dwvk 耐人寻味
 dwvu 三仙姑传道
-dwwa 三舖八菹 秦代
+dwwa 秦代
 dwwc 奉公
 dwwd 万念俱灰
 dwwf 盛华仁
@@ -13839,7 +13803,6 @@ dytu 胡言乱道 胡说乱道
 dyty 胡言乱语
 dyuc 矿冶
 dyud 厨房旁边盖茅厕 太差
-dyun 詟谀立懦
 dyuq 大义凛然
 dyur 厨房旁边盖茅厕厕所
 dyut 矿产
@@ -13926,7 +13889,6 @@ eath 膜片
 eauq 肛交
 eauu 及其壮也血气方刚戒之在斗
 eauy 肛门
-eavq 悬鞀建铎
 eawt 腊八
 eaww 腻人
 ebaa 服式
@@ -14108,7 +14070,7 @@ ecyn 胎记
 ecyx 盈率
 edae 腌菜
 edai 爱克斯光 舜有臣五人而天下治
-edan 朋友切切偲偲兄弟怡怡 爱奇艺
+edan 爱奇艺
 edaw 用非其人
 edbr 腮帮子上拔火罐
 eddh 须在
@@ -14255,7 +14217,6 @@ eekg 月号
 eekh 月中
 eekn 胸脯中了箭伤心伤透心
 eekt 胸脯中了箭
-eeky 肥遯鸣高
 eelk 月圆
 eelw 月轮
 eemm 服服帖帖 服服贴贴
@@ -14272,7 +14233,7 @@ eepl 股肱之力
 eepp 胳肢窝下过日子太窄
 eepq 胳肢窝插鸡毛假充外国鸟
 eept 胳肢窝插鸡毛
-eepu 月初 肤受之愬
+eepu 月初
 eepw 胳肢窝
 eepy 肤受之言 肤受之诉 肺腑之言
 eeqc 月色
@@ -14869,7 +14830,7 @@ emqq 股金
 emrr 悬崖撒手
 emrx 股指
 emsc 股权
-emsf 股票 腥风醎雨
+emsf 股票
 emsg 股本
 emta 股长
 emtf 腥风血雨
@@ -15127,7 +15088,6 @@ eqfq 胸无
 eqfr 逐名趋势
 eqgo 豺狼遭火烧
 eqgp 豺狼遭火烧焦头烂额
-eqgu 悬猙素飡
 eqgx 胰岛素
 eqhe 豺狼虎豹
 eqhf 肥猪上屠场
@@ -15261,7 +15221,6 @@ erub 遥闻
 eruf 爱打半边鼓 爱打半边鼓旁敲侧击
 eruk 腺癌
 eruq 腺瘤
-eruv 鹏抟鹢退
 ervp 用兵如神
 erwf 遥祭
 erws 腺体
@@ -15436,7 +15395,6 @@ etgh 乳犊不怕虎
 etgk 用事
 etgo 用来
 ethh 用上
-ethp 邈处歬视
 ethq 用餐
 ethw 用具
 etia 胀满
@@ -15839,7 +15797,6 @@ eyap 月亮惹的祸
 eyaq 县市区
 eybb 脑子
 eybf 脑际
-eyck 胁肩絫足
 eydg 脉石
 eydj 悬旌万里
 eydx 悬鹑百结
@@ -16521,7 +16478,6 @@ fcsi 戴马桶坐大堂
 fcsm 动机
 fcsp 戴马桶坐大堂赃脏官
 fcss 云林 云梦 魂驰梦想
-fcst 埇桥
 fcsu 云梯
 fcsv 却要
 fcsy 支柱
@@ -16622,7 +16578,6 @@ fddt 城邦 老太太吃牛筋 老太太学绣花心灵手笨 老太太学钢琴
 fddu 墙面而立 老太太啃骨头 老太太的脚趾头 老太太补衣服东拼西凑
 fddx 老太太纺纱
 fddy 老太太 老太太哭儿没指望 韩太太
-fdee 博硕肥腯
 fdeg 云龙县 井研县 南丰县
 fdet 需用
 fdfa 卖友求荣 盐碱地的身苗
@@ -16857,14 +16812,14 @@ feqc 真彩色
 feqf 丧胆销魂 裁月镂云
 feqg 零用钱
 fequ 鼓脑争头
-fera 二月的菜薹 二月的韭菜 二月的韭菜头一茬 十月的芥菜
+fera 二月的韭菜 二月的韭菜头一茬 十月的芥菜
 ferc 赶脚的骑驴
 fere 露胆披肝
 ferf 二月的闷雷
 ferg 十月的螃蟹横行不了几天
 feri 赤脚的和尚 赤脚的和尚两头光 赶脚的骑驴只图眼前快活
 ferj 二月的闷雷想响得早 戴月披星
-fern 二月的菜薹起了心另有心 十月的芥菜齐心
+fern 十月的芥菜齐心
 ferq 十月的螃蟹
 ferr 赤脚的撵 赤脚的撵追赶穿高跟鞋的
 feru 赤脚拜观音 赤脚拜观音诚心实意
@@ -16927,7 +16882,7 @@ ffdy 云起龙襄 井井有序 井井有方 塔吉克族 款款而谈
 ffeb 运动服
 ffec 土肥
 ffee 十二月
-ffef 云堦月地 墙脚
+ffef 墙脚
 ffeg 云霄县 南城县 壤塘县 赤城县 霍城县
 ffej 土腥
 ffel 封爵
@@ -17015,7 +16970,6 @@ ffjw 坟地里赶集 盐堆里爬出来的人 盐堆里的花生闲人咸仁
 ffjx 坟地里拉弓
 ffjy 坟地里摆酒席
 ffkb 土地喊城隍
-ffkc 鄠邑
 ffkf 运动员下跑场 运动员下跑场你追我赶
 ffkg 封号
 ffkh 堵嘴
@@ -17054,7 +17008,7 @@ ffnf 土层
 ffng 动地惊天 土司 赍志以殁
 ffni 赍志以没
 ffnk 墙壁
-ffnn 乾乾翼翼 干干翼翼
+ffnn 干干翼翼
 ffnp 才过屈宋 违者必究
 ffnq 寸土必争 趋吉避凶
 ffnt 土改
@@ -17076,7 +17030,7 @@ ffpf 堵塞
 ffpg 填写 霄壤之殊
 ffph 十二寡妇征西全家都上
 ffpi 真才实学 赫赫之光
-ffpj 坎井之蛙 埳井之蛙
+ffpj 坎井之蛙
 ffpk 二进宫 霄壤之别
 ffpl 赦过宥罪 雨露之恩 霜露之思
 ffpn 元元之民
@@ -17093,7 +17047,7 @@ ffqe 墙角
 ffqg 封印
 ffqi 封锁
 ffqj 卦象
-ffqn 填饱 朝乾夕惕 朝乾夕愓 朝过夕改
+ffqn 填饱 朝乾夕惕 朝过夕改
 ffqq 十二金钗
 ffqr 二十多年 二十钱一双乌拉
 ffqs 封杀
@@ -17169,7 +17123,7 @@ ffwb 土地爷打城隍 土地爷洗脸失湿面子 土地爷被虫蛀了
 ffwc 土地公 土地公和土地婆孤寡一对 土地爷的蜡台 土地爷逃难
 ffwd 无二爷无常鬼卖布
 ffwe 土地爷洗脸 土地爷理发鬼头鬼脑 土地爷的胳膊
-ffwf 运动会 颠乾倒坤
+ffwf 运动会
 ffwg 土地爷管龙王 土地爷管龙王以上压下
 ffwh 十二个
 ffwi 土地公和土地婆 土地爷拿邪神出鬼没 土地爷捉迷藏神出鬼没 垃圾倒进粪池里同流合污
@@ -17261,7 +17215,7 @@ fget 二用
 fgfa 云屯雾散 云开雾散 十堰 十载
 fgfb 支形者敌虽利我我无出也
 fgfc 动不动 过不去 进不去
-fgfd 十五块板子做桌面 无羐无碍 老王卖瓜自卖自夸 雨城
+fgfd 十五块板子做桌面 老王卖瓜自卖自夸 雨城
 fgff 云天雾地 直来直去 老吾老以及人之老 震天动地
 fgfg 二十 十二 博士 夫两者各得所欲大者宜为下 雨一直下
 fgfh 越来越
@@ -17330,7 +17284,7 @@ fgka 干呕
 fgkb 干吼 老两口演戏夫唱妇随
 fgkc 干吗 老两口演戏
 fgke 干嚼 老两口赏月
-fgkf 十天跑完万里长城 戴天蹐地
+fgkf 十天跑完万里长城
 fgkg 二号
 fgkh 二中 二路 十足 南环路 老两口观灯走着瞧
 fgki 十五只小船出海
@@ -18147,7 +18101,7 @@ fjdr 趋时奉势
 fjdw 博览古今 救时厉俗 朝奉
 fjeb 朝服
 fjec 进贤用能
-fjeg 乾县 南昌县 博野县 孝昌县 进贤县 都昌县
+fjeg 南昌县 博野县 孝昌县 进贤县 都昌县
 fjet 刊用
 fjfa 刊载
 fjfc 进去 进贤进能
@@ -18191,7 +18145,6 @@ fjim 埋没
 fjip 进学 进深
 fjis 进酒
 fjiy 韩流
-fjja 雨昫时若
 fjjc 进贤
 fjjd 运旺时盛
 fjje 老蜘蛛的内脏
@@ -18230,7 +18183,6 @@ fjpm 井蛙之见
 fjpn 献曝之忱
 fjpq 十日之饮
 fjpu 丧明之痛
-fjpv 乾安
 fjpw 老师宿儒
 fjpy 韬晦之计
 fjqb 埋怨
@@ -18332,7 +18284,7 @@ fkad 吉期
 fkai 鼓荡
 fkaj 喜鹊
 fkap 露营
-fkaq 南川区 喜获 城中区 鄠邑区
+fkaq 南川区 喜获 城中区
 fkaw 喜茶
 fkbf 嘉陵 求忠出孝
 fkbj 吉阳 彭阳
@@ -18448,7 +18400,7 @@ fkrl 鼓舞
 fkrn 喜气
 fkrp 云中白鹤 走路拾元宝
 fkrq 鼓捣
-fkrr 喜跃抃舞 露白
+fkrr 露白
 fkrt 赤口白舌 走路拨算盘 鼓手
 fkru 走路拨算盘手脚不闲
 fksf 无路可走
@@ -18472,10 +18424,9 @@ fkud 嘉善 夫唯道善贷且成 露头
 fkug 嘉靖
 fkui 志足意满
 fkum 雪中送炭
-fkun 截趾適履
 fkuo 吉普
 fkuq 嘉奖
-fkus 动中竨要 喜新
+fkus 喜新
 fkut 吉首
 fkuu 夫唯病病是以不病
 fkuv 无兄盗嫂
@@ -18882,7 +18833,7 @@ fngo 救民于水火
 fngq 专列 魂飞天外
 fngu 专心一意 二心两意
 fngy 丧尽天良
-fnhh 场上 声卡 直眉睖眼 直眉瞪眼
+fnhh 场上 声卡 直眉瞪眼
 fnhi 声频
 fnhk 卖点
 fnho 魂飞目断
@@ -18950,7 +18901,7 @@ fnpy 违心之论
 fnqc 声色
 fnqg 朝发夕至
 fnqh 场外
-fnqi 声乐 魂慑色沮 魂慴色沮
+fnqi 声乐 魂慑色沮
 fnqk 声名
 fnqm 亏负
 fnqn 场馆
@@ -18970,7 +18921,7 @@ fnrh 卖掉
 fnri 专挑
 fnrk 亏损
 fnrl 赤心报国
-fnrm 专制 魂飞魄飏
+fnrm 专制
 fnrn 场所 魂惊魄惕
 fnrp 声控
 fnrr 亏折
@@ -19030,7 +18981,7 @@ fnwk 直性人发言一有啥说啥
 fnwq 声像
 fnwr 韦伯
 fnws 超导体
-fnwt 专任 卖履分香 截发剉穢
+fnwt 专任 卖履分香
 fnwu 趁心像意
 fnww 专人
 fnwx 无以伦比
@@ -19163,7 +19114,7 @@ fpdp 韦裤布被
 fpdq 鹁鸪
 fpdu 过磅
 fpee 云容月貌
-fpeg 乾安县 吉安县 嘉祥县 索县 远安县
+fpeg 吉安县 嘉祥县 索县 远安县
 fpem 云窗月帐 堆案盈几 霞裙月帔
 fpep 索爱
 fpes 过膝
@@ -19829,7 +19780,7 @@ fsae 吉木萨尔县
 fsag 韫椟藏珠
 fsah 塔顶散步 赤橙黄绿青蓝紫
 fsak 塔顶散步走投无路
-fsaq 南票区 吉木萨尔 埇桥区 城西区 鼓楼区
+fsaq 南票区 吉木萨尔 城西区 鼓楼区
 fsar 朝攀暮折
 fsav 坏植散群
 fsaw 霜花
@@ -20341,7 +20292,7 @@ fuef 鼓着肚子充胖子外强中干
 fueg 南部县 南靖县 嘉善县 壶关县 赫章县 都兰县
 fuej 丧胆
 fueu 霞姿月韵
-fufa 境域 无適无莫 进冰场穿冰鞋
+fufa 境域 进冰场穿冰鞋
 fufb 境地
 fufc 幸运 无拳无勇
 fufd 增城 无亲无故
@@ -20355,7 +20306,7 @@ fufq 二次元
 fufr 十六进制 戴着雨帽进庙门冒充大头鬼
 fuft 无产者
 fufu 戴着雨帽进庙门
-fufw 丧夫 乾端坤倪 云交雨合 干端坤倪 无背无侧 越次超伦 雨凑云集
+fufw 丧夫 云交雨合 干端坤倪 无背无侧 越次超伦 雨凑云集
 fuga 城郊型 增开
 fugc 二童一马 增至
 fugd 老半天 老鳖吞秤砣
@@ -20413,7 +20364,6 @@ fuko 老头吃麻糖
 fukt 老鳖咬人叼住不放死不丢
 fuku 老鳖跌跟头
 fukw 老鳖咬人
-fuky 毂交蹄劘
 fuld 朝章国故
 fulg 吉普车 进善黜恶
 fulk 增加
@@ -20596,9 +20546,7 @@ fvgq 喜怒不形于色
 fvgr 雪碧
 fvgu 进退两端
 fvgv 未婚妻
-fvgy 进退迍邅
 fvhg 老鼠上了老鼠夹
-fvht 勃如战色足蹜蹜如有循
 fvii 雪水
 fvin 雪泥
 fvip 霓裳
@@ -20624,7 +20572,7 @@ fvkq 老鼠吃猫 老鼠咬乌龟 老鼠咬猫 老鼠啃大象 老鼠跌进铁�
 fvkr 老鼠吃高粱顺杆秆爬 老鼠咬牛
 fvks 老鼠咬旗杆 老鼠咬石柱 老鼠啃擀面杖 老鼠嘴里讨碎骨莫想
 fvkt 老鼠吃海水无足轻重 老鼠咬象鼻
-fvku 老鼠跳火坑毛干爪净 进退跋痜
+fvku 老鼠跳火坑毛干爪净
 fvkw 老鼠咬旗杆吃不到倒 老鼠咬石柱攻不倒 老鼠咬象鼻不识大体 进退唯谷
 fvkx 进退中绳
 fvky 进退中度
@@ -20653,7 +20601,6 @@ fvpo 雪灾
 fvpq 雪冤
 fvpv 二姓之好 进退裕如
 fvpw 封建社会 无如之何
-fvqo 进退触籵
 fvqq 进退狼狈
 fvqr 老鼠钻烟囱够戗够受的 老鼠钻风箱两头受气
 fvqt 老鼠钻烟囱 老鼠钻进火筒 老鼠钻风箱 进退触篱
@@ -20700,7 +20647,6 @@ fvvm 袁姗姗
 fvvn 二姑娘上轿忸忸怩怩
 fvvp 二姑娘的包袱 老鼠嫁花猫冤家变亲家
 fvvq 二姑娘的针线包 二姑娘的针线包花色多 二姑娘绣荷包 老妈妈补衣裳见缝插针 老鼠嫁花猫
-fvvt 十拏九稳
 fvvv 老奶奶吃软柿子正好
 fvvw 二姑娘架老鹰招架不住
 fvvy 二姑娘架老鹰 老奶奶的嫁衣 老舅舅拉破二胡陈词滥调
@@ -20784,7 +20730,7 @@ fwfr 无凭无据
 fwft 无伤无臭 无依无靠 无倚无靠
 fwfu 云舒霞卷 十全十美 赵公元帅拍肩膀好事临头
 fwfv 雷公动怒
-fwfw 云合雾集 才华超众 无偏无倚 雨僝云僽 雾集云合 霍霍
+fwfw 云合雾集 才华超众 无偏无倚 雾集云合 霍霍
 fwgb 喜从天降 真命天子
 fwgh 零下
 fwgk 规整
@@ -20813,9 +20759,8 @@ fwjw 云合景从 云集景从 十八里地保
 fwkb 十八只唢呐齐奏全吹了
 fwkd 十八只唢呐齐奏
 fwkg 十八口子乱当家各自为政
-fwkk 替代品 都俞吁咈
+fwkk 替代品
 fwkp 十八口子乱当家 起伏跌宕
-fwkx 顽父嚚母
 fwky 云合响应 云集响应
 fwlf 二人转
 fwlg 老爷车
@@ -20830,13 +20775,11 @@ fwmj 规则
 fwmm 霍山
 fwmq 二人同心其利断金 十八岁
 fwmt 雷令风行
-fwmw 雨僝风僽 雨僽风僝
 fwnb 雷公劈城隍
 fwng 卖剑买琴 雷公劈城隍以上压下
 fwnh 零蛋
 fwnj 雷公劈蚂蚁
 fwnk 规避
-fwnn 夫代司杀者杀是谓代大匠斲
 fwnq 十八层地狱
 fwnr 动人心魄 卖剑买牛 雷公劈蚂蚁大的欺负小的
 fwns 坏人心术 雷公劈海椒辣椒
@@ -21140,7 +21083,7 @@ fymq 戴高帽儿
 fyna 戴玄履黄 过为已甚
 fync 无言以对
 fynn 协议书 教育局
-fynt 南蛮鴂舌 地方性
+fynt 地方性
 fynu 顽廉懦立
 fyoe 雨膏烟腻
 fypb 二郎神吹笛子
@@ -21230,7 +21173,7 @@ fywm 颠鸾倒凤
 fywn 二郎爷放屁
 fywq 地广人希
 fywr 二郎爷放屁神气
-fywt 南蛮鴃舌 地广人稀 超度众生
+fywt 地广人稀 超度众生
 fywu 才高八斗
 fyww 坑人
 fywx 城市化
@@ -21241,7 +21184,6 @@ fyya 才望高雅
 fyyb 老鹰变成夜猫子
 fyyf 才高识远
 fyyi 瞽言妄举
-fyyl 刓方为圆
 fyym 二郎庙 南京市 南充市 嘉义市 孝义市 彭州市 无为市 雷州市 霍州市 霸州市
 fyyt 卖文为生 地方话
 fyyv 戴证良
@@ -21500,7 +21442,7 @@ gauk 刑部
 gaul 开闸 束戈卷甲
 gaum 开端
 gauo 开基立业
-gaup 不欺闇室 五黄六月穿棉袄 形旁
+gaup 五黄六月穿棉袄 形旁
 gauq 开奖 武将
 gaur 五黄六月穿棉袄摆阔气 五黄六月长疥疮热闹挠
 gaut 开道
@@ -21557,7 +21499,7 @@ gbai 五陵英少 屯落
 gbaq 下陆区 夷陵区 惠阳区 武陵区 武隆区
 gbbb 一阵子 屯子
 gbbc 屯聚
-gbbg 一子出家七祖升天 一子出家七祖昻天 一子出家九祖升天
+gbbg 一子出家七祖升天 一子出家九祖升天
 gbbl 一阵阵
 gbbp 不了了之
 gbbw 死了孙子哭爷爷 死了孙子哭爷爷乱了辈分
@@ -22031,7 +21973,7 @@ gduq 天资
 gdur 不顾前后
 gdus 天尊
 gdut 天道
-gduu 一百单八将 五石六鹢 亘古新闻 天阙
+gduu 一百单八将 亘古新闻 天阙
 gduw 天冷
 gduy 天门
 gdvb 不太好
@@ -22056,7 +21998,7 @@ gdws 天体 玉石俱焚
 gdwt 一百个人骂仗多嘴多舌
 gdwu 一百个傻瓜给你磕头
 gdwv 天分
-gdww 一百个人骂仗 不辱使命 天价 死有余僯
+gdww 一百个人骂仗 不辱使命 天价
 gdwx 一百个和尚念经 不成体统
 gdwy 事在人为 吞食 死有余诛
 gdxd 玉石皆碎
@@ -22248,7 +22190,7 @@ gesk 表哥
 gesm 青枫
 geso 青楼
 gesp 青柠
-gess 不胜杯杓 不胜梘杓 晋用楚材 青木
+gess 不胜杯杓 晋用楚材 青木
 gest 表格
 gesw 一脉相传 青松
 gesy 表述
@@ -22801,7 +22743,7 @@ ggrb 玻璃缸里养鱼大不了
 ggrc 一把
 ggrd 一排
 ggrf 珍珠搀到绿豆里卖
-ggrg 一抹 五岳 王后 瑕不掩瑜 瑕不搑瑜 瑜不掩瑕 瑜不搑瑕
+ggrg 一抹 五岳 王后 瑕不掩瑜 瑜不掩瑕
 ggrh 一年 五年
 ggri 玻璃缸里的金鱼翻不了大浪
 ggrj 青天白日
@@ -22836,7 +22778,7 @@ ggsw 一枪
 ggsy 一桩 素不相识
 ggta 理事长
 ggtb 一季
-ggtd 殊不知 珪璋特达
+ggtd 殊不知
 ggte 一盘 一般 一艘
 ggtf 一千 一等 一行 五千 五行 琨玉秋霜
 ggtg 一生 天下第一
@@ -22962,7 +22904,7 @@ ghcf 正对
 ghch 一眨巴眼
 ghck 下台
 ghcn 下巴 下马
-ghdb 下顾 不战而屈人之兵善之善者也 与上大夫言訚訚如也
+ghdb 下顾 不战而屈人之兵善之善者也
 ghdd 天上有飞机地上有坦克 正大
 ghde 焉有
 ghdf 玷辱
@@ -23151,7 +23093,6 @@ ghtu 下乘
 ghtv 政委
 ghua 下疳
 ghud 下头 五虚六耗
-ghug 天目将彭玘
 ghuh 一些半些 一点半点
 ghuj 一瞬间 下单
 ghuk 下部
@@ -23277,7 +23218,7 @@ gifw 下水救落婴舍己为人
 gify 不学无识 正法直度 王婆坏了磨 王小二开饭店
 gigb 珠沉玉陨
 gigc 不到 不致
-gigd 玉汝于成 珠沉玉碎 珠沉玉磒
+gigd 玉汝于成 珠沉玉碎
 gige 不敷
 gigf 一举一动 来源于 毒泷恶雾
 gigg 一尘不到 不一 不当不正 平治天下 碧海青天
@@ -23303,7 +23244,7 @@ gihm 不贞
 gihn 不眠
 gihv 青光眼
 gihw 不齿
-giia 不满 瑧湾汇
+giia 不满
 giic 不治
 giid 青海湖
 giie 不肖 开水泡黄豆自大自我膨胀 开水洗脸
@@ -23645,7 +23586,7 @@ gjmm 惠山
 gjmu 理赔
 gjna 惠民
 gjnb 理屈
-gjnj 一颗心悬在半天云里 玩日愒时 玩时愒日
+gjnj 一颗心悬在半天云里
 gjnn 更快
 gjnt 更改 理性
 gjog 更糟
@@ -23830,7 +23771,7 @@ gkgp 一路平安 屯蹶否塞
 gkgq 逼死
 gkgr 一跌不振 一蹶不振
 gkgs 一口吞根擀面杖 一喷一醒
-gkgt 一唱一和 一嚬一笑
+gkgt 一唱一和
 gkgu 顿足不前
 gkgx 带毒
 gkgy 一嘴吞了个鞋帮子心里有底 不足与谋 带班
@@ -23921,7 +23862,6 @@ gkpg 速写
 gkpj 一路福星
 gkpk 逼宫
 gkpn 副官
-gkpp 一路神祇
 gkpt 不逞之徒
 gkpu 事实
 gkpv 融安
@@ -23942,7 +23882,7 @@ gkqy 不贵久 逗留
 gkra 速描
 gkrb 两只手写对联 顿足捩耳
 gkrd 一只手遮脸独当一面
-gkre 一只手遮脸 顿口拙腮 顿足捶胸 顿足搥胸
+gkre 一只手遮脸 顿口拙腮 顿足捶胸
 gkrg 两只手写对联双管齐下 事后 带兵
 gkrh 不足挂齿 两叶掩目 整年
 gkrj 不叫的黄蜂
@@ -24283,10 +24223,8 @@ gmmq 再见
 gmms 一朵朵
 gmnb 政由己出
 gmnc 责怪
-gmne 玩岁愒月
 gmnf 两层
 gmni 天网恢恢疏而不漏
-gmnj 玩岁愒日 玩岁愒时
 gmnk 两臂
 gmnl 两翼
 gmnm 两届
@@ -24427,7 +24365,7 @@ gmyn 两遍
 gmyo 开山放瞎炮
 gmyt 两讫
 gmyu 再说
-gmyw 两座 瑧山府
+gmyw 两座
 gmyy 两广 两方 理由就在这个地方
 gnaa 瓦工
 gnab 不以其道得之不处也
@@ -24438,7 +24376,7 @@ gnam 不敢苟同 刺心切骨
 gnaq 不改其乐 天心区 开发区 环翠区
 gnar 瓦匠
 gnas 不惜工本 理发匠登金榜
-gnat 玉惨花愁 蠹居棊处
+gnat 玉惨花愁
 gnau 歪心邪意
 gnaw 与共
 gnbi 珠璧联辉
@@ -24491,7 +24429,7 @@ gnhh 死眉瞪眼
 gnhv 死心眼
 gnhx 与此
 gnid 一以当百
-gnif 一以当十 不习水土 不習水土
+gnif 一以当十 不习水土
 gnio 不避水火 不避汤火
 gnip 画眉举案
 gniv 不敢当
@@ -24895,7 +24833,6 @@ gpwb 平安保险
 gpwf 王守仁
 gpwg 不完全
 gpwm 一家人五更打牙祭吃肉
-gpwn 天之僯民
 gpwp 天灾人祸
 gpww 一家人 一空依傍
 gpwy 不容分说
@@ -25170,7 +25107,7 @@ gqyt 一句话
 gqyw 熬夜
 gqyy 五句话分两次讲 五句话分两次讲三言两语 赘言
 grad 更年期
-graf 一把黄豆数着卖 一抔黄土
+graf 一把黄豆数着卖
 grag 一把芝麻撒上天
 grah 一把芝麻撒上天星星点点
 graj 残年暮景 碧蓝
@@ -25220,7 +25157,7 @@ grgk 一手一足 亚热带 束手束足
 grgm 瑰丽
 grgn 不挠不屈 严气正性 曹操下江南来得凶败得惨
 grgp 理所不容
-grgr 一报还一报 一推两搡 不抗不卑 不折不扣 不挠不折 不揪不採
+grgr 一报还一报 一推两搡 不抗不卑 不折不扣 不挠不折
 grgs 一搭一档 不拘一格
 grgt 不拔一毛
 grgu 天兵天将 天年不遂 歪打正着
@@ -25318,7 +25255,7 @@ grsa 不搭棚的葡萄
 grse 环氧树脂
 grsf 一打醋二买盐
 grsi 不遑枚举
-grtc 不失黍絫 吾执御矣 束兵秣马
+grtc 吾执御矣 束兵秣马
 grtg 束手待死
 grth 珠算
 grti 珠箔
@@ -25341,7 +25278,7 @@ grvr 一挥九制
 grvt 一反既往
 grvw 一拍即合
 grwd 一氧化碳
-grwf 瑰伟 还年卻老 还看今朝
+grwf 瑰伟 还看今朝
 grwg 一手拿刺叭一手托皮球 曹操作事 曹操做事 玉皇剑
 grwl 残年余力
 grwn 不近人情
@@ -25635,7 +25572,7 @@ gtgr 一毛不拔 一重一掩 天生丽质 死得不明不白 死得不明不�
 gtgt 一物不知 一簧两舌 一身两役 一长一短 一长两短 下德不失德是以无德 不稼不穑
 gtgu 一身两头 不徐不疾 不得开交 不笑不足以为道 屯毛不辨
 gtgw 一生一代 一秉至公 严惩不贷 天生天化 遭逢不偶
-gtgy 不赞一词 天各一方 珠槃玉敦 珠盘玉敦
+gtgy 不赞一词 天各一方 珠盘玉敦
 gthb 不入虎穴不得虎子 不入虎穴焉得虎子
 gthf 一箭上垛
 gthk 平衡点
@@ -25715,7 +25652,7 @@ gtpy 不迁之庙
 gtqb 一毛钱买了一筐蒜壳贱皮子
 gtqe 麦角
 gtqf 一毛钱买了一筐蒜壳
-gtqg 玉箫金琯 麦秆儿当秤没斤没两
+gtqg 麦秆儿当秤没斤没两
 gtqi 一笔勾消
 gtql 政策链
 gtqn 夹生饭 珠箔银屏
@@ -25730,7 +25667,7 @@ gtrh 五千年
 gtrn 不知所以 事务所 吾得执而杀之孰敢
 gtrp 敷衍搪塞
 gtrq 一笔抹杀 一笔抹煞 不知所错 天生的黄鳝
-gtrr 一笔抹摋 不知所措
+gtrr 不知所措
 gtrs 不知所可
 gtrx 不知所终
 gtry 不知所言
@@ -25835,7 +25772,6 @@ gubv 玉帝娶亲阎王嫁女
 gucf 一将难求
 guck 平台
 gudd 两头三面
-gudf 五羖大夫
 gudj 平辈
 gudm 平面
 gudn 两意三心
@@ -25860,7 +25796,7 @@ gufi 一头雾水 带着救生圈出海
 gufj 一头栽到煤堆里 平坦
 gufk 两部鼓吹 带着救生圈出海有备无患
 gufm 夹击 平南 平坝
-gufn 一差二悮 下半场
+gufn 下半场
 gufp 天将救之以慈卫之
 gufq 一差二错 一浆十饼 平均 平远
 gufr 王道士画符自己明白
@@ -26074,7 +26010,6 @@ gvfn 一群老鸦朝南飞
 gvga 开刀不上麻药
 gvgb 惠灵顿
 gvgf 再好不过 开刀不上麻药蛮干硬干
-gvgi 不媿下学
 gvgo 一刀两断
 gvgv 一忍再忍
 gvgw 一刀两段
@@ -26089,7 +26024,6 @@ gvmx 刺刀见红
 gvnb 一群惊窝的耗子
 gvnt 更姓改物
 gvnx 玉女心经
-gvpf 琅嬛福地
 gvpg 妻室
 gvpu 正始之音
 gvpv 王建安
@@ -26136,7 +26070,7 @@ gway 一个世纪才盘点百年大计
 gwba 一佛出世
 gwbg 一佛出世二佛升天 一佛出世二佛生天
 gwbp 一个院里住两家
-gwbt 一佛出世二佛涅槃 一佛出世二佛涅盘
+gwbt 一佛出世二佛涅盘
 gwby 一个院里住两家谁也知道谁
 gwce 不食马肝
 gwcf 事件驱动
@@ -26195,7 +26129,7 @@ gwgq 不依不饶 不值一钱
 gwgr 不分青白 不分青红皂白 王八遭棍打 珍珠
 gwgt 一倡一和 一谷不升 不值一笑 五谷不升
 gwgu 天公不作美
-gwgw 一代不如一代 一谷不登 不偏不倚 不做不休 不偢不倸 不僧不俗 五谷不分
+gwgw 一代不如一代 一谷不登 不偏不倚 不做不休 不僧不俗 五谷不分
 gwgy 一人一把号各畋各的调 一分一毫 不仁不义 两个琵琶一个调
 gwha 一代鼎臣
 gwhb 王八上岸遇雹子
@@ -26585,7 +26519,7 @@ gydr 一语破的
 gydt 一望而知
 gydu 再衰三竭 死记硬背
 gydw 不言而信 不识大体 不谋而合 开诚布公
-gydy 一褱而论 一语成谶 不言而谕
+gydy 一语成谶 不言而谕
 gyeb 豆腐脑儿挑子
 gyeg 囊谦县 武义县
 gyeh 豆腐脑儿摔地上 豆腐脑儿洒地上
@@ -26853,7 +26787,6 @@ hagp 睡卧不宁
 hagr 上蒸下报
 hagv 皮匠不带锥子真针好
 hahc 虎皮
-hahd 矇眬
 hahw 龅牙齿
 haie 虚浮
 haif 虚汗
@@ -27005,7 +26938,6 @@ hbii 瞎子染布不知深浅
 hbin 瞎子当向导
 hbit 瞎子当向导摸不清方向
 hbjg 瞳孔里挑刺
-hbjk 柴也愚参也鲁师也辟由也喭
 hbjq 瞳孔里挑刺故意找茬碴儿
 hbkb 瞎子哼曲子 瞎子踩高跷盲目冒险
 hbkc 睡了吗 瞎子哼曲子盲目乐观 瞎子跑夜路难上加难 瞎子跳舞盲目乐观
@@ -27186,7 +27118,6 @@ hdgb 虚而不屈动而愈出
 hdgh 卢邦正
 hdgv 卓而不群
 hdip 睡大觉
-hdmu 瞓面盎背
 hdna 此非以贱为本邪
 hdnt 虚左以待
 hdny 目成心许
@@ -27197,7 +27128,6 @@ hdrd 上套的猴子任人耍由人玩耍
 hdsv 此而可忍孰不可忍
 hdta 旧态复萌
 hdwu 紫髯伯皇甫端
-hdyn 瞭望
 hdyq 点石为金
 hebb 卡脖子
 hebs 卡脖子技术
@@ -27206,7 +27136,6 @@ hegf 肯于
 heih 点胸洗眼
 hejf 瞬时
 helg 战胜国
-hepa 虎豹之鞟犹犬羊之鞟
 hepf 虚盈实亏
 hepg 肯定
 hern 上膛的子弹一触即发
@@ -27399,7 +27328,6 @@ hhaa 卡式 步步莲花
 hhad 上期 卡若
 hhae 上菜
 hhag 瞒上欺下
-hhah 瞋目切齿
 hhaj 上划
 hhan 上世
 hhaq 上虞区
@@ -27528,7 +27456,7 @@ hhmf 上周
 hhmm 上山 上岗
 hhmq 上网 上风
 hhmt 上账
-hhnc 目眐心骇 目瞪心骇
+hhnc 目瞪心骇
 hhnf 上层
 hhng 上司 目眦尽裂
 hhnk 上臂
@@ -27557,7 +27485,6 @@ hhqq 上钩
 hhqt 上犹
 hhqu 上镜
 hhrb 上报
-hhre 瞋目扼腕
 hhrg 皮卡丘
 hhrh 上年 上爬
 hhrk 卡扣 睁眼打呼噜
@@ -28103,7 +28030,6 @@ hofg 柴米夫妻
 hofh 眯起
 hofq 目断魂销
 hogq 目迷五色
-hogr 上焌下报
 hohi 柴火上浇汽油
 hohu 柴火上浇汽油一点就着
 hoif 柴米油盐
@@ -28203,7 +28129,6 @@ hqme 皮包骨
 hqmg 战争贩子唱和平
 hqmh 餐巾
 hqmm 旧金山
-hqnn 目眢心忳
 hqnt 齿危发秀
 hqog 餐饮业
 hqpg 餐室
@@ -28248,7 +28173,6 @@ hqyn 瞻望
 hrae 点手划脚 点指划脚
 hrag 紫气东来
 hraq 虎丘区
-hrbi 目攋耳染
 hrdi 旧抹布补新衣裳
 hrdj 虎据龙蟠
 hrds 卡拉奇 旧抹布补新衣裳配不上不配
@@ -28269,10 +28193,8 @@ hrrk 瞎牛撞草堆碰着就吃
 hrrv 上热搜
 hrrw 目指气使
 hrsm 虚拟机
-hrsw 鼎折覆餸
 hrud 眼看着
 hruj 止损单
-hrws 鼎折餸覆
 hrww 虚拟人
 hrwy 上兵伐谋
 hrxg 止损线
@@ -28384,7 +28306,6 @@ htvb 睡好
 htwa 睡袋
 htwf 睡会
 htwn 睹物伤情
-htxd 齰舌缄唇
 htxt 睡乡
 htyb 睡熟
 htye 睡衣
@@ -28451,7 +28372,6 @@ hvbw 瞎妹子当媒人
 hvga 上好下甚
 hvgf 眼球
 hvgh 眼下
-hvgj 上嫚下暴
 hvgr 眼珠
 hvha 眼眶
 hvhc 眼皮
@@ -28799,7 +28719,7 @@ iaiq 鸿沟
 iair 染蓝涅皂 江浙
 iais 江河 泛萍浮梗 湛河 漠河 潇洒 潇湘
 iait 江海 江苏省 港澳
-iaiu 沅芷湘兰 沅芷澧兰 沅茞澧兰
+iaiu 沅芷湘兰 沅芷澧兰
 iaiv 江津 灌溉
 iaiw 江淮
 iaiy 江流 波斯湾 洪流 浇注 港湾 满洲
@@ -28930,7 +28850,6 @@ iayw 满座
 iayx 汇率
 iayy 满文 鸿文
 ibaa 光阴荏苒
-ibaf 渔阳鞞鼓
 ibag 小阿七 浪子燕青
 ibak 洗耳恭听
 ibal 滑了牙的螺丝帽团团转
@@ -29706,7 +29625,6 @@ ifny 潜心
 ifod 河南烩面
 ifol 尘烟
 ifon 油干火尽 油干灯尽 油干灯草尽
-ifoo 尘垢粃糠
 ifot 淬过火的钢条
 ifou 尘粒
 ifoy 淬过火的钢条宁折不弯
@@ -30349,7 +30267,7 @@ iiai 水藻 油漆匠的家当 清洁工遇垃圾一扫光
 iiaj 水草 潜光匿曜
 iial 河沙世界
 iiap 水淹七军
-iiaq 梁溪区 汉滨区 江汉区 江津区 江海区 江源区 沈河区 沙湾区 沿滩区 洛江区 洪泽区 浈江区 浉河区 浑江区 海棠区 海沧区 海淀区 海港区 涵江区 淇滨区 清河区 渝水区 温江区 渭滨区 湖滨区 湛河区 湾沚区 源汇区 溧水区 溪湖区 滨江区 滨湖区 澄海区 濂溪区 濠江区
+iiaq 梁溪区 汉滨区 江汉区 江津区 江海区 江源区 沈河区 沙湾区 沿滩区 洛江区 洪泽区 浈江区 浑江区 海棠区 海沧区 海淀区 海港区 涵江区 淇滨区 清河区 渝水区 温江区 渭滨区 湖滨区 湛河区 源汇区 溧水区 溪湖区 滨江区 滨湖区 澄海区 濂溪区 濠江区
 iiar 泥水匠 泥水匠招手
 iias 浇淳散朴
 iiat 泥水匠无灰专砖等
@@ -30373,7 +30291,7 @@ iice 水能
 iici 滴水难消
 iicj 海水难量
 iick 江湖骗子耍贫嘴 港澳台
-iicl 沧海桑田 海水桑田 渤澥桑田
+iicl 沧海桑田 海水桑田
 iicn 泼水难收
 iicv 激流勇退
 iicw 河清难俟
@@ -30384,7 +30302,7 @@ iidd 汪洋大肆 波波碌碌 清清爽爽
 iidf 水压 水浇石灰船没有救 滂沱大雨
 iidg 沙石 渊源有自来 源源而来
 iidh 消夏
-iidi 水泵 汪洋大海 消耗 涓滴成河 涸泽而渔 温润而泽 滴水成河 漏泄春光 漏洩春光
+iidi 水泵 汪洋大海 消耗 涓滴成河 涸泽而渔 温润而泽 滴水成河 漏泄春光
 iidj 汲汲顾影 河清三日
 iidk 津津有味 涣汗大号
 iidl 泱泱大国
@@ -30429,7 +30347,7 @@ iifu 没没无闻 湮没无闻
 iifw 污水坑里的蛆虫臭货肮脏货 沙堆 沧浪老人 沸水煮孩子熟人
 iify 沙坑 河清云庆 清水煮豆腐 温水煮板栗半生不熟
 iigb 水泡豆子
-iigc 水泄不通 水洩不通
+iigc 水泄不通
 iigd 江汉平原 清水下杂面
 iige 水泡豆子自我膨胀 水表
 iigf 水球 鸿渐于干
@@ -30472,10 +30390,10 @@ iiic 汪潮涌 沙滩
 iiid 水源 汗流满面 沙湖 泪流满面 流水游龙 清水染白布 澄沙汰砾
 iiie 汗流浃肤 活学活用 清水河县
 iiif 汪洋浩博 沉滓泛起 沙尘 河涸海干 清水染白布空过一场
-iiig 小水沟里撑大船异想天开 沟满濠平 没法没天 河溓海夷 泥水沟里游泳施展不开 清江浦 滚水泼蚂蚁一窝都是死
+iiig 小水沟里撑大船异想天开 沟满濠平 没法没天 泥水沟里游泳施展不开 清江浦 滚水泼蚂蚁一窝都是死
 iiih 水波
-iiii 污泥浊水 汹涌渒湃 汹涌澎湃 河汉江淮 沸沸汤汤 油光水滑 波涛汹涌 泥水沟里游泳 泾浊渭清 泾清渭浊 洋洋洒洒 洒洒潇潇 浊泾清渭 浑浑沉沉 浑浑沌沌 浩浩汤汤 涕泗流涟 涕泗滂沱 涕泗滂沲 混混沌沌 清尘浊水 清渭浊泾 渊渟泽汇 渭浊泾清 源清流洁 源清流清 滔滔滚滚
-iiij 小混混 水温 沤浮泡影 河清海晏 河溓海晏 滚水泼蚂蚁 潜江油焖大虾
+iiii 污泥浊水 汹涌澎湃 河汉江淮 沸沸汤汤 油光水滑 波涛汹涌 泥水沟里游泳 泾浊渭清 泾清渭浊 洋洋洒洒 洒洒潇潇 浊泾清渭 浑浑沉沉 浑浑沌沌 浩浩汤汤 涕泗流涟 涕泗滂沱 涕泗滂沲 混混沌沌 清尘浊水 清渭浊泾 渭浊泾清 源清流洁 源清流清 滔滔滚滚
+iiij 小混混 水温 沤浮泡影 河清海晏 滚水泼蚂蚁 潜江油焖大虾
 iiik 水涡 汗流浃踵
 iiil 流浪汉坐远洋轮
 iiim 水泊梁山 水洞 浑浑沌沌形圆而不可败 润滑油 游泳池里撒网
@@ -30498,7 +30416,7 @@ iije 水暖
 iijf 水池里长草荒唐塘 水里 沙漠里撵小偷跟踪追击 淡泊明志 满洲里 澹泊明志宁静致远
 iijg 水师 水量 江河日下 江河里长大水泥沙俱下 江流日下
 iijh 沙漠里烤火就地取材柴 沙虫
-iiji 江河里长大水 沙漠里的水 沙漠里的红柳不怕风沙 泥潭里滚石头越陷越深 渊涓蠖瀋 温汤里煮鳖不死不活
+iiji 江河里长大水 沙漠里的水 沙漠里的红柳不怕风沙 泥潭里滚石头越陷越深 温汤里煮鳖不死不活
 iijj 水晶 水沟里的篾片总有翻身日
 iijk 沙漠里的水点滴都可贵 沙漠里盼水喝 沙漠里踩高跷 沙漠里踩高跷不是路
 iijn 水电
@@ -30523,7 +30441,6 @@ iikr 婆婆嘴吃西瓜
 iiku 没水吃渴死人与我饿无关
 iikw 没水吃渴死人
 iiky 浙江只有蒋伯诚
-iila 瀍河回族区
 iilb 水淹田园再筑坝迟了
 iilc 深沟固垒
 iild 海洛因 温酒斩华雄
@@ -30539,7 +30456,6 @@ iils 添油加醋
 iilt 水力
 iilu 水圈
 iilw 潜消默化 潜濡默化
-iily 瀍河回族
 iimb 滴水崖上滴水没完没了 脊梁骨上长茄子 脊梁骨长茄子
 iimd 沉潜刚克 渊涌风厉
 iime 光辉岁月 脊梁骨
@@ -30563,7 +30479,7 @@ iioa 添油炽薪 清油炸麻花
 iiob 温水烩饼子
 iiol 水烟
 iioo 光辉灿烂 油浇火燎 消炎
-iioq 泡泡糖粘住糯米饭 清油炸麻花摽劲儿
+iioq 泡泡糖粘住糯米饭
 iior 水深火热
 iios 省油灯
 iiou 沙粒 海棠糕 温水烩饼子皮热心凉
@@ -30615,13 +30531,13 @@ iirh 水牛
 iiri 洁浊扬清 海滨的潮汐 深海探测 滑泥扬波 澜沧拉祜族自治 激浊扬清 濯污扬清
 iirj 河滩的沙子有的是多的是 浮光掠影
 iirk 汗流接踵 浸水的木鱼敲不响 消损 湿水的大鼓不想响
-iirm 水缸 渊渟岳峙
+iirm 水缸
 iirn 消消气
 iiro 浸湿的木头点不起火
 iirq 小小的 浑水摸鱼 浸水的木鱼 淡淡的 混水捞鱼 混水摸鱼
 iirr 汲汲皇皇 河梁携手 沸沸扬扬 消逝
 iirt 水手 浸水的炮仗爆竹 湿水的炮仗爆竹
-iiru 沙拉 浸湿的木头 渊渟岳立
+iiru 沙拉 浸湿的木头
 iirv 水势 潮汕牛肉丸
 iirw 消失
 iisa 流水桃花 湿水棉花
@@ -30635,7 +30551,7 @@ iism 汽油机 渔海樵山
 iiso 水泥柱当顶门杠大老粗
 iisr 水泥板
 iiss 水泥柱当顶门杠 清清楚楚 源源本本 肖鸿林
-iist 敩学相长 水榭 水泥柱里的钢筋 江淹梦笔 济河焚舟
+iist 水榭 水泥柱里的钢筋 江淹梦笔 济河焚舟
 iisw 水枪
 iisx 湿水棉花谈弹不得无法谈弹
 iisy 水柱
@@ -30656,7 +30572,7 @@ iitp 水管
 iitq 淘沙得金
 iitr 污染物 沙特 深海科技
 iits 水箱
-iitt 沙滩行船 沾沾自衒 洁清自矢 洋洋自得 涓滴微利 溯水行舟
+iitt 沙滩行船 洁清自矢 洋洋自得 涓滴微利 溯水行舟
 iitu 尖尖筷子夹凉粉滑头对滑头 洋洋得意 清水衙门
 iitv 沾沾自好
 iitw 泾渭自分
@@ -30716,7 +30632,6 @@ iixq 沙弥
 iixs 沂水弦歌 涕泗纵横
 iixt 水乡 汲深绠短
 iixv 水绿
-iixx 洋洋纚纚
 iixy 水纹
 iiya 油渍麻花 泛浩摩苍 温湿度
 iiyc 深沟高垒
@@ -30791,14 +30706,13 @@ ijij 浪蝶游蜂 混浊 游蜂浪蝶
 ijip 温觉
 ijiq 梁曙光 沙里淘金 沙里淘金有不多 没里没外 混淆
 ijir 流里流气
-ijis 浉河 温酒
+ijis 温酒
 ijiu 湿润
 ijiw 河里洗铁盒
 ijiy 没日没夜 漫游
 ijje 温暖
 ijjn 浅显易懂
 ijjq 温煦
-ijjw 渊蜎蠖伏
 ijkb 小虫吃李子
 ijkd 温顺
 ijkh 光明路
@@ -30826,7 +30740,6 @@ ijnu 温习
 ijot 水晶灯笼
 ijoy 水果糖
 ijpg 温室
-ijpp 当暑袗絺绤必表而出之
 ijpw 温宿
 ijpy 汤显祖
 ijqd 鸿星尔克
@@ -30858,7 +30771,6 @@ ijsf 温标
 ijsh 渴想
 ijta 漫长
 ijtd 混乱
-ijte 涅槃
 ijth 漫延
 ijtj 沃野千里
 ijtk 温和
@@ -31053,7 +30965,7 @@ ilid 涟源 渭源
 ilif 没办法
 ilig 小恩小惠
 ilih 小囡小孩儿拔萝卜
-ilii 泅水 泗水 涟水 湛恩汪濊
+ilii 泅水 泗水 涟水
 ilil 法轮常转 渐渐
 ilip 渭滨
 iliq 涟漪
@@ -31212,7 +31124,7 @@ imiw 梁山泊的王伦 渔网当伞
 imiy 梁山泊的吴用足智多谋 湍流
 imja 洞晓
 imje 清风明月
-imjf 洞里 深山野墺
+imjf 洞里
 imjg 测量
 imjh 尚早
 imjn 江山易改
@@ -31720,7 +31632,7 @@ ipis 沈河 沉渣
 ipit 学海 深海 深渊 滨海
 ipiv 沉浸 渲染
 ipiw 沉沦
-ipix 沉溺 鸿鴆满纸
+ipix 沉溺
 ipiy 溶液
 ipjd 沙窝里种荞麦不成
 ipje 兴安盟
@@ -32420,7 +32332,7 @@ isjg 酒量
 isji 酒杯里洗澡
 isjk 涂歌里咏 酒杯里量米小气器
 isjo 酒杯里量米
-isjr 涂歌里抃 清歌曼舞
+isjr 清歌曼舞
 isjw 光可鉴人 酒杯里洗澡小人
 isjx 深根蟠结
 iskc 酒吧
@@ -32697,8 +32609,7 @@ itmj 少则 水秀山明
 itml 海岬
 itmm 深入骨髓
 itmq 少见
-itmr 鸿鷑凤逝
-itmu 深入则拘不得已则斗 鸿鷑凤立
+itmu 深入则拘不得已则斗
 itmw 海内 省内
 itne 沁入心脾
 itnf 少尉
@@ -33233,7 +33144,6 @@ iwcd 沙依巴克
 iwcn 泥佛劝土佛同病相怜
 iwcw 泥佛劝土佛
 iwdc 源代码
-iwdd 鹡鸰在原
 iwdg 活化石
 iwdh 光华夺目 涂在
 iwdi 深仁厚泽 清华大学 鸿儒硕学
@@ -33478,7 +33388,7 @@ ixyu 汲引忘疲
 iyaa 流式
 iyae 流散
 iyaf 水磨工夫
-iyag 兴文匽武 游弋
+iyag 游弋
 iyai 流落 游荡
 iyak 浪迹萍踪
 iyal 流苏
@@ -33531,7 +33441,6 @@ iyfp 泸州老窖 渡过
 iyfr 江郎才掩
 iyfs 游谈无根
 iyft 海底动物 逃亡者
-iyfu 流离颠痜
 iyfy 波谲云诡
 iyga 流形
 iygc 光说不练嘴巴子戏 流到
@@ -33565,7 +33474,7 @@ iyid 洞庭湖 济源 浪涛
 iyie 流溪 濂溪
 iyif 学识渊博 浪潮
 iyig 淤滞
-iyih 流泪 湾沚
+iyih 流泪
 iyii 洞庭湖上踩钢丝凶多吉少 洞庭湖里涨春水 洞庭湖里涨春水一浪高一浪 流水 流淌 浪迹江湖 澈底澄清
 iyij 浪漫
 iyik 洞庭湖吹喇叭 浪迹浮踪 浮迹浪踪 漩涡
@@ -33700,7 +33609,6 @@ iyuo 油库着了火
 iyuq 注资
 iyut 常言道 油库着了火难近身近不得身 流产
 iyuy 尖言冷语
-iyvy 淫言媟语
 iywa 温文儒雅
 iywc 济公
 iywf 流传
@@ -34135,7 +34043,6 @@ jdft 晨雾
 jdfu 旷古未闻
 jdfw 是非颠倒 蚌埠
 jdfy 晨霭
-jdgd 是故不欲琭琭如玉珞珞如石
 jdgj 冒大不韪
 jdgl 旷达不羁
 jdgw 旷古一人
@@ -34158,7 +34065,6 @@ jdma 晨曲
 jdmf 是非曲直
 jdmm 蚌山
 jdmq 晨风
-jdmu 晬面盎背
 jdnb 昭聋发聩
 jdoq 晨炊 电磁炮
 jdpn 是非之心
@@ -34430,7 +34336,6 @@ jfqg 时鲜
 jfqh 野外
 jfqj 旱地鱼虾 旱象
 jfqk 时钟
-jfqn 日乾夕惕
 jfqt 野猪
 jfqv 旷夫怨女
 jfqy 野鸟
@@ -34845,7 +34750,6 @@ jido 电光石火
 jieg 临沭县 临泽县 临洮县 临漳县 临潭县 临澧县 明水县 明溪县 昭觉县
 jiei 日渐月染 日濡月染
 jiep 日削月割
-jies 日削月杒
 jieu 日滋月益
 jiew 日省月修
 jiex 日清月结
@@ -35175,7 +35079,6 @@ jkmj 日中则昃 日喀则
 jkmt 日中则移
 jkmy 临别赠言 临别赠语 日喀则市
 jknd 日中必彗 蜗居
-jkni 日中必湲
 jknj 日中必昃
 jknt 日中必移
 jknw 易口以食
@@ -35228,7 +35131,6 @@ jlsd 星罗棋布
 jlsf 螺杆
 jlsw 螺栓
 jltr 坚甲利兵
-jlug 昌歜羊枣
 jlvi 曼妙
 jlwf 临界值
 jlww 曼谷
@@ -35381,7 +35283,6 @@ jnlg 电车
 jnlk 电贺
 jnlt 电力
 jnmb 电邮
-jnmf 鶗鴂雕卉
 jnmh 愚眉肉眼
 jnmn 明心见性
 jnmq 电网
@@ -35581,7 +35482,6 @@ jprp 显祖扬宗
 jprq 显祖扬名
 jprs 蟾宫折桂
 jprt 蜂蜜拌黄连又苦又甜
-jpsg 晏安醙毒
 jpsm 电视机
 jpss 电视机里放录音机
 jpta 明察秋毫不见舆薪 明察秋毫之末而不见舆薪
@@ -35840,7 +35740,6 @@ jrrm 易拉罐
 jrrq 冒失鬼
 jrtd 时势造英雄
 jrtf 日近长安远 电热毯
-jrtn 剔抽禿刷
 jrtr 剔抽秃揣
 jrud 紧接着
 jruj 野牛闯进火海里
@@ -35859,9 +35758,7 @@ jsan 果蔬
 jsaq 临桂区
 jsbb 果子
 jseg 临西县 果脯
-jsei 日杒月削
 jset 果腹
-jseu 日杒月减
 jsfg 晒干
 jsfh 果真
 jsfn 晒场
@@ -36660,7 +36557,6 @@ kady 哈萨克族
 kaef 中式服装西式领独出心裁
 kaei 口若悬河
 kaew 中式服装西式领
-kafn 跗萼载韡
 kafw 哗世动俗 遗世越俗
 kaga 咽苦吞甘 哄弄
 kagb 吕蒙正盖房子
@@ -36711,7 +36607,6 @@ kart 顺藤摸瓜十拿九稳
 karw 哄抢 遗世拔俗
 kasc 呆若木鸡
 kasl 蹈其覆辙
-kata 逞工衒巧
 katg 吴燕生
 kati 听其自流
 katl 喋血
@@ -37126,7 +37021,6 @@ kdud 顺着
 kdue 顺遂
 kdug 味达美
 kduj 顺意
-kdun 跋胡痜尾
 kduq 顺次
 kdut 喊道 顺道
 kduu 跤龙头上搔痒
@@ -37195,10 +37089,9 @@ keph 跛脚穿花鞋边走边瞧
 kepl 口腹之累
 keqi 顺脚印走路步人后尘
 keqk 顺脚印走路
-kere 跌脚捶胸 跌脚搥胸
+kere 跌脚捶胸
 kern 吊胆提心 吸气
 kerv 吸热
-kery 嚼腭搥床
 kese 跌脚槌胸
 keso 吊脚楼
 ketd 嚼舌
@@ -37290,7 +37183,7 @@ kfju 跨境电商
 kfka 吱呀
 kfkb 嚅嗫
 kfkf 吃过响午搭早车不赶趟 哇哇 喃喃 喷云吐雾 喷雨嘘云 嘻嘻
-kfkg 踣地呼天 蹐地踨天
+kfkg 踣地呼天
 kfkh 喷嘴
 kfki 遗老遗少
 kfkl 吃过响午搭早车
@@ -37307,7 +37200,6 @@ kfmr 贵远贱近
 kfmt 吴越同舟
 kfmw 叶肉
 kfnc 嗔怪
-kfng 蹐地局天
 kfni 听鼓书抹眼泪
 kfnn 口直心快 嘴直心快
 kfnq 吃过屎的狗
@@ -37325,7 +37217,7 @@ kfov 跌进糨糊盆的娃娃
 kfow 跌进糨糊盆的娃娃糊涂人
 kfpb 吐字
 kfpf 哇塞
-kfpy 中冓之言 鄙视
+kfpy 鄙视
 kfqb 嗔怨
 kfqd 顺过饰非
 kfqk 吊起锅儿当钟打穷得丁当响
@@ -37463,8 +37355,8 @@ kgiw 吴兴
 kgiy 中下游
 kgjn 鸣玉曳履
 kgjx 鸣玉曳组
-kgkf 吁天呼地 呼天叩地 呼天叫地 呼天号地 呼天吁地 呼天唤地 咒天骂地 哭天喊地 啼天哭地 嚎天喊地 踨天蹐地 骂天咒地
-kgkg 咳珠唾玉 啧啧 噀玉喷珠 患至呼天
+kgkf 吁天呼地 呼天叩地 呼天叫地 呼天号地 呼天吁地 呼天唤地 咒天骂地 哭天喊地 啼天哭地 嚎天喊地 骂天咒地
+kgkg 咳珠唾玉 啧啧 患至呼天
 kgkh 吓唬 吴中 吴忠
 kgkj 吊形吊影
 kgkk 号哭
@@ -37553,7 +37445,6 @@ kgve 吓退
 kgvf 哈瓦那
 kgvk 号召
 kgvs 嘈杂
-kgwf 踨天促地
 kgwg 吓倒
 kgwh 另一个
 kgwi 遗惠余泽
@@ -37913,7 +37804,7 @@ kihh 哨卡
 kiib 喷水池
 kiic 口水沾跳蚤
 kiih 口水流到肚脐上
-kiii 呴湿濡沫 喝江水说海话无边无沿 喝海水长大的见过风浪
+kiii 喝江水说海话无边无沿 喝海水长大的见过风浪
 kiij 路漫漫
 kiin 跳梁小丑
 kiip 中小学 吃海水长大的管得宽
@@ -37963,7 +37854,6 @@ kirc 顺水推舟不费力不费劲
 kird 吵扰
 kirg 哨兵 顺水推舟顺风扯篷见机行事
 kiri 口渴的牛犊望井底解不了渴
-kirm 川渟岳峙
 kirn 哨所
 kirq 顺沟摸鱼
 kirt 叩源推委 顺水推舟 顺水推舟顺风扯篷 顺水推船
@@ -38090,7 +37980,6 @@ kkbl 骂阵
 kkbm 品出
 kkbq 叫跛子撵追赶狼
 kkbr 叫跛子撵
-kkbt 哈啰出行
 kkbu 串联
 kkbw 啦啦队
 kkca 串戏
@@ -38106,7 +37995,7 @@ kkde 患有
 kkdf 口唇
 kkdg 口感 咳唾成珠
 kkdh 呼呼大睡
-kkdk 号唃大哭 号啕大哭
+kkdk 号啕大哭
 kkdm 吕布
 kkdn 串成
 kkdr 口碑
@@ -38129,13 +38018,11 @@ kkfn 哭声 噪声
 kkfq 哼哈二将样子凶
 kkft 患者
 kkfu 哭丧 哼哈二将
-kkfw 吁咈都俞
 kkfy 哑口无言
 kkga 口形
 kkgg 口吐珠玑 口琴 唯唯否否 蹀躞不下
 kkgi 顺口开河
 kkgj 口惠
-kkgp 踨蹐不安
 kkgq 吃喝玩乐
 kkgr 串珠
 kkgu 踌躇不决 踌躇不前
@@ -38183,7 +38070,7 @@ kkkg 口号
 kkkh 口中
 kkki 口哨
 kkkj 吐口唾沫砸个坑出口有分量
-kkkk 串口 吱哩哇啦 吹喇叭的分家挨不上号 呜呼噫嘻 呷哺呷哺 咄嗟叱咤 咒骂 哔哩哔哩 哭哭啼啼 哼哼唧唧 唠唠叨叨 啛啛喳喳 啼啼哭哭 喇叭嘴上塞泥巴吹不响 喑噁叱咤 嗫嗫嚅嚅 嘟嘟哝哝
+kkkk 串口 吱哩哇啦 吹喇叭的分家挨不上号 呜呼噫嘻 呷哺呷哺 咄嗟叱咤 咒骂 哔哩哔哩 哭哭啼啼 哼哼唧唧 唠唠叨叨 啼啼哭哭 喇叭嘴上塞泥巴吹不响 嗫嗫嚅嚅 嘟嘟哝哝
 kkkl 哭咽
 kkkm 哔哩哔哩弹幕网
 kkkn 哭叫
@@ -38202,7 +38089,7 @@ kklp 串连
 kklq 口软
 kkmd 口岸
 kkme 咏嘲风月 蹉跎岁月
-kkmf 叱咤风云 叱嗟风云 啸吒风云 啸咤风云
+kkmf 叱咤风云 叱嗟风云 啸咤风云
 kkmm 串岗
 kkmq 口风
 kkmw 口内
@@ -38240,13 +38127,11 @@ kkrb 口拙
 kkre 口授
 kkrf 品质 郢中白雪
 kkrh 吃喝拉撒睡
-kkrk 鸮啼鬼啸
 kkrl 踢踏舞
 kkrn 口气 吐哺捉发 吐哺握发
 kkrp 口吃报纸咬文嚼字 鄂皖
 kkrq 串换
 kkrr 吹吹打打 足蹈手舞 跌跌撞撞 跷足抗手
-kkrt 噤口捲舌 蹑躥担簦
 kkru 串接 跷足抗首
 kkrx 口吃报纸
 kksa 器械
@@ -38258,7 +38143,7 @@ kksh 吃口樱桃肉塞了嗓子眼 品相
 kksn 跷跷板上搁鸡蛋
 kksq 趾踵相错
 kksr 趾踵相接 跷跷板 踵足相接 踵趾相接
-kkst 吕忠梅 品格 蹑躥檐簦
+kkst 吕忠梅 品格
 kksw 口口相传
 kksy 口述
 kkta 口吻生花
@@ -38295,7 +38180,6 @@ kkuw 口疮
 kkuy 串门
 kkvb 嗯嗯好
 kkvf 咆哮如雷
-kkvj 鸮鸣鼠暴
 kkvm 吃喝嫖赌
 kkvo 哭灵
 kkvv 嘈嘈杂杂
@@ -38385,7 +38269,7 @@ kljv 中国电建
 kljw 中国电信
 klkc 喟叹
 klkd 咖啡
-klkf 中国足协 吹回哨过坟场 啰嗦
+klkf 中国足协 吹回哨过坟场
 klkg 别号
 klki 别吵
 klkj 咖哩
@@ -38503,7 +38387,6 @@ kmge 路由表 路见不平拔刀相助
 kmgf 吊球
 kmgg 路见不平
 kmgk 吊带
-kmgl 跅幪不羁
 kmgq 吊死
 kmgy 中央政府
 kmhf 饕风虐雪
@@ -38615,8 +38498,6 @@ knfn 叫卖 叫声
 kngc 叫到
 kngo 叫来
 kngq 啮檗吞针
-kngt 鸮心鹂舌
-knht 鸮心鹺舌
 knif 叫法
 knit 中书省 呕心沥血
 knjp 响尾蛇
@@ -38646,11 +38527,10 @@ knqk 叫名 吃屎狗难断吃屎路
 knqt 吃屎狗难断吃屎路本性难移
 knrd 逞怪披奇
 knrr 中心摇摇
-knrt 嘱托 蹑屩担簦
+knrt 嘱托
 knrw 逞己失众
 knsg 叫醒
 knsr 叫板
-knst 蹑屩檐簦
 kntf 嘱告
 knth 叫牌
 kntl 中性策略
@@ -38677,7 +38557,6 @@ knyw 叫座
 knyx 中性评级
 knyy 唯心主义 逞性妄为
 koci 中煤能源
-kocs 哺糟歠醨
 kodf 口燥唇干
 kofi 蹈火赴汤
 kogg 吃粮不管事
@@ -38687,10 +38566,8 @@ koiu 喝米汤划拳 喝米汤划拳图热闹
 kokb 噗嗤
 kokf 噗哧
 kokk 喷火器
-kokl 喽啰
 koko 喷火器的脾气张口就发火
 kokr 喷火器的脾气
-koks 哺糟啜醨
 koll 吨粮田
 kolq 喽罗
 komh 踞炉炭上
@@ -38896,7 +38773,7 @@ kqtj 兄得
 kqtk 喟然长叹
 kqtl 吃饭舔碗边
 kqtm 口角生风 鸣笛
-kqtn 戢鳞委翼 鸮鸟生翼
+kqtn 戢鳞委翼
 kqto 吐鲁番
 kqtp 吹管
 kqtq 史称
@@ -39254,7 +39131,6 @@ kttj 吃香 吴香香
 kttl 咯血
 kttq 嘴甜甜腰里挂弯镰
 kttu 响箭
-kttv 蹈矩循彟
 kttw 吹箫乞食 吹篪乞食
 kttx 喝敌敌畏跳井必死无疑
 ktub 嗅闻
@@ -39308,7 +39184,7 @@ kudf 踩着石头过河脚踏实地
 kudi 吕端大事不糊涂 踩着石头过河
 kudj 吃着碗里瞧着锅里
 kuds 吃着碗里瞧着锅里贪婪
-kudv 蹄閒三寻 蹄闲三寻 蹄间三寻
+kudv 蹄闲三寻 蹄间三寻
 kudy 中道而废
 kueb 踩着脖子敲脑壳太欺负人了
 kuef 踏着脖子敲脑壳 踩着脖子敲脑壳
@@ -39356,7 +39232,7 @@ kukh 咬嘴
 kukk 啼哭
 kukn 啼叫
 kukp 咬音咂字
-kukr 叼着喇叭敲鼓自吹自擂 跋前踕后
+kukr 叼着喇叭敲鼓自吹自擂
 kuks 咬姜呷醋
 kulg 中立国 遗闻轶事
 kuln 啥意思
@@ -39395,7 +39271,6 @@ kuui 吃着冰棍拉家常
 kuuj 咬音
 kuum 中间商
 kuuq 跪着养猪
-kuur 跋前痜后
 kuut 跆拳道
 kuuu 吃闭门羹
 kuuw 兄弟阋于墙外御其侮
@@ -39630,7 +39505,6 @@ kxbg 串绳子养海带
 kxbt 遗编坠简
 kxbu 串绳子养海带棍子在上头
 kxem 鹭鸶腿上劈精肉
-kxgl 跅弛不羁 跅弢不羁
 kxgm 叱责
 kxgv 跌弹斑鸠
 kxgx 叶绿素
@@ -39670,12 +39544,10 @@ kyck 贵州驴子学马叫
 kycw 忠义双全
 kycx 唱京戏拉单弦
 kycy 唱京戏拉单弦变了调 贵州驴子学马叫南腔北调
-kydp 咬文齧字
 kyeg 中方县
 kyfi 蹿房越脊
 kyfn 吭声
 kyfw 口说无凭
-kygf 踨高天蹐厚地
 kygi 吊扇下面拉家常
 kygk 只说不练的把势光耍嘴
 kygr 只说不练的把势
@@ -39685,7 +39557,6 @@ kyip 忠义堂
 kyit 贵州省
 kyjn 唁电
 kykc 咏叹
-kykd 踨高蹐厚
 kykf 哼哧 踩高跷上高墙
 kykg 咳嗽
 kykj 哼唱
@@ -39705,7 +39576,7 @@ kynn 口诵心惟 听评书流泪替古人担忧
 kynq 躁言丑句
 kynr 跋扈飞扬
 kynx 口诵心维
-kypt 吴市之箫 鹭序鹓行
+kypt 吴市之箫
 kypu 中庸之道 嘴请客手关门 嘴请客手关门虚情假意
 kyqq 遗文逸句
 kyqt 鹭序鸳行
@@ -40838,7 +40709,6 @@ liiq 黑溜溜
 liis 加油添醋 黑漆漆
 liiu 加油添酱 圆滚滚
 lije 黑洞里裹脚
-lijg 四海昻平
 lijs 罗汉果
 lijt 车沟里翻船
 lijx 黑洞里裹脚瞎缠
@@ -41349,7 +41219,6 @@ lnqs 图书馆的耗子蚀食本
 lnqx 斩尽杀绝
 lnrb 黑心的萝卜坏透了
 lnrh 黑心的萝卜
-lnrj 连昬接晨
 lnrm 轧制
 lnry 架屋迭床
 lnsh 困心横虑 思想
@@ -41800,8 +41669,6 @@ ltbp 国务院
 ltbu 因敌取资
 ltbw 国务院令 国奥队
 ltcl 力劝
-ltcm 连篇絫幅
-ltct 连篇絫牍
 ltdd 力大
 ltde 略有
 ltdf 力夺
@@ -42057,7 +41924,6 @@ lvxo 轶群绝类
 lvya 轨度
 lvyo 轨迹
 lwaa 轮式
-lwam 轻傜薄赋
 lwas 软件著作权
 lwat 软件工程
 lwau 力倍功半
@@ -42327,7 +42193,6 @@ maah 典雅
 maai 典范
 maan 曲艺
 maaq 岭东区
-maas 山节藻棁
 maau 崔莺莺患病
 maay 崔莺莺送郎
 mabb 曲子
@@ -42454,7 +42319,7 @@ mbgx 见了王母娘娘喊岳母
 mbia 邮汇
 mbid 内陆湖
 mbie 帽子涂蜡滑头滑头滑脑
-mbii 山陬海澨 帽子没沿
+mbii 帽子没沿
 mbij 帽子涂蜡
 mbik 山陬海噬
 mbiq 崩子小形硬币当眼镜
@@ -42580,7 +42445,7 @@ mdbi 岩隙
 mdby 贻厥孙谋
 mddf 肉秦秦上的买卖
 mddg 岩石
-mddj 岁在龙蚮 岁在龙蛇
+mddj 岁在龙蛇
 mddl 肉秦秦上的买卖斤斤计较
 mddv 骨碌碌
 mddw 岩礁
@@ -42598,7 +42463,6 @@ mdhg 岂有此理
 mdhh 内存卡 岸上
 mdhp 崖壑
 mdic 岩滩
-mdid 山砠水厓
 mdim 岩洞
 mdiy 赈济
 mdjg 岂有是理
@@ -42664,7 +42528,7 @@ mefj 崩塌
 mefl 风月无边
 mefm 崩坍
 megh 山脚下
-megj 彫肝琢肾 雕肝琢肾
+megj 雕肝琢肾
 megm 骨刺
 megn 岁月不居
 megq 崩裂
@@ -42840,7 +42704,6 @@ mfrt 几十斤 周规折矩
 mfrv 财势 贩夫皂隶
 mfrx 由博返约
 mfsc 凡士林涂嘴巴 财权
-mfse 风雨飘飖
 mfsf 周村 风雨飘零
 mfsg 赌本
 mfsj 赌棍
@@ -42966,7 +42829,7 @@ mgkt 风不鸣条
 mglg 同车
 mglm 同轴
 mgln 财殚力尽
-mglu 财殚力痡 财殚力竭
+mglu 财殚力竭
 mgmq 同岁
 mgmt 见事风生
 mgmw 贱内
@@ -42999,7 +42862,7 @@ mgrs 刚来报到就要跳槽 见素抱朴
 mgru 周瑜打黄盖
 mgrw 鹦鹉的嘴巴会说不会做
 mgse 同恶相助
-mgsf 同恶相求 帡天极地 盎盂相击
+mgsf 同恶相求 盎盂相击
 mgsi 同恶相党 同恶相济
 mgsm 同机
 mgsn 同恶相恤
@@ -43090,7 +42953,7 @@ mhgy 山上开梯田步步高
 mhhi 帧频
 mhhx 由此
 mhia 贴满
-mhib 嵬目鸿耳 嵬眼澒耳
+mhib 嵬目鸿耳
 mhif 山上溜冰滑坡
 mhii 贴水
 mhim 帽沿
@@ -43277,7 +43140,7 @@ mjho 风里点灯
 mjhq 风里点灯不久长难长久
 mjia 雕虫小巧 雕虫小艺
 mjig 雕虫小事
-mjir 山盟海誓 彫虫小技 雕虫小技
+mjir 山盟海誓 雕虫小技
 mjit 山明水秀
 mjjg 则是
 mjly 见贤思齐
@@ -43298,7 +43161,7 @@ mjsj 同明相照
 mjsv 则要
 mjtm 见时知几
 mjtn 见景生情
-mjty 彫虫篆刻 赐稿 雕虫篆刻
+mjty 赐稿 雕虫篆刻
 mjuq 则将 山里头打锣
 mjuu 山里头打锣有回音
 mjwe 岁时伏腊
@@ -43439,14 +43302,13 @@ mmbw 删除
 mmby 婴孩
 mmcn 岗巴
 mmcq 山鸡
-mmda 峰峰矿区 崟崎历落 崟崎磊落
+mmda 峰峰矿区
 mmdd 山大
 mmde 凤髓龙肝
 mmdf 凤凰古城 巾帼奇才
 mmdg 山石
 mmdm 凹面 巍巍大山
 mmdr 巍巍大山永不动摇
-mmdt 凤凰在笯
 mmdu 凤骨龙姿
 mmdw 见几而作
 mmdy 峰峰矿
@@ -43489,7 +43351,7 @@ mmia 山洪
 mmid 山尖
 mmie 删削 岫岩满族自治县
 mmif 山洼
-mmii 山峙渊渟 山水 岫岩满族自治 峨峨汤汤 峨峨洋洋 肉山酒海
+mmii 山水 岫岩满族自治 峨峨汤汤 峨峨洋洋 肉山酒海
 mmik 山崩海啸
 mmim 山洞
 mmin 山泥
@@ -43501,7 +43363,6 @@ mmiv 山梁
 mmiw 山脊
 mmjf 山里 山野 见风是雨
 mmjg 山师
-mmjr 峣峣易缺
 mmjs 山果
 mmjt 山蜂
 mmjy 山影 山景
@@ -43687,7 +43548,7 @@ mnwe 同心合胆
 mnwf 岂会
 mnwg 觊觎
 mnwj 岂但
-mnwl 同心僯力 同心合力
+mnwl 同心合力
 mnwt 同心合德
 mnwu 同心合意
 mnww 贴心人
@@ -43753,7 +43614,7 @@ mpix 山容海纳 山穷水绝
 mpje 崇明
 mpkc 迪吧
 mpkt 崇川
-mpmf 峻宇彫墙 峻宇雕墙
+mpmf 峻宇雕墙
 mpmi 同袍同泽
 mpmm 崆峒
 mpmr 见神见鬼
@@ -43884,7 +43745,6 @@ mqiy 风急浪高 风流 风浪
 mqja 山肴野蔌 风暴
 mqjf 风里
 mqjh 网虫
-mqji 山殽野湋
 mqjj 网包里的田鸡青蛙
 mqjn 肉锅里煮元宵浑蛋
 mqjp 肉锅里煮元宵
@@ -44400,7 +44260,7 @@ mupy 赔礼
 muqd 风韵犹存
 muqe 贼头狗脑
 muqg 赚钱
-muqq 彫章镂句 雕章镂句
+muqq 雕章镂句
 muqw 曲意迎合
 murb 山羊拴在竹园里乱缠缠住了
 mure 贼头鬼脑
@@ -44457,7 +44317,7 @@ mvwy 山姆会员店
 mvyn 见好就收
 mwaa 肉芽
 mwad 同休共戚
-mwah 内臣 飂兮若无止
+mwah 内臣
 mwai 岭东
 mwaj 内幕
 mwak 内勤
@@ -44647,9 +44507,8 @@ mwyu 内详
 mwyx 肉畜
 mwyy 内文
 mxda 曲终奏雅
-mxdw 见幾而作
 mxeg 内乡县
-mxfk 见弹求鸮 见弹求鹗
+mxfk 见弹求鹗
 mxgo 冈比亚
 mxgw 岁比不登
 mxgx 由弱到强
@@ -44701,7 +44560,6 @@ mydp 凯旋而归的将军
 mydw 夙夜在公
 mydy 见诮大方
 myeg 册亨县 凤庆县 崇义县 嵩县
-myey 崇论豠议
 myfc 彤云
 myfd 凡需
 myff 赃款
@@ -44731,7 +44589,6 @@ myjy 风言影语
 mykb 山高路险
 mykf 山高路远
 mykt 凡响
-myky 崇论吰议
 myll 丹田
 mymc 丹凤
 mymh 凡由
@@ -45034,7 +44891,6 @@ nbra 收了白菜种韭菜
 nbrm 层出迭见
 nbrp 收了白菜种韭菜清青白传家
 nbrs 敢打
-nbrw 发隐擿伏
 nbrx 屈指
 nbsh 敢想
 nbsq 买了相因便宜柴烧了夹生饭
@@ -45332,7 +45188,6 @@ neeu 慢腾腾
 nefw 刷脸支付
 negj 已受理
 negt 情逐事迁
-negv 以貍至鼠
 nehb 屁股上画眉眼好大的面子 屁股上锯锯子
 nehd 屁股上吊扫帚好伟尾大
 nehe 屁股上打花脸
@@ -45495,7 +45350,7 @@ nfqe 丑角
 nfqf 避雷针
 nfqg 局地钥天
 nfqk 慰勉
-nfqn 昼乾夕惕 昼干夕惕
+nfqn 昼干夕惕
 nfqs 屠杀
 nfqt 尿壶镀金箔 屠夫杀羊内行 迅猛
 nfqu 屠夫杀羊
@@ -45571,7 +45426,7 @@ nfyb 屎壳郎变知了 屎壳郎叫门臭到家了 屎壳郎排队
 nfyc 性教育
 nfye 屎壳郎戴面具臭不要脸
 nfyf 导读 屎壳郎爬茅缸离死屎不远 屎壳郎跌粪坑 屎壳郎钻炭堆
-nfyg 以规为瑱 屎壳郎下蛋孬 屎壳郎戴耳环 屎壳郎滚煤球
+nfyg 屎壳郎下蛋孬 屎壳郎戴耳环 屎壳郎滚煤球
 nfyh 屎壳郎戴面具 屎壳郎爬到书本上 屎壳郎爬到茧棚上 屎壳郎爬在算盘上 屎壳郎钻炭堆不显眼
 nfyi 屎壳郎掉进阴沟里随波逐流 屎壳郎跌炉灶凶多吉少
 nfyj 屎壳郎吃蛆虫 屎壳郎掉进尿盆里 屎壳郎掉进阴沟里 屎壳郎爬到牛角尖里
@@ -45673,7 +45528,7 @@ ngjt 恒星
 ngjy 情景
 ngka 快来呀
 ngkd 恒顺
-ngkf 局天蹐地 怆天呼地 情味
+ngkf 怆天呼地 情味
 ngkh 怀中
 ngkk 怪事咄咄
 ngkq 情史
@@ -46295,7 +46150,6 @@ nkye 辟谣
 nkyf 避讳
 nkyh 以噎废餐 避让
 nkyo 避谈
-nkyu 以噎废飡
 nkyw 发号施令
 nlae 屏边苗族自治县
 nlai 屏边苗族自治
@@ -46334,7 +46188,6 @@ nlny 心连心
 nlpc 尻轮神马
 nlqc 惭色
 nlqd 翼然
-nlrq 以磛投卵
 nlrr 尼加拉瓜
 nlru 心黑手辣
 nltj 收因种果
@@ -46374,7 +46227,6 @@ nmfb 刷地
 nmff 刷墙
 nmfk 买贱卖贵
 nmfp 尸骨未寒
-nmfu 情见埶竭
 nmfw 发凡起例
 nmgp 发财致富 情同一家
 nmgq 屡见不鲜 情见于色
@@ -46423,7 +46275,6 @@ nmty 情见乎言 情见乎词 疏财重义
 nmuj 刷单
 nmus 刷新
 nmvi 惊风怒涛
-nmwh 以肉餧虎
 nmwj 已见分晓
 nmww 收购价
 nmwy 疏财仗义
@@ -46489,7 +46340,7 @@ nnfp 已过
 nnfq 发屋求狸
 nnfr 惊心丧魄 惊心动魄 惊惶无措 惊慌无措
 nnfs 飞书走檄
-nnfw 以屈求伸 悃愊无华
+nnfw 以屈求伸
 nnfy 书坊 慷慨赴义
 nnga 乙型
 nngc 快到
@@ -46505,7 +46356,6 @@ nngo 快来 慢慢来
 nngp 忸怩不安 惴惴不安 惶惶不安
 nngq 怏怏不乐 悒悒不乐
 nngt 迟迟吾行
-nngu 恇怯不前
 nngy 居心不良
 nnhc 书皮
 nnhg 心怀忐忑
@@ -46563,7 +46413,7 @@ nnng 书屋
 nnnh 书眉 惊心怵目 惊心惨目
 nnnj 快慢
 nnnl 尽心尽力 羽翼
-nnnn 忧心忡忡 忧心悄悄 快快 怡情悦性 恢恑憰怪 惺惺惜惺惺 懵懵懂懂
+nnnn 忧心忡忡 忧心悄悄 快快 怡情悦性 惺惺惜惺惺 懵懵懂懂
 nnnu 忌惮
 nnnv 忌恨
 nnny 已尽 翼翼飞鸾
@@ -46748,7 +46598,6 @@ npgh 尸禄素餐
 npgi 恪守不渝
 npgp 发家致富 心神不宁 心神不定
 npgt 心安理得
-npgu 尸禄素飡
 npgx 居之不疑
 nphq 居安虑危
 npib 习家池
@@ -46815,7 +46664,6 @@ nqeq 惊猿脱兔
 nqfa 以逸击劳
 nqfd 以卵击石
 nqff 避凶趋吉
-nqfk 飞觞走斝 飞觥献斝 飞觥走斝
 nqfq 愀然无乐
 nqfx 飞针走线
 nqgd 悍然不顾
@@ -46971,7 +46819,6 @@ nrtj 怕得
 nrtr 快手科技
 nrud 怕羞 改换头面
 nrui 情投意洽
-nrun 情投意忺
 nrup 屏气凝神
 nruq 愧疚
 nrus 改换门楣
@@ -47167,7 +47014,7 @@ nthb 眉毛上挂帘子 眉毛上掐虱子 眉毛上搭梯子
 nthe 眉毛上挂猪胆 眉毛上搭梯子放不下脸
 nthh 发卡 眉毛上失火红了眼 眉毛上挂帘子不显眼
 nthi 眉毛上安灯泡
-nthk 改点 虱处裻中
+nthk 改点
 nthm 眉毛上长牡丹
 nthn 眉毛上掐虱子有眼色虱
 ntho 眉毛上失火 眉毛上挂灯
@@ -47252,7 +47099,7 @@ ntow 发粉
 ntpc 心往神驰
 ntpe 以管窥豹 发家
 ntpf 恪守
-ntpg 以筦窥天 以管窥天 必定 改写
+ntpg 以管窥天 必定 改写
 ntpm 书生之见
 ntpn 民告官
 ntpu 以辞害意 属实
@@ -47654,7 +47501,6 @@ nvvp 心如刀割
 nvvq 心如刀锉 心如刀锯 懒姑娘头上的虮子虱子的卵
 nvvr 心如刀搅
 nvvv 丑姑娘嫁俊女婿
-nvvw 心如刀剉
 nvvx 心如刀绞
 nvwi 尼姑偷汉
 nvwu 尼姑偷汉躲躲闪闪 尽如人意
@@ -47815,7 +47661,6 @@ nxgx 改弦更张
 nxgy 心比天高
 nxhc 属比目鱼的成双成对
 nxhk 恫疑虚喝
-nxhq 恫疑虚猲
 nxhr 属比目鱼的
 nxhv 屁眼
 nxii 以蠡测海
@@ -47978,7 +47823,6 @@ nyjn 心电
 nyjo 尽显
 nyjt 尼摩星
 nykc 惊叹
-nykd 局高蹐厚
 nykg 惊吓
 nykh 心中 心跳
 nykk 心口
@@ -48444,7 +48288,6 @@ oetg 粗重
 oetn 精采秀发
 oets 粗笨
 oetu 粗服乱头
-oeue 断脰决腹
 oeuf 粗壮
 oewd 粗估
 oews 粗体
@@ -48474,7 +48317,6 @@ offh 烟云过眼
 offu 米盐博辩
 offw 烟霏雾集
 ofgf 断雨残云
-ofgj 烜赫一时
 ofgn 断垣残壁
 ofgt 烽鼓不息
 ofgv 粪土不如
@@ -48535,7 +48377,7 @@ ogaa 精工
 ogag 精巧
 ogam 精英
 ogaq 精警
-ogas 炊琼爇桂 米珠薪桂
+ogas 米珠薪桂
 ogav 精切
 ogay 精萃
 ogbb 燮理阴阳 精子
@@ -48600,7 +48442,7 @@ ognk 精辟
 ognn 业已
 ogny 精心
 ogoa 精炼
-ogof 数一数二 熯天炽地
+ogof 数一数二
 ogog 凿凿
 ogor 糟粕
 ogou 糟糕
@@ -48609,7 +48451,6 @@ ogpj 精审
 ogpn 精密
 ogpw 凿穿
 ogpy 精神
-ogqf 焮天铄地
 ogqh 业外
 ogqn 精馏
 ogqq 精金
@@ -48618,7 +48459,7 @@ ogqy 火烈鸟
 ogrb 业报
 ogrg 精兵
 ogrm 精制
-ogrn 断珪缺璧 精气
+ogrn 精气
 ogrr 精白
 ogsd 炫玉贾石
 ogsv 精要
@@ -48941,7 +48782,7 @@ onal 灯心草挑刺太软
 onaw 火尽薪传
 onax 灯心草做琴弦 灯心草做琴弦不值一谈弹
 onbv 断怪除妖
-onbw 断除 燔书阬儒
+onbw 断除
 onco 烧犀观火
 ondc 断码
 ondg 断石
@@ -48976,7 +48817,6 @@ onht 灯心上煨牛筋
 onhw 断齿
 onif 灯尽油干
 onii 断水
-onim 焗油
 onip 灯尽油干玩完
 onir 粗心浮气
 oniy 断流
@@ -49191,7 +49031,6 @@ ooya 火炬计划
 ooyi 炳烛夜游
 ooyp 火亮
 ooys 火魔
-ooyy 炳炳焤焤
 opad 迷藏
 opai 迷茫
 opak 迷惑
@@ -49307,7 +49146,6 @@ oqnt 焕发
 oqny 焰心
 oqoa 燃烧
 oqoc 烯烃
-oqod 燋金烁石
 oqol 炊烟
 oqoo 火急火燎 炮火 焰火
 oqoq 粼粼
@@ -49606,7 +49444,6 @@ ount 烂尾
 ouoa 焙烧
 ouoc 糍粑
 ouod 烂糊
-ouop 燋头烂额
 ouou 粒粒
 oupg 料定
 ouqk 烂钟
@@ -50153,7 +49990,7 @@ pdcw 福寿双全 福慧双修
 pddd 宏大
 pddf 富面百城
 pddh 寄存
-pddp 宏达 祲威盛容 豁达
+pddp 宏达 豁达
 pddr 宏愿
 pddt 祖大寿
 pddy 豁达大度
@@ -50235,7 +50072,6 @@ pdqt 宠儿
 pdqy 害鸟
 pdra 穷而后工
 pdrd 寒耕热耘
-pdrf 神龙失埶
 pdrh 割掉
 pdrn 割据 穷大失居
 pdrr 社威擅势 神牵鬼制
@@ -50436,7 +50272,6 @@ pfab 守节
 pfad 寒苦
 pfaf 祸起萧墙
 pfah 寒邪
-pfam 神魂荡飏
 pfaq 宛城区 宝坻区 宝塔区 宽城区 宿城区 密云区 禅城区 赛区 鹤城区
 pfar 宗匠
 pfbb 塞子
@@ -50963,7 +50798,6 @@ pitg 礼尚往来
 pitk 安常处顺
 piui 穷源朔流
 piuj 穷当益坚
-pium 宿水飡风
 piut 穷源竟委
 pivo 官法如炉
 piwg 军法从事
@@ -50974,7 +50808,6 @@ piym 宁波市 宜兴市 福清市
 piyn 祝酒词
 piyt 家常话
 piyw 宵夜
-pjau 冥昭瞢闇
 pjbb 穷日子
 pjcw 审验
 pjds 宴厅
@@ -51272,7 +51105,7 @@ pmau 剜肉医疮
 pmbk 视同陌路
 pmcb 家贼难防
 pmce 鹤骨鸡肤
-pmdf 审曲面埶 视同秦越
+pmdf 视同秦越
 pmdr 审曲面势
 pmdt 鹤骨龙筋
 pmdu 剜肉成疮
@@ -51646,7 +51479,7 @@ pprv 之势
 pprw 家神揍灶神自家人打自家人 神安气集
 ppsb 官官相卫
 ppse 之极
-ppsg 之本 宴安醙毒
+ppsg 之本
 ppsk 之歌
 ppsm 之机
 ppso 写字楼 寥寥可数
@@ -51755,7 +51588,7 @@ pqpk 祝鲠祝噎
 pqpl 窃钩窃国
 pqpp 牢狱之灾
 pqpv 冤案
-pqpw 安乐窝 祝鮠之佞 祝鲠祝饐
+pqpw 安乐窝
 pqpy 家乐福
 pqqd 宛然
 pqqk 安兔兔
@@ -51817,7 +51650,6 @@ prgd 礼拜天
 prgi 神鬼不测
 prgl 案兵束甲
 prgp 寓兵于农
-prgr 衽抭囊括
 prgu 神兵天将
 prgy 割据一方 宁折不弯
 prhd 神摇目夺
@@ -51827,7 +51659,6 @@ prii 福气满满
 prip 礼拜堂
 priq 祸近池鱼
 priy 神皇洲
-prjf 神抶电击
 prjg 鹤势螂形
 prjj 礼拜日
 prkb 空手跑进中药店没方子
@@ -52095,7 +51926,6 @@ ptqn 客饭
 ptqo 安生乐业 安身乐业
 ptrb 初升的太阳
 ptre 初生的娃娃小手小脚
-ptrf 冥行擿埴
 ptrg 定航的班机继往开来 宪兵
 ptrh 初生牛犊不怕虎 初生的牛犊不怕虎
 ptri 神短气浮
@@ -52295,7 +52125,7 @@ puri 补阙挂漏
 purk 补阙拾遗 被扣
 purm 补缺
 purn 实据
-purp 神閒气定 神闲气定 空着手回娘家 空着手回娘家无理礼 被迫
+purp 神闲气定 空着手回娘家 空着手回娘家无理礼 被迫
 purr 补白
 purt 衬托
 puru 赛道投资
@@ -52585,7 +52415,7 @@ pwgq 突兀
 pwgw 穷追不舍
 pwha 空虚
 pwhg 蹇人上天
-pwhh 案剑瞋目 穿上
+pwhh 穿上
 pwhi 穷人点蜡烛大家借光
 pwhk 空战
 pwho 穷人点蜡烛
@@ -52603,7 +52433,7 @@ pwiv 空当
 pwiw 穷举 穷人逃债 穷途潦倒
 pwiy 安全测试
 pwjd 社会贤达
-pwje 宾餿日月 察明
+pwje 察明
 pwjg 容量
 pwjh 害人虫
 pwjn 空暇
@@ -52656,7 +52486,6 @@ pwpj 突审
 pwpk 穷途之哭
 pwpl 空军
 pwpn 安份守己 安分守己 安分守已 寂兮寥兮独立而不改
-pwpq 祝僯祝鲠
 pwpt 空额
 pwpu 安贫守道 寡人之疾
 pwpv 窃案
@@ -53114,7 +52943,6 @@ qagq 乌鸦不叫乌鸦太平鸟 铁匠死了不闭眼欠捶锤
 qagr 铁匠开炉趁热打
 qagw 乌鸦一字飞一溜黑货 锋芒逼人
 qagy 名医开处方 错落不齐
-qahd 狐藉虎威
 qahg 铁匠上班
 qahk 锚点
 qaht 昏睡 铁匠上班不打不行
@@ -53132,7 +52960,6 @@ qajp 昏晕
 qajq 钳工师傅教徒弟动手就错锉
 qajt 昏星
 qaju 昏暗 钳工师傅教徒弟
-qajx 蟹匡蝉緌
 qakb 乌鸦唱山歌不堪入耳
 qakd 铁鞋踏破
 qakf 乌鸦叮蚌壳
@@ -53152,7 +52979,6 @@ qanc 错怪
 qand 独幕剧
 qanf 错层
 qank 错愕
-qann 鸟革翚飞
 qant 铁匠改行学绣花拈轻怕重
 qaob 铁匠炉的钳子
 qaoo 铁匠炉的钳子好家伙夹火
@@ -53393,7 +53219,7 @@ qbpy 凶神
 qbqb 钉子锈在木头里铁定了
 qbqi 饺子铺的酱油
 qbqj 钉子锈在木头里
-qbqm 锰钢 饥附饱飏
+qbqm 锰钢
 qbqr 包子馒头做一笼大家都争气 饺子铺的酱油白搭
 qbqs 凶杀
 qbqt 凶狠 凶猛 包子馒头做一笼 锯子解高粱秆
@@ -53873,7 +53699,7 @@ qell 饥肠辘辘
 qels 解困
 qelt 角力
 qemq 触网
-qend 狂朋怪友 狂朋恠友 解忧
+qend 狂朋怪友 解忧
 qeng 解悟
 qent 触发
 qenu 触屏
@@ -53891,7 +53717,6 @@ qeqd 狐朋狗友 猪朋狗友
 qeqe 独脚蟹 触角
 qeqg 狗胆包天 色胆包天
 qeqi 狐朋狗党 解锁
-qeqj 镂肝鉥肾
 qeqm 角钢 铭肌镂骨 铭肤镂骨
 qeqn 狗肺狼心 独脚蟹爬不快 解馋
 qeqp 鱼县鸟窜
@@ -53914,7 +53739,6 @@ qerp 触控
 qerr 鱼肚白
 qert 解手
 qerv 解热
-qery 铺采摛文
 qesa 角柜
 qesf 角票
 qeso 角楼
@@ -53974,7 +53798,6 @@ qfbn 针孔
 qfcf 负地矜才 针对
 qfcn 镇巴
 qfcr 危地马拉
-qfda 狐裘尨茸
 qfdc 镇雄
 qfdf 负土成坟 镇压
 qfdm 名场面 鱼封雁帖
@@ -54053,7 +53876,7 @@ qfqg 钟鼓馔玉
 qfqi 兔起乌沉 狗走狐淫 钻进鸟笼里的猫嘴馋上了当
 qfqn 兔走乌飞 铜城铁壁 铜墙铁壁
 qfqq 钻进鸟笼里的猫
-qfqr 狐埋狐扬 狐埋狐搰 铜墙铁壁坚不可摧
+qfqr 狐埋狐扬 铜墙铁壁坚不可摧
 qfqt 针锋
 qfqy 针灸
 qfrb 锈坏的轱辘车轮子
@@ -54200,7 +54023,6 @@ qgit 鲜活
 qgiu 饿殍满道 鲜润
 qgiv 印染
 qgiw 饭囊酒瓮
-qgiy 饭囊酒畒
 qgje 鲜明
 qgjf 昏天暗地
 qgjg 鱼虾
@@ -54448,7 +54270,7 @@ qhhk 狼餐虎咽 狼餐虎噬 鸱目虎吻
 qhhs 饭桌上的盘子没把柄
 qhia 外汇 独步当世 锦上添花
 qhic 外滩
-qhig 鱼目混珍 鱼目混珎 鱼目混珠
+qhig 鱼目混珍 鱼目混珠
 qhih 外婆
 qhii 外水
 qhij 独步当时
@@ -54681,7 +54503,6 @@ qiog 乐业
 qiol 销烟
 qiop 乐迷
 qios 镁光灯
-qiow 鱼游燋釜
 qipf 钓游之地 饱学之士
 qipg 锁定
 qipl 金汤之固
@@ -54820,7 +54641,6 @@ qjtf 久旱得雨 久旱逢甘雨
 qjtg 乐晶生 象征
 qjth 象鼻
 qjti 锡箔
-qjtm 象徵
 qjtn 触景生情
 qjtw 饱暖生淫欲
 qjud 龟头
@@ -54981,7 +54801,6 @@ qkpw 句容 名宿
 qkpy 免礼 钟祥
 qkqa 名氏 铁嘴钢牙
 qkqe 名角 狗吃猪肠
-qkqf 乌踷兔走
 qkqh 多吃多占
 qkqi 狗吃猪肠撒扯不清 逸乐
 qkqk 名句 狐鸣枭噪 狼嗥狗叫 鸟哭猿啼
@@ -55189,7 +55008,6 @@ qlut 链产
 qluy 负恩背义
 qlvc 鲜车怒马
 qlvf 链建
-qlvl 狖轭鼯轩
 qlvv 包办婚姻
 qlvy 包办婚姻不由自主
 qlwa 解甲倒戈
@@ -55427,7 +55245,7 @@ qnew 猪尿脬打人 猪尿脬膀胱打不死人
 qnex 狗尾貂续
 qnfc 乌云
 qnfd 负心违愿
-qnff 刨土 夕惕朝乾
+qnff 刨土
 qnfg 饼干
 qnfh 包起
 qnfn 包场
@@ -55508,7 +55326,7 @@ qnpw 包容
 qnqa 鱼惊鸟散 鸟惊鱼散
 qnqc 饥色 鸟惊鱼骇
 qnqd 多情多感
-qnqe 狼心狗肺 铜心铁胆 镂心鉥肝
+qnqe 狼心狗肺 铜心铁胆
 qnqf 乌镇 乌飞兔走 铁壁铜墙
 qnqg 乌鱼 饭铺
 qnqi 包销 鸟惊鱼溃
@@ -55639,7 +55457,6 @@ qopn 乐业安居
 qopw 镂空
 qopx 鱼米之乡
 qoqt 独断独行
-qoqu 金断觿决
 qorv 炙热
 qorw 负类反伦
 qotj 然糠自照
@@ -55803,7 +55620,7 @@ qqfh 多起
 qqfi 凶多吉少
 qqfl 乌龟进沙锅丢盔卸甲
 qqfm 狐狸戴礼帽 狐狸戴草帽 猩猩戴礼帽 钦南
-qqfn 多亏 狐狸戴礼帽假正经人面兽心 狐狸进村没安好心 鲂鱼趙尾
+qqfn 多亏 狐狸戴礼帽假正经人面兽心 狐狸进村没安好心
 qqfq 乌龟进沙锅 多元 金元
 qqfs 狐狸进村
 qqft 乌龟壳上找毛 乌龟壳上贴广告 多才
@@ -56368,7 +56185,6 @@ qsqv 鸟覆危巢
 qsqw 银样锻
 qsqx 铁板铜弦
 qsrb 鸟枪打兔子
-qsrd 鸟枪换砲
 qsrh 杀掉 鸟枪打兔子睁只眼闭只眼
 qsrn 杀气
 qsro 鸟枪换炮
@@ -56693,7 +56509,7 @@ qtyd 饶舌调唇
 qtyg 邹衍谈天
 qtyn 狂妄
 qtyo 猜谜
-qtyp 狼毫 猇亭
+qtyp 狼毫
 qtyq 狭义
 qtyr 猥亵
 qtys 铣床
@@ -56759,7 +56575,6 @@ qugw 乐善不倦
 qugy 包产到户
 quhb 锅盖上的米花子
 quhi 锐步
-quhk 狼飡虎咽
 quho 锅盖上的米粒
 quhp 钻头上加钢针好厉害
 quhq 钻头上加钢针 钻头上绑针婆缝衣针
@@ -56768,11 +56583,10 @@ quhs 龟背上刮毡毛痴心妄想妄想
 quht 狼头上插竹笋 龟背上刮毡毛
 quhu 狼头上插竹笋装样羊
 quhv 锐眼
-quhw 狼飡虎食
 quhx 金章紫绶
 quid 镜湖
 quih 铸新淘旧
-quiq 针头削铁 镁光 饥飡渴饮
+quiq 针头削铁 镁光
 quit 乌兰浩特
 quiy 乌兰浩特市
 quje 昏头晕脑
@@ -56793,7 +56607,6 @@ qult 免疫力 昏头转向
 qumg 镂冰雕琼
 qumq 狼羊同饲
 qumr 饮冰内热
-quni 金鴗擘海
 qunq 名闻遐迩
 qunt 独立性
 quod 镂冰炊砾
@@ -56827,7 +56640,7 @@ qurn 锐气
 qurp 外头拾块铺衬屋里丢件皮袄 多闻择其善者而从之
 qurq 乌头白马生角
 quru 铰接
-qury 猪头挂在花椒树上肉麻 龟冷搘床
+qury 猪头挂在花椒树上肉麻
 qusa 镜框
 qusb 角立杰出
 qusd 铁交椅
@@ -57368,7 +57181,7 @@ qyaj 久慕
 qyak 多言或中
 qyal 留苏
 qyam 留英 镶黄
-qyaq 猇亭区 解放区 金州区 银州区
+qyaq 解放区 金州区 银州区
 qyat 鸟语花香
 qybb 卵子
 qybc 留取
@@ -57514,7 +57327,7 @@ qysu 留校
 qysw 鸟枪
 qysy 危言核论
 qyta 久长
-qytd 狂妄自大 解衣槃磅 解衣盘磅 解衣盘礴 解衣般礴 鸟笼
+qytd 狂妄自大 解衣盘磅 解衣盘礴 解衣般礴 鸟笼
 qytf 久等
 qytg 卵生
 qyth 尔诈我虞
@@ -57667,7 +57480,6 @@ rakm 报幕员
 rakn 打靶中靶心
 rakq 看菜吃饭 缺牙啃西瓜道道多
 rakr 缺牙啃西瓜
-rakt 拽巷啰街
 raku 撕咬
 rala 拔茅连茹
 ralb 抱黄连敲门苦到家了
@@ -57682,7 +57494,6 @@ ralw 搭界
 raly 找辙
 ramd 拒贿
 ramf 找赎
-ramn 白藋同心
 ramp 操戈同室
 ramq 撒网
 ramu 拒赔
@@ -57725,7 +57536,7 @@ rarn 抽芽的蒜头多心 撒气
 rarp 拭擦 牛鞭牛阴敬神
 rarq 拱抱
 rarr 兵戈扰攘 抱蔓摘瓜
-rart 拔节的竹笋 拱手 拽巷攞街 撒手
+rart 拔节的竹笋 拱手 撒手
 raru 抽芽的蒜头 撒拉
 rarv 投其所好
 rarw 掇菁撷华
@@ -57843,7 +57654,6 @@ rbge 报表
 rbgg 扫除天下
 rbgh 摄政
 rbgj 担子两头挂红灯挑明 摄理
-rbgk 撧耳顿足
 rbgo 担子两头挂红灯 挠出来的疮自讨麻烦
 rbgu 挠出来的疮 推陈致新
 rbhb 挖了眼当判官瞎到底了
@@ -57880,7 +57690,6 @@ rbng 岳阳屈原管理
 rbnh 报收
 rbnn 排除异己
 rbnr 捉了虱子跑了牛 捉了虱子跑了牛得不偿失
-rbnu 批隙导竨
 rbny 报以
 rbog 报业
 rbou 报料
@@ -57901,7 +57710,7 @@ rbqw 打了兔子喂鹰好处给了恶人
 rbqy 打了兔子喂鹰
 rbrb 挨了打的鸭子 鬼子兵败阵
 rbrc 报摊
-rbre 扒耳搔腮 抓耳挠腮 抓耳搔腮 撧耳挠腮 撧耳揉腮 爬耳搔腮
+rbre 扒耳搔腮 抓耳挠腮 抓耳搔腮 爬耳搔腮
 rbrg 打了的鱼缸四分五裂 报捷
 rbrh 看了看
 rbri 鬼子兵逃命屁滚尿流
@@ -58346,7 +58155,6 @@ rdnk 振臂
 rdnn 近在咫尺
 rdnr 抱在怀里的西瓜
 rdnt 势在必行 白面书生
-rdnu 批砉导竨
 rdny 白面书郎
 rdod 朱唇粉面
 rdoe 掏大粪的做知县
@@ -58404,10 +58212,10 @@ rdsc 所有权 拴在树上的叫驴 擀面杖吹火一窍不通
 rdsd 擀面杖
 rdse 皇太极
 rdsf 擀面杖敲鼓 擀面杖钻石头纹丝不动
-rdsg 挨三顶五 捱三顶五 牛磺酸
+rdsg 挨三顶五 牛磺酸
 rdsi 排档
 rdsj 排查
-rdsl 挑三检四 捱三顶四
+rdsl 挑三检四
 rdso 擀面杖吹火
 rdss 擀面杖敲鼓抡的哪一槌
 rdst 反唇相稽 掉在枯井里的牛犊
@@ -58562,7 +58370,7 @@ reqh 援外
 reqn 掏腰包
 reqw 摇铃
 reqy 后脑勺
-rerb 挠腮撧耳 缺腿的老虎神气不了
+rerb 缺腿的老虎神气不了
 rerc 摇把
 rerd 摇撼
 rere 摇摇 撑肠拄肚 撑肠拄腹
@@ -58673,7 +58481,7 @@ rffe 失魂丧胆 扭亏增盈
 rfff 担雪填井 挑雪填井
 rffg 拨云雾见青天
 rffh 扶起
-rffi 担雪填河 摘埴索涂 擿埴索涂
+rffi 担雪填河 摘埴索涂
 rffk 扫地无遗 抓地坑沟找豆包吃 擂鼓
 rffm 技击
 rffp 抗震救灾
@@ -58681,7 +58489,7 @@ rffq 手无寸铁 抚远
 rffr 失魂丧魄
 rfft 抓地坑沟找豆包吃没出息 挂孝 白露过后的庄稼
 rffv 白露过后的庄稼天不如
-rffw 扫地无余 挂零 擿埴索途
+rffw 扫地无余 挂零
 rffy 挥霍无度
 rfga 遁形
 rfgb 后进于礼乐君子也 捷雷不及掩耳
@@ -58832,7 +58640,6 @@ rfuw 制动阀 白云亲舍
 rfux 抚背
 rfva 逝者如斯
 rfvd 按堵如故
-rfvf 握雾拏云
 rfvn 持刀
 rfwb 持仓
 rfwf 拍卖会 握云拿雾
@@ -59346,7 +59153,7 @@ rhrl 看押
 rhrm 扛鼎拔山
 rhrn 牛气
 rhrp 年近
-rhrr 扛鼎抃牛 捣虚撇抗
+rhrr 捣虚撇抗
 rhrs 扑打 瓜皮搭李树
 rhrw 牛扒 牛掰 皇上的旨将军的令
 rhrx 披拂
@@ -59359,7 +59166,7 @@ rhsr 看板
 rhst 括目相待
 rhsu 看样
 rhsv 年根
-rhsw 年检 折鼎覆餸
+rhsw 年检
 rhsy 技战术
 rhta 年长
 rhte 牛筋 看透
@@ -59525,7 +59332,7 @@ rile 推小车扭屁股
 rilf 朱墨
 rilg 挡车
 rilk 挡驾
-rilp 掎裳连袂 掎裳连襼
+rilp 掎裳连袂
 rily 挥泪斩马谡
 rimm 泉山
 rimq 年深岁久 挡风 排沙见金
@@ -59895,7 +59702,7 @@ rkqb 缺口镊子
 rkqe 拐角 拙口钝腮
 rkqg 捉鱼
 rkqh 牛踩乌龟背心里痛痛在心上
-rkqk 鬼吒狼嚎 鬼咤狼嚎 鬼哭狼嗥 鬼哭狼嚎
+rkqk 鬼咤狼嚎 鬼哭狼嗥 鬼哭狼嚎
 rkqr 缺口镊子一毛不拔
 rkqs 扣杀
 rkqu 牛踩乌龟背
@@ -59921,7 +59728,6 @@ rkrw 损失
 rksd 拐杖
 rksj 拐棍
 rksr 气味相投
-rksw 折足覆餸
 rkta 手足重茧
 rktb 牛吃笋子
 rkte 拙口笨腮 拙嘴笨腮 操盘
@@ -60067,7 +59873,6 @@ rlrr 擐甲执兵
 rlrt 拈轻掇重 摆手
 rlsd 接力棒
 rlsg 瓜田李下
-rlsm 指囷相赠
 rlte 兵因敌而制胜 押租
 rlth 反转片
 rltl 反转策略
@@ -60120,7 +59925,6 @@ rmbn 失败了 投了
 rmbq 缺陷
 rmbt 投降
 rmbu 白内障
-rmcf 魆风骤雨
 rmcw 抽验
 rmde 换骨夺胎
 rmdf 投奔
@@ -60137,7 +59941,7 @@ rmep 缺爱
 rmet 制胜
 rmfa 制裁
 rmfc 制动
-rmfh 抽走 掩骼埋胔
+rmfh 抽走
 rmfi 担山填海 拔山超海 挟山超海 掀风鼓浪
 rmfj 投井 白骨露野
 rmfp 招财进宝 掩骼埋窆
@@ -60151,7 +59955,7 @@ rmgh 投下
 rmgl 帛画
 rmgm 白骨再肉
 rmgo 投来
-rmgp 抢购一空 白帢青衫
+rmgp 抢购一空
 rmgq 摧残
 rmgr 挡风玻璃当锅盖明受气
 rmgu 挡风玻璃当锅盖
@@ -60164,7 +59968,7 @@ rmhx 爬山虎的本领会巴结
 rmia 投江
 rmif 制法
 rmih 拔山举鼎
-rmii 岳峙渊渟 抽水 接风洗尘 握炭流汤 爬山涉水
+rmii 抽水 接风洗尘 握炭流汤 爬山涉水
 rmim 捶骨沥髓 揣测
 rmin 缺漏
 rmiq 抽逃
@@ -60227,12 +60031,11 @@ rmpw 抽空
 rmqj 抽象
 rmqq 手帕包牛脑袋露头角
 rmqw 手帕包牛脑袋
-rmra 扬风抦雅 揣摸
+rmra 揣摸
 rmrd 打凤捞龙 挫骨扬灰
 rmre 批风抹月 捉贼捉脏 捉风捕月
 rmrf 扬幡招魂
 rmrh 拔山扛鼎
-rmri 抃风舞润
 rmrj 捉风捕影 捕风捉影 握风捕影
 rmrk 缺损
 rmrm 捉贼捉赃 皑皑
@@ -60287,7 +60090,7 @@ rmvw 兵败如山倒
 rmwd 制伏
 rmwf 扭曲作直
 rmwg 投合
-rmwi 抃风儛润 排山倒海
+rmwi 排山倒海
 rmwk 投保
 rmwn 制假
 rmwo 手帕做床单横竖不够料
@@ -60304,7 +60107,7 @@ rmxl 投缳
 rmxp 抽缩
 rmxq 制约
 rmxu 投弹
-rmxx 投缘 挨风缉缝 捱风缉缝
+rmxx 投缘 挨风缉缝
 rmxy 缺编
 rmya 制度 缺席
 rmyb 抽离
@@ -60395,7 +60198,7 @@ rngq 气死
 rngw 鬼怕恶人
 rngx 氮素
 rnha 气虚
-rnhh 扬眉眴目 扬眉瞬目
+rnhh 扬眉瞬目
 rnhk 据点
 rnhv 扎眼
 rnhx 据此
@@ -60427,7 +60230,7 @@ rnkk 拉屎啃猪蹄 拉屎啃鸡腿亏他张得开嘴 握发吐哺 气口
 rnkl 握别
 rnkm 指导员 气喘
 rnkn 拨叫
-rnkr 扬眉吐气 搤臂啮指
+rnkr 扬眉吐气
 rnkt 拉屎啃猪蹄香香臭臭
 rnkw 打情骂俏
 rnle 推心置腹
@@ -60481,7 +60284,7 @@ rnrc 抉择
 rnre 抠心挖肚 摧眉折腰
 rnrf 抟心揖志 摊书拥百城 气质
 rnri 摒挡
-rnrj 扭捏 拉屎拉到鞋跟儿里 誓以皦日
+rnrj 扭捏 拉屎拉到鞋跟儿里
 rnrl 扭摆
 rnrm 气缸
 rnrn 失惊打怪 掇臀捧屁 气氛 氢气 氧气
@@ -60673,7 +60476,6 @@ rpck 抱窝鸡带崽可忙啦
 rpcm 抱窝鸡带崽 近观
 rpcn 探马
 rpcr 损之又损
-rpcv 抽祕骋妍
 rpcy 损之又损以至于无为
 rpda 抑塞磊落
 rpdc 探友
@@ -60821,7 +60623,7 @@ rprn 挖掘
 rprp 招灾揽祸 迫近
 rprr 捻神捻鬼 控拆
 rprt 挥手
-rpru 捋袖揎拳 损军折将 捰袖揎拳 攞袖揎拳
+rpru 捋袖揎拳 损军折将
 rpry 挨家挨户
 rpsc 制空权
 rpsf 探杆
@@ -60888,7 +60690,6 @@ rpyu 按说
 rpyy 反客为主 探访
 rqaa 换工
 rqab 鬼节
-rqad 朱镕基
 rqah 换牙
 rqak 抑或
 rqal 抑菌
@@ -60970,7 +60771,7 @@ rqia 换汇
 rqib 打鸟没打中非飞也
 rqid 牛角尖
 rqif 操觚染翰
-rqii 岳镇渊渟 抵消 牛角尖对牛角尖
+rqii 抵消 牛角尖对牛角尖
 rqij 鬼混
 rqik 打鸟没打中
 rqil 扶危济困
@@ -61195,7 +60996,7 @@ rrfb 白地
 rrfc 白云
 rrfd 扫把赶客不留情面 白城
 rrff 拆封
-rrfg 挢抂过正 白干
+rrfg 白干
 rrfh 扶摇直上 抓起 掀起
 rrfi 打手击掌
 rrfj 扶摇直上九万里 白堤
@@ -61212,7 +61013,7 @@ rrfy 招摇过市
 rrga 拆开 掀开
 rrgb 乒乓球打七板子
 rrgc 抓到
-rrgd 攧扑不破 白天
+rrgd 白天
 rrge 指手画脚 指手顿脚 措手不及 搓手顿脚
 rrgf 乒乓球 扯掉画皮的恶鬼凶相毕露 扯掉画皮的恶魂 扯掉画皮的恶魂凶相毕霹 按兵不动
 rrgg 打抱不平 抱打不平 氢气球上天
@@ -61269,7 +61070,7 @@ rrkh 折中
 rrkj 白喝
 rrkk 手舞足蹈 抽抽噎噎 控制器
 rrkm 指挥员
-rrkr 拜拜啦 掤扒吊拷
+rrkr 拜拜啦
 rrkt 打招呼
 rrkw 拱手听命
 rrlf 折转
@@ -61496,7 +61297,6 @@ rsfd 打垮
 rsff 打卦 返本朝元
 rsfg 打坏 挢枉过正
 rsfh 打趣
-rsfi 反覆无常 擿植索涂
 rsfj 打井 打进
 rsfk 打鼓
 rsfl 打雷
@@ -61572,7 +61372,7 @@ rspd 拔本塞原
 rspf 打完
 rspg 手术室
 rspi 拔本塞源 探本穷源
-rspr 投桃之报 投梭之拒 摽梅之年
+rspr 投桃之报 投梭之拒
 rspv 瓜李之嫌
 rspw 打穿 抱柱之信
 rspy 打禅
@@ -61730,14 +61530,13 @@ rtes 挺腰
 rtet 搬用
 rtfb 拖地
 rtfc 手动 捐躯赴难 搬运
-rtfd 披毛索靥 披毛索黡 拖垮 掉舌鼓唇
+rtfd 披毛索靥 拖垮 掉舌鼓唇
 rtfg 披毛求瑕 捉生替死
 rtfh 挺直
 rtfi 反复无常 气得志满
 rtfj 挺进
 rtfl 手雷
 rtfm 所剩无几
-rtfo 拥篲救火
 rtfq 披毛戴角
 rtft 所向无敌 郫都
 rtfu 所向无前 批毛求疵 披毛求疵
@@ -61758,9 +61557,9 @@ rtgm 斤两
 rtgo 搬来
 rtgr 年复一年
 rtgx 抗生素
-rtgy 摇身一变 朱槃玉敦 朱盘玉敦
+rtgy 摇身一变 朱盘玉敦
 rtha 牛毛上解锯刻薄
-rthh 手上 播穅眯目 牛身上爬蚂蚁不显眼
+rthh 手上 牛身上爬蚂蚁不显眼
 rthi 牛身上的毛数不清
 rthj 牛身上爬蚂蚁
 rthq 牛毛上解锯
@@ -61858,7 +61657,7 @@ rtqw 拖欠
 rtra 播撒
 rtrb 播报
 rtrc 拖把
-rtrd 挦毛捣鬓 挺拔 牛犊拉车乱套
+rtrd 挺拔 牛犊拉车乱套
 rtre 手摇
 rtrf 手持
 rtrg 拨乱反正 挑毛拣刺 揭箧担囊 揭箧探囊
@@ -61869,13 +61668,13 @@ rtrk 撮科打哄
 rtrl 捐躯报国 牛犊拉车
 rtrm 抽筋拔骨
 rtrn 手气 招待所
-rtro 扣槃扪烛 扣盘扪烛
+rtro 扣盘扪烛
 rtrp 手控
 rtrq 手挽 扣盘扪钥
 rtrr 手抓 朱德的扁担
 rtrs 捶打 撑船的老板
 rtrt 持筹握算 据我所知 插手
-rtru 拖拉 挑么挑六 撮科打閧
+rtru 拖拉 挑么挑六
 rtrv 手势 朱德的扁担有名有姓
 rtrx 手指 扯篷拉纤
 rtry 反复推敲 所向披靡 插科打诨 撒科打诨
@@ -62194,18 +61993,18 @@ rura 拉普拉斯 招亲招来猪八戒 捎关打节 白痴的葫芦
 rurb 兵闻拙速未睹巧之久也 抄着手过日子 投间抵隙 拉痢打摆子 挑着缸钵走滑路担风险 接报 搔头抓耳 搔头摸耳 皇帝的后代龙子龙孙
 rurc 搓揉 白兰瓜 皇帝的女儿招驸马
 rurd 拉拢 指亲托故 气决泉达
-rure 探头探脑 摇头摆脑 撞头搕脑 牛羊的肚腹 鬼头鬼脑
+rure 探头探脑 摇头摆脑 牛羊的肚腹 鬼头鬼脑
 rurf 抗美援朝
 rurg 兵闻拙速 抄着手过日子等着饿死 拼搏 排头兵 摧兰折玉 皇帝打架争天下
 rurh 拉扯 皇帝的交椅至高无上
 ruri 按着牛头喝水 摘抄 擦拳抹掌
 rurj 打着手电筒走夜路前途光明
-rurk 打着手电筒走夜路 抵背扼喉 拉着手走路 拊背扼吭 拊背扼喉 拊背搤吭 挑着缸钵走滑路
+rurk 打着手电筒走夜路 抵背扼喉 拉着手走路 拊背扼吭 拊背扼喉 挑着缸钵走滑路
 rurl 皇帝打架
 rurm 扳着指头算账 拉罐
 rurn 摇头摆尾
 ruro 扳着指头算账有数 抖擞 拄着拐棍下煤窑倒霉捣煤
-rurp 拄着拐棍下煤窑 接近 揎拳拢袖 揎拳捋袖 揎拳捰袖 揎拳掳袖 揎拳攞袖 揎拳舞袖 撺拳拢袖
+rurp 拄着拐棍下煤窑 接近 揎拳拢袖 揎拳捋袖 揎拳掳袖 揎拳舞袖 撺拳拢袖
 rurq 年壮气锐 抱关执钥 援鳖失龟 搜章摘句 牛羊的肚腹草包 皇帝的女儿
 rurr 接拍
 rurs 皇帝的交椅
@@ -62234,7 +62033,7 @@ ruta 拉长 捏着鼻子吃葱
 rutb 捏着鼻子过日子
 rutc 捏着鼻子唱戏
 rutd 投亲靠友 捏着鼻尖儿做梦不成
-rute 拼盘 捏着鼻子唱戏闷腔 摇头穢脑
+rute 拼盘 捏着鼻子唱戏闷腔
 rutf 接待
 rutg 接生 近亲繁殖
 ruth 捏着鼻子哄眼睛 摘自
@@ -62448,7 +62247,6 @@ rvpo 招灾
 rvpu 殷实
 rvpv 招安
 rvpw 挪窝
-rvpx 兵拏祸结
 rvpy 扫帚写家书说大话 扫视
 rvqa 抛锚
 rvqg 垫钱
@@ -62533,7 +62331,6 @@ rvxh 招引
 rvxm 招纳
 rvxn 执纪
 rvxr 搜缴
-rvxs 势如彍弩节如发机
 rvxt 热络
 rvya 热度
 rvyb 抛离
@@ -62665,7 +62462,6 @@ rwmp 推崇
 rwmq 抢购
 rwmt 失败 挫败
 rwna 抚今悼昔 推展
-rwnb 擿伏发隐
 rwnf 推导
 rwnh 抢收
 rwnn 失忆
@@ -62867,7 +62663,6 @@ rxrp 指挥 指控
 rxrr 操练的士兵
 rxrt 失张失智
 rxru 指摘 挑幺挑六
-rxrv 挦绵扯絮
 rxrw 提纲振领 握纲提领
 rxrx 扶弱抑强 抑强扶弱 拇指 指指
 rxry 指斥
@@ -63040,7 +62835,6 @@ rymt 反腐败
 ryna 扩展
 rynd 据为己有 攫为己有
 rynk 护壁
-rynu 批鄐导竨
 ryny 据义履方
 ryog 热度爆表
 ryoq 扬州炒饭 抗燃
@@ -63052,7 +62846,6 @@ rypg 搞定
 rypl 撤军
 rypo 抗灾
 rypp 拘挛补衲 换言之
-rypq 鬼刻神劖
 ryps 白衣宰相
 rypt 掮客
 rypu 执文害意 遁迹空门
@@ -63171,7 +62964,6 @@ ryyu 挂席为门
 ryyy 抗议
 saaa 柳莺花燕 模式
 saab 柳营花阵
-saac 橡茹藿歠
 saad 杜蕾斯
 saah 横卧
 saai 模范 飘茵落溷
@@ -63683,7 +63475,7 @@ sdvb 顶好
 sdvi 校友录
 sdvn 甄奇录异
 sdwf 校友会
-sdwm 枯耘伤岁 楛耘伤岁
+sdwm 枯耘伤岁
 sdww 枯坐
 sdwx 柳大华
 sdwy 顶住
@@ -63754,7 +63546,7 @@ sesc 极权
 sesd 极顶
 sese 杏脸桃腮 杏腮桃脸
 sesh 桃腮柳眼
-sesr 极板 枷脰械手
+sesr 极板
 sess 杉木
 seth 极处
 setu 极简
@@ -64031,7 +63823,6 @@ sgds 西厢
 sgdw 格于成例
 sgeb 西服
 sgee 本月
-sgef 析珪胙土
 sgeg 丁青县 西平县
 sgem 配股
 sgep 酷爱
@@ -64147,7 +63938,7 @@ sgpg 酌定
 sgpk 西宫
 sgpm 松形鹤骨
 sgpn 机不容发 楚囊之情
-sgpp 林平之 覆盂之安
+sgpp 林平之
 sgpq 极恶穷凶
 sgpr 极武穷兵 酬宾
 sgps 西宁
@@ -64204,7 +63995,7 @@ sgud 本着 配送
 sguf 西装 顶天立地
 sgug 酸辣
 sguh 本站
-sguj 本意 本章 析珪判野 西单
+sguj 本意 本章 西单
 sguk 本部 西部
 sgum 西端
 sguq 本次
@@ -64436,7 +64227,7 @@ sidj 李泽厚
 sidm 极深研几
 sidn 相沿成习
 sidw 相沿成俗
-sidx 李小龙 极深研幾
+sidx 李小龙
 sieg 松溪县 松潘县 柞水县 柳河县 桃江县 桃源县 梓潼县 榕江县
 sifd 杯水救燎原 桃城
 sifi 飘洋过海
@@ -64726,7 +64517,6 @@ skma 歌曲
 skmq 可见
 skna 可惜
 sknd 可怖 歌剧
-skni 相呴以湿
 sknr 可怕 顶踵尽捐
 sknu 可憎
 sknv 可恨
@@ -64759,7 +64549,6 @@ sksb 桃蹊柳陌
 sksc 杏树
 sksg 歌本
 sksh 可想
-sksi 相呴相济
 sksk 可可 哥哥
 sksm 桃蹊柳曲
 sksq 可口可乐
@@ -65062,13 +64851,11 @@ soaf 柳烟花雾
 soal 杨业功
 soaw 楼花
 sobb 粟子
-sobi 飘籵坠溷
 sobm 杰出
 sobp 楼院
 sobr 攀炎附热
 sock 楼台
 soda 术业有专攻
-sodf 枪烟砲雨
 sodm 楼面
 sodq 杰克
 sods 楼厅
@@ -65418,7 +65205,7 @@ srst 板桥
 srsx 李白桃红
 srtb 西瓜长爪子
 srtf 可执行 桂质廷
-srtg 根据槃互 根据盘互 歌舞升平
+srtg 根据盘互 歌舞升平
 srth 横挑鼻子竖挑眼
 srtp 横扫千军
 srtr 标的物 西瓜长爪子能滚能爬
@@ -65496,7 +65283,7 @@ ssew 榆木脑袋
 ssfb 林地 禁地
 ssfc 禁运
 ssfd 柯城
-ssff 松松垮垮 楚梦云雨 榆木圪垯
+ssff 松松垮垮 楚梦云雨
 ssfg 柯坪
 ssfh 西柏坡
 ssfk 桃李无言下自成蹊 梦露
@@ -65690,7 +65477,7 @@ sstj 焚香
 sstm 栖身
 sstr 禁物
 ssts 木箱
-sstt 木笔 枯杨生稊
+sstt 木笔
 sstu 木简
 sstv 禁律
 sstw 木筏 枯树生华
@@ -66237,7 +66024,7 @@ swgi 木偶下海
 swgk 检束
 swgp 树欲静而风不宁 禁舍开塞
 swgw 木偶不叫木偶 木偶不叫木偶傀儡 树欲静而风不停 要价还价
-swgy 木偶下海摸不着底 林黛玉 横僿不文 西邻责言
+swgy 木偶下海摸不着底 林黛玉 西邻责言
 swhc 木偶上戏台
 swhg 板凳上打麻将抓不开
 swhh 板凳上搁窝窝头有板有眼
@@ -66430,7 +66217,6 @@ syaq 西市区
 syas 梗迹蓬飘
 syat 柳市花街
 syau 柳户花门
-syav 柳亸花娇 柳亸莺娇
 syay 枝词蔓语 枝词蔓说
 sybb 柱子 柿子
 sybk 述职
@@ -66480,7 +66266,6 @@ sylw 核办
 sylx 概率思维
 syme 想望风采
 symt 李郭同舟 李郭同船
-symy 想望风褱
 syna 李为民
 syng 述怀
 synt 核发
@@ -66760,7 +66545,7 @@ tatw 稻草秆打人
 tatx 造茧自缚
 taty 螽斯衍庆 长篇
 tauc 长痛
-taud 智藏瘝在 长卷
+taud 长卷
 tauf 升斗
 taug 稻草盖珍珠
 tauj 第七章 长音
@@ -66771,7 +66556,6 @@ taux 长辫
 tavj 筑巢
 tavt 生花妙笔
 tavv 长女
-tawb 复其位踧踖如也
 tawf 升值
 tawg 乱七八遭 长剑
 tawi 稻草人过河 稻草人过河不成沉
@@ -67066,7 +66850,7 @@ tciy 径流
 tcjj 先驱蝼蚁
 tcjk 牝鸡晨鸣
 tcjm 智能电网
-tckk 延颈跂踵 毛驴啃石磨好硬的嘴
+tckk 毛驴啃石磨好硬的嘴
 tcky 毛驴啃石磨
 tclc 智能驾驶
 tclt 私图
@@ -67475,7 +67259,6 @@ tefx 自胜者强
 tega 盘弄
 tegd 航天
 tegh 租下
-tegi 愁肠殢酒
 tegk 盘整 自爱不自贵 航速
 tegm 秀丽
 tego 租来
@@ -67654,7 +67437,7 @@ tfda 冬裘夏葛
 tfdd 千真万确
 tfde 入云龙公孙胜 徒有
 tfdf 壬辰 船老大带徒弟从何河说起
-tfdg 千古 鼻塌唇青 鼻塌脣青
+tfdg 千古 鼻塌唇青
 tfdh 告破
 tfdi 船老大敬神为何河
 tfdj 千百 笔走龙蛇
@@ -68006,7 +67789,6 @@ tgce 行不通
 tgck 禹王台 第一台
 tgcn 升班马
 tgcu 惩恶劝善
-tgcx 重珪叠组
 tgdb 自天而降
 tgdc 重码
 tgdd 重大
@@ -68048,7 +67830,7 @@ tgfr 冬天进豆腐房好大的气
 tgfs 冬天卖醋 冬天卖醋寒酸
 tgft 冬天卖凉粉不识时务 秉正无私 笔下超生 管理者 重教
 tgfu 循环无端 生境
-tgfw 乞丐过日子全靠别人施舍 冬天卖扇子过时货 征夫 衒玉求售
+tgfw 乞丐过日子全靠别人施舍 冬天卖扇子过时货 征夫
 tgfy 乞丐进发廊 冬天进豆腐房 利不亏义 特殊教育
 tgga 生死与共 重型
 tggb 入不敷出 冬天不戴帽子
@@ -68213,10 +67995,10 @@ tgrs 乞丐扭秧歌 秋天的棉桃
 tgrt 冬天摇蒲扇不知春秋 冬天的竹笋 重托
 tgru 冬天的暖水瓶 冬天的炉子闲不着 冬天的竹笋出不了头 冬天的蚂蚁不露头
 tgrw 冬天的旋风成不了气候 重挫
-tgrx 先下手为强 秋天的木棉花老来红 秋天的柿子自来红 第一批 重珪迭组
+tgrx 先下手为强 秋天的木棉花老来红 秋天的柿子自来红 第一批
 tgry 冬天摇蒲扇 管理制度
 tgsc 积不相能 管理权
-tgsd 衒玉贾石 衔玉贾石
+tgsd 衔玉贾石
 tgsf 翻天覆地 翻来覆去 船到桥头自然直 船到桥门自会直
 tgsg 重酬
 tgsh 生相
@@ -68246,7 +68028,6 @@ tgts 第一条 行不得也哥哥 迁于乔木
 tgtt 循环往复 秉笔
 tgtu 征税
 tgtv 丢下犁耙拿扫帚
-tgtw 衒玉自售
 tgty 征稿 自不待言 船到竹稿撑随机应变
 tgub 重塑
 tgud 生养 第一卷
@@ -68545,7 +68326,7 @@ thvk 自如
 thvn 行步如飞
 thvp 复旧如初
 thvt 牌九
-thvv 处女 稚齿婑媠
+thvv 处女
 thvw 舌战群儒
 thvx 奥卡姆
 thwa 利齿伶牙 自供
@@ -69148,7 +68929,7 @@ tkjh 和畅
 tkjo 各显
 tkjq 和煦
 tkka 乱哄哄
-tkkd 和顺 牝哹鸣辰
+tkkd 和顺
 tkkf 笑嘻嘻
 tkkh 各路
 tkkl 各别
@@ -69418,8 +69199,6 @@ tlux 粤北
 tluy 囟门
 tlvb 备好
 tlvm 积甲如山
-tlvn 德輶如羽
-tlvt 德輶如毛
 tlvv 科罗娜
 tlvy 睾丸
 tlwg 血债
@@ -69645,7 +69424,7 @@ tmvc 得见君子者斯可矣
 tmvi 奥妙 微妙
 tmvx 奥姆
 tmwd 自贻伊戚 身段
-tmwf 币值 行崄侥幸
+tmwf 币值
 tmwg 躺倒
 tmwi 移山倒海
 tmwl 盘山公路上开车
@@ -70007,7 +69786,6 @@ tpik 香蜜湖一号
 tpil 长安汽车
 tpir 长安少年
 tpiy 稗官小说
-tpji 入室昻堂
 tpjk 稗官野史
 tpjr 行军遇伏兵 行家里手
 tpjt 千军易得 行军遇伏兵出师不利
@@ -70213,7 +69991,7 @@ tqnf 翻然改进
 tqng 移情
 tqnh 稀疏
 tqnl 翻然改图
-tqnn 翻然悔悟 行色恠恠
+tqnn 翻然悔悟
 tqnr 稀狗屎上叉白搭
 tqnt 重金属
 tqnv 衔恨
@@ -70443,7 +70221,6 @@ trmi 午后见阳光
 trmj 御赐 长白山的野人参得之不易
 trmm 长白山
 trmn 长白山的大雪满天飞
-trmq 犁牛髐角
 trmy 牡丹
 trna 牧民 特异
 trnf 臭氧层
@@ -70469,7 +70246,6 @@ trqh 冬瓜钱算在葫芦上 物外
 trqi 穆尔
 trqj 物象
 trqm 冬瓜钱算在葫芦上混账 特钢
-trqq 重气猣名
 trqv 特急
 trra 秋后的芭蕉
 trrb 秋后的扇子 秋后的知了 秋后的蚊子
@@ -70651,7 +70427,7 @@ tsph 衔橛之虞
 tspl 御林军
 tspv 条案
 tspy 盘根究底 衔橛之变
-tsqa 槃根错节 盘根错节
+tsqa 盘根错节
 tsqj 短棍儿打蛇
 tsqm 自相鱼肉
 tsqn 箱包
@@ -70677,7 +70453,7 @@ tssw 向棺材里的人讨帐逼死人
 tstd 箱笼
 tstg 笨重
 tstr 适材适所
-tsts 夭桃穠李 条条
+tsts 条条
 tstx 自查自纠
 tsty 利析秋毫
 tsud 条状 竹枕头
@@ -70716,7 +70492,7 @@ ttar 各得其所 片长薄技 适得其反
 ttat 微乎其微
 ttaw 竹篱茅舍 躬行节俭 适逢其会
 ttba 竹筒子里塞棉花
-ttbb 竹子 竹筛子兜水漏洞百出 齉鼻子
+ttbb 竹子 竹筛子兜水漏洞百出
 ttbf 算盘子进位以一当十 行行出状元
 ttbh 竹筒子吹火只有一个心眼 竹筒子里塞棉花空虚
 ttbi 竹筛子兜水
@@ -70741,7 +70517,7 @@ ttda 积微成著
 ttdb 竹篮盛稀饭漏洞百出
 ttdc 笔友 自告奋勇
 ttdd 千千万万 箩筐盛石灰 长篇大套
-ttdf 冬箑夏裘 鹅毛大雪
+ttdf 鹅毛大雪
 ttdg 造船厂
 ttdi 笔耕
 ttdm 竹升面 篷布
@@ -70778,11 +70554,11 @@ ttge 算盘珠子脱了框无用 衅稔恶盈
 ttgf 算盘珠子拨拨动动不拨不动 行稳致远 长生不老
 ttgg 生生死死 自我表现 长生不死
 ttgh 笔下
-ttgi 愁长殢酒 行船不划桨随大流
+ttgi 行船不划桨随大流
 ttgk 微处理器
 ttgl 笔画
 ttgn 生生不已
-ttgq 笑死 簠簋不饬
+ttgq 笑死
 ttgr 片长末技 积重不反 积重不返
 ttgs 算盘珠子脱了框
 ttgt 千篇一律 生生不息
@@ -70849,7 +70625,6 @@ ttmf 我得则利彼得亦利者为争地 我自岿然不动 竹雕
 ttmg 科特迪瓦
 ttmh 笔帽
 ttmm 竹山
-ttmq 犁生髐角
 ttnd 笑剧
 ttnh 先悉必具
 ttni 舐犊情深
@@ -70894,7 +70669,7 @@ ttrm 竹帛 竹篮打水风拦风
 ttrn 乱箭攒心
 ttrp 竹筐挑水两头空两落空 竹篮打水一场空 竹篮打水风拦风全落空
 ttrq 短短的 长长的
-ttrr 徬徨失措 稀稀拉拉
+ttrr 稀稀拉拉
 ttrs 毛笔掉了头光棍一条光棍
 ttrt 笔挺 翻船抓到救生圈绝处逢生 行香挂牌
 ttru 先行后闻 徇私舞弊 毛笔掉了头
@@ -71170,7 +70945,7 @@ turj 衙门的灯笼正大光明
 turk 税捐 笔端的大马路
 turl 衙门皂子打老爹公事公办
 turm 税制
-turn 垂头搨翼 移商换羽
+turn 移商换羽
 turo 鼻头搽白粉
 turp 衙门皂隶进宅
 turq 剩的 街头的狗
@@ -71338,7 +71113,6 @@ tvtg 魏征
 tvtm 委身 自寻短见
 tvtq 自娱自乐
 tvts 律条 选妓征歌
-tvtt 自媒自衒
 tvtx 自始自终
 tvua 笤帚疙瘩上打茧
 tvud 很差
@@ -71354,7 +71128,6 @@ tvvp 委婉
 tvvq 笨媳妇纳的袜底儿
 tvvy 笨姑娘纳鞋底
 tvwf 委会
-tvwh 息怒停瞋
 tvwq 很低
 tvws 魏体
 tvwt 委任
@@ -71410,7 +71183,6 @@ twff 黏土
 twfh 科伦坡 长念却虑
 twfj 复仇者联盟 知人者智自知者明
 twfm 行合趋同
-twfn 利令志惛
 twft 知人者智 秉公无私
 twfu 告贷无门
 twfw 微信支付
@@ -71765,7 +71537,7 @@ tygc 入到
 tyge 先为不可胜 先为不可胜以待敌之可胜 牧刘表
 tygf 入球
 tygg 血迹斑斑
-tygh 往下 重裵列鼎
+tygh 往下
 tygi 往还
 tygj 入理
 tygk 往事 生离死别
@@ -71970,7 +71742,6 @@ uafi 判若云泥 并未
 uafj 并进
 uafq 并无
 uafw 旁若无人 闲工夫 阒其无人
-uafx 旁蒷远绍
 uagc 并到
 uagd 并吞
 uagf 并于
@@ -72022,7 +71793,6 @@ uarl 将功折罪 将功抵罪
 uarp 并按
 uaru 酱菜缸里泡石头
 uarw 新鞋打掌子多余 酱菜缸里的瓜子闲人仁
-uasa 闲花埜草
 uask 并可
 uast 兰薰桂馥
 uasv 并要
@@ -72184,7 +71954,6 @@ ubui 头出头没
 ubuq 疗效
 ubut 癞子头上抓痒求之不得 闻道
 ubuu 癞子剃头 癞子头上抓痒 辣子辣椒拌老姜 辣子辣椒拌老姜辣对辣
-ubwb 闵子侍侧訚訚如也
 ubwf 瘸子追小偷越喊越远
 ubwq 塑像
 ubwt 疗伤
@@ -72504,7 +72273,6 @@ udqr 遵而勿失
 udqt 养猪 头儿
 udqu 送故迎新
 udqv 关键 着急
-udqw 閒古铸今
 udqy 关岛
 udrb 丫鬟抱孩子 送报
 udrd 凑拢
@@ -72921,7 +72689,6 @@ ufkk 道士吹螺号 闭口
 ufkm 总动员 送丧路上遇旋风
 ufkr 道士吹螺号吓鬼
 ufkt 送丧路上遇旋风祸不单行
-uflb 瓶罄罍耻
 uflf 装置
 uflg 装车
 uflh 装甲
@@ -73208,7 +72975,7 @@ ugop 凄迷
 ugpd 病害 间不容砺
 ugpe 病家
 ugpg 新型冠状病毒 普天之下 靖宇
-ugph 间不容瞚 间不容瞬
+ugph 间不容瞬
 ugpl 美军
 ugpn 间不容发
 ugpq 盗玉窃钩
@@ -73248,13 +73015,12 @@ ugsd 盖顶
 ugsg 冷不丁 靖西
 ugsh 辣椒
 ugsj 病榻
-ugsn 道殣相属
 ugso 盖楼
 ugsr 盖板
-ugss 美梦 道殣相枕
+ugss 美梦
 ugst 美格
 ugsv 病根
-ugsy 疾不可为 美术 道不相谋 道殣相望
+ugsy 疾不可为 美术 道不相谋
 ugtc 病笃
 ugtd 美籍
 ugtf 盖德 美德 问一答十 闻一知二 闻一知十
@@ -73434,7 +73200,6 @@ uhsu 头上顶碓窝石臼老实石疙瘩
 uhsv 头上顶碓窝石臼
 uhsy 站桩
 uhta 站长
-uhtd 养虎自齧
 uhte 头上长疮脚底流脓
 uhtf 头上生疮顶坏 头上长疮顶坏 疤上生疮根底坏
 uhtg 养虎自残
@@ -73569,7 +73334,7 @@ uipf 冰寒 痛湔宿垢
 uipg 冰室
 uipu 冰袖 北洋军阀
 uipw 冰窖
-uiqf 兰洋镇 冰镇 道滘镇
+uiqf 兰洋镇 冰镇
 uiqn 冻浦鱼惊 盖浇饭
 uiqq 奖学金
 uiqt 关汉卿
@@ -74014,14 +73779,13 @@ ukre 半响打不出喷嚏来干难受
 ukrf 竞技
 ukrg 半响打不出喷嚏来 总兵 总后
 ukrh 冲掉
-ukri 拳中掿沙
 ukrj 总揽
 ukrk 冷嘲热骂
 ukrm 竞投
 ukrq 兑换
 ukrr 前呼后拥 竞拍
 ukrt 总括 闭口捕舌
-ukru 冲撞 前跋后痜
+ukru 冲撞
 ukry 冷嘲热讽
 uksa 冲模
 uksc 阔叶树
@@ -74352,7 +74116,7 @@ umww 商人 瘦骨伶仃 端坐
 umwy 憋住
 umxf 端绪
 umxg 端线
-umxq 冯髈弹铗 商约
+umxq 商约
 umxy 凉山彝族 凉山彝族自治州
 umyf 商讨 端庄
 umyh 商店
@@ -74510,7 +74274,6 @@ uogf 痰盂
 uogn 痴迷不悟
 uogp 遂迷不寤
 uogt 产业政策
-uogu 遂迷不竝
 uoib 普洱
 uoif 普法
 uoim 普测
@@ -74625,7 +74388,6 @@ uplp 判官办案 旁边
 uplt 剖视图
 uplu 痛定思痛
 uplw 判官办案吓死人
-upmd 兽穷则齧
 upmk 兽穷则啮
 upmq 北宫婴儿
 upms 闳宇崇楼
@@ -75411,7 +75173,6 @@ utlx 逆向思维
 utmj 立竿见影
 utmm 病入骨髓 痛入骨髓
 utmq 疾风
-utmy 病入骨雜
 utna 疼惜
 utne 痛入心脾
 utnf 决策层
@@ -75570,7 +75331,7 @@ uudl 阅历
 uudm 立面 背着石头上泰山 背着石磨上山
 uudn 冰冻三尺
 uudp 冰冻三尺非一日之寒 疾首蹙额
-uudr 六问三推 拳头舂海椒辣椒辣手 痌瘝在抱 立碑 背前面后
+uudr 六问三推 拳头舂海椒辣椒辣手 立碑 背前面后
 uuds 拳头砸核桃 拳头舂海椒辣椒
 uudu 将门有将 拳拳盛意 旁门左道
 uudv 背着石头上泰山受累不讨好 背着石磨上山费力不讨好
@@ -76041,7 +75802,6 @@ uwpt 立命安身 道傍之筑 闪客
 uwpw 善人之宝不善人之所保
 uwpy 新华社
 uwqc 冷色 阅人多矣
-uwqd 閒今铸古
 uwqg 美人鱼
 uwqi 产供销
 uwql 半个铜钱不成方圆
@@ -76472,7 +76232,6 @@ uyqn 单肩包
 uyqs 门钉
 uyqt 门儿
 uyqw 背义负信 门铃
-uyqy 兽迒鸟迹
 uyrc 半夜拔河暗中使劲 门把
 uyrd 兰州拉面 兰州牛肉面
 uyrg 门后
@@ -76577,7 +76336,6 @@ vaaq 姑苏区
 vabn 毁了
 vada 忍苦耐劳
 vadg 如期而至
-vado 九蒸三熯
 vadu 如芒在背
 vaeg 如东县
 vaes 寻花觅柳
@@ -76906,14 +76664,12 @@ vdge 姑表
 vdgh 始愿不及此
 vdgi 杂耍班子走江湖 群而不党
 vdgp 如有政虽不吾以吾其与闻之 既成事实
-vdgq 女大不中留 鼠齧蠹蚀
+vdgq 女大不中留
 vdgs 退耕还林
 vdih 姑婆
 vdin 好奇尚异
 vdip 九三学社
 vdiv 女大当嫁
-vdjp 鼠齧虫穿
-vdkb 君在踧踖如也与与如也
 vdlt 忍耐力
 vdnw 如原以偿 如愿以偿
 vdny 好奇心
@@ -77152,8 +76908,6 @@ vfqk 那句
 vfqn 寻乌
 vfqt 妹儿 那儿
 vfra 寻找
-vfrd 拏云攫石
-vfrf 拏云握雾
 vfrh 那年
 vfrm 建制
 vfrn 那所
@@ -77197,7 +76951,7 @@ vfvc 建始
 vfvf 妹妹 姥姥 娃娃
 vfvn 妩媚
 vfvr 好声好气
-vfvt 如埙如箎 如埙如篪 那群
+vfvt 如埙如篪 那群
 vfvv 妓女
 vfwb 建仓
 vfwd 那段
@@ -77353,7 +77107,6 @@ vidf 九流三教 剥夺
 vidm 刀削面
 vidn 姚湘成
 vidp 九流百家
-vidr 如法砲制
 vidv 媒婆夸姑娘 媒婆夸姑娘说得象仙女 媒婆夸闺女
 vidy 媒婆夸闺女光拣好的说
 vieg 始兴县 寻流逐末 建水县 建湖县
@@ -77642,7 +77395,6 @@ vmho 好肉上贴橡皮膏自找麻烦
 vmhy 好肉上贴橡皮膏
 vmil 九岁当了童养媳活受罪
 vmiv 九岁当了童养媳
-vmkf 拏风跃云
 vmle 九曲回肠
 vmmw 毁风败俗
 vmoi 刀山火海
@@ -77691,7 +77443,7 @@ vnie 刀削 好心当成驴肝肺
 vnif 刀法
 vnig 好心当成驴肝肺不识好歹
 vniq 刀光
-vniu 鼠屎汙羹 鼠屎污羹
+vniu 鼠屎污羹
 vnje 鼠臂虮肝
 vnkk 刀口
 vnlk 刀架
@@ -77863,7 +77615,6 @@ vpvn 嫔妃
 vpvp 婶婶
 vpvu 鼠穴寻羊
 vpvy 婶娘
-vpwd 姱容修态
 vpwe 好袄做成破马褂穷折腾
 vpwo 好家伙
 vpwp 好袄做成破马褂
@@ -78398,13 +78149,11 @@ vvnr 奶妈怀里的娃娃人家的
 vvnt 女性
 vvnv 奶妈怀里的娃娃
 vvpa 妹妹穿姐姐的鞋
-vvpc 鼪鼬之迳
 vvpe 女家
 vvpg 女娲补天
 vvpl 娃娃穿道袍宽大无边
 vvpp 娃娃穿道袍 旭旭宝宝
 vvpr 女宾
-vvpt 鼪鼯之径
 vvpy 女神 媒妁之言
 vvqc 女色
 vvqd 巢毁卵破
@@ -78464,7 +78213,7 @@ vvvp 女娃娃缝尿布虑事太宽
 vvvs 好女嫁丑汉不般配
 vvvt 女妖
 vvvv 妇女 娉婷婀娜 嫂嫂
-vvwb 君召使摈色勃如也足躩如也 女仔
+vvwb 女仔
 vvwd 女优
 vvwe 女佣
 vvwh 女仆 娃娃拿到新玩具
@@ -79139,7 +78888,6 @@ wdaq 华龙区
 wdar 亿万斯年
 wdas 人非草木
 wdat 人百其身
-wdaw 儗非其伦
 wdax 今非昔比
 wdbb 段子
 wdbl 优孟
@@ -79217,7 +78965,7 @@ wdjk 集成电路
 wdjm 优遇
 wdjq 命在旦夕
 wdkf 借面吊丧
-wdkg 仰面唾天 伏而唂天 分三别两
+wdkg 仰面唾天 分三别两
 wdkh 段中
 wdkk 传感器
 wdkw 借古喻今
@@ -79234,7 +78982,6 @@ wdmw 八达岭
 wdna 优异
 wdnf 仗恃
 wdng 人在屋桅下
-wdnr 斧破斨缺
 wdnt 僚属
 wdnu 人在屋桅下不得不低头
 wdny 倚翠
@@ -79408,7 +79155,6 @@ weun 合肥新站高新技术产业开发
 weuq 仍将
 weus 八月间的核桃
 weuw 八月间的核桃满人仁
-wevt 佛肸召子欲往
 wewe 倾肠倒肚
 wewf 仍会
 wewg 公乃全全乃天
@@ -79594,7 +79340,7 @@ wfpe 体无完肤 儒家
 wfpf 值守
 wfpg 坐井窥天
 wfph 体无完皮
-wfpj 会审 逾墙窥蠙
+wfpj 会审
 wfpl 傅志寰
 wfpn 坐南宫守北殿
 wfps 会宁 坐南宫守北殿不分东西
@@ -79605,15 +79351,13 @@ wfqb 逾墙钻隙
 wfqd 佳肴
 wfqg 值钱
 wfqi 传销
-wfqj 逾墙钻蠙
 wfqk 佳句
 wfql 人才链
-wfqm 贪夫猣财
 wfqn 会馆
 wfqp 逾墙钻穴
 wfqq 命运多舛
 wfqr 什锦
-wfqt 会儿 贪夫猣利
+wfqt 会儿
 wfqu 含垢包羞
 wfra 偷南瓜带摘葫芦
 wfrb 传报 华南热作学院
@@ -79814,7 +79558,7 @@ wggr 华不再扬
 wggs 人事不醒
 wggt 人事不知 今吾于人也听其言而观其行
 wggu 全副武装
-wggw 儗不于伦 八珍玉食 公平责任
+wggw 八珍玉食 公平责任
 wggy 人琴两亡 全班 欲与天公试比高
 wghh 登上
 wghi 便步
@@ -79844,7 +79588,6 @@ wgjg 便是 倒是 命题
 wgjj 全日
 wgjm 从恶是崩 倒映
 wgjq 做一日和尚撞一天钟 做一日和尚撞一日钟 食不暇饱
-wgjs 合夥
 wgjt 登临
 wgjv 合照
 wgjy 全景 合影
@@ -79885,7 +79628,7 @@ wgnd 人一己百 全剧
 wgnf 假恶丑
 wgng 仰不愧天 合情
 wgnh 剑眉
-wgnj 伺瑕导蠙 傲慢
+wgnj 傲慢
 wgnk 合璧
 wgnn 僵尸 僵局 全书 全局
 wgnt 代表性 传不习乎 全球性 愈发
@@ -79936,7 +79679,7 @@ wgrd 合拢 焦熬投石
 wgrf 倚天拔地 偷来的锣鼓 僵持
 wgrg 便捷
 wgrh 全年
-wgrj 伺瑕抵蠙 偷天换日 拿捏
+wgrj 偷天换日 拿捏
 wgrk 倒扣 偷来的喇叭 食不遑味
 wgrn 傲气 欲速反迟
 wgrp 愈近
@@ -80016,7 +79759,7 @@ wgwf 人到八十拜花堂老来喜 全会
 wgwg 使命 便便 公平合理 愈合 愈来愈
 wgwh 全天候
 wgwi 人到八十拜花堂
-wgwk 侠侣 食不餬口
+wgwk 侠侣
 wgwl 公事公办
 wgwm 祭于公不宿肉
 wgwn 例假
@@ -80026,11 +79769,11 @@ wgwq 倒像 倒爷
 wgwr 人琴俱逝 偃武休兵 拿班作势 拿班做势
 wgws 全体
 wgwt 人来人往 代表作 倚玉偎香 合作
-wgwu 仪静体闲 佹形僪状
+wgwu 仪静体闲
 wgwv 全分
 wgww 代理人 代表人 使人
 wgwx 僵化 全球化
-wgwy 人事代谢 人琴俱亡 仰事俛畜 仰事俯畜 仰事俯育 偃武修文 全集 合集 命令
+wgwy 人事代谢 人琴俱亡 仰事俯畜 仰事俯育 偃武修文 全集 合集 命令
 wgxf 爷青结
 wgxg 全线
 wgxi 瓮天蠡海
@@ -80044,7 +79787,7 @@ wgya 合谋
 wgyc 倒序
 wgyd 作歹为非
 wgye 便衣 食不充肠
-wgyf 人焉廋哉 供不应求 化整为零 合计
+wgyf 供不应求 化整为零 合计
 wgyg 例证 合两为一
 wgyh 僵蚕放在蚕蔟上
 wgyi 便应 公正廉洁
@@ -80221,7 +79964,7 @@ wibe 歙漆阿胶
 wibg 傻小子不识打更
 wibk 傻小子拉二胡自顾自吱咕吱
 wibr 傻小子不识货拣大的摸 傻小子拜年
-wibs 依乷附木 傻小子不识打更敲竹杠
+wibs 傻小子不识打更敲竹杠
 wibu 傻小子爬墙头
 wibw 傻小子不识货
 wiby 傻小子拜年光磕头不说话
@@ -80229,7 +79972,6 @@ wice 倘能
 wict 父没观其行
 widg 禽流感
 widq 众少成多
-widr 依法砲制
 wieg 从江县 仙游县 会泽县 修水县 剑河县 华池县 合水县 合江县 合浦县 翁源县 邻水县
 wiew 作小服低
 wiey 伏法受诛
@@ -80372,7 +80114,6 @@ wjkh 伸嘴
 wjld 但因
 wjlt 分时图
 wjma 伸曲
-wjmd 优贤飏历
 wjmq 但见
 wjmy 但凡
 wjna 伸展
@@ -80492,7 +80233,6 @@ wkhu 伤口上长毒疮
 wkif 保洁
 wkij 保温
 wkik 个中滋味 低吟浅唱
-wkim 众喣漂山
 wkio 偷吃海椒辣椒里外发烧
 wkip 命中注定
 wkiq 釜中游鱼
@@ -80515,7 +80255,6 @@ wklh 保甲
 wklk 保驾
 wklo 合唱团里的哑巴凑数
 wklq 保罗
-wkmf 众喣山动
 wkmm 保山 坐吃山崩
 wkmp 坐吃山空
 wkmq 公路网
@@ -80559,7 +80298,6 @@ wkru 瓮中捉鳖
 wkrw 瓮中的王八
 wkry 保护
 wksg 保本
-wksm 众喣飘山
 wkst 企踵可待 公路桥
 wksw 众口相传
 wkta 保长
@@ -80769,7 +80507,6 @@ wmrh 做贼的不用化装贼眉贼眼
 wmrj 追风掣电 追风摄景
 wmrm 合同制
 wmrn 仙气
-wmro 传风搧火
 wmrp 侧近 倒贴的门神
 wmrr 仙逝
 wmrs 凭几据杖
@@ -80871,7 +80608,6 @@ wnel 侯爵
 wnep 追逐
 wnet 仁民爱物
 wnev 假腿
-wnew 使心用倖
 wney 追及
 wnfb 似地
 wnfd 阜城
@@ -80940,7 +80676,7 @@ wnng 追怀
 wnnh 伤心惨目 舒眉展眼 追悼
 wnnj 假惺惺
 wnnl 倾心尽力
-wnnn 人心惶惶 人情恟恟 追忆
+wnnn 人心惶惶 追忆
 wnnq 人心惟危
 wnnt 假性
 wnnw 何必改作 分居异爨
@@ -81039,7 +80775,7 @@ wnwr 使性傍气 使臂使指 拿尿盆往头上扣
 wnws 仁心仁术
 wnwt 假作 全心全意为人民服务
 wnwu 仁心仁闻 依心像意 像心像意 全心全意
-wnww 人民代表大会 使心作倖 舍己从人 领导人
+wnww 人民代表大会 舍己从人 领导人
 wnwx 个性化 依翠偎红 倚翠偎红 假货
 wnwy 何以伐为 俾昼作夜 追念
 wnxk 倔强
@@ -81057,8 +80793,6 @@ wnyv 阜康
 wnyw 舍己为人 舍己为公 舍己就人 追认
 woat 含糊其辞
 woay 含糊其词
-woci 餵糟歠漓
-wocs 餵糟歠醨
 woft 创业者
 wofw 伙夫
 wogf 借米还糠气鼓气胀气鼓鼓
@@ -81071,10 +80805,8 @@ woit 人烟浩穰
 wojg 从糠里熬出油来 作业题
 wojr 从糠里熬出油来是把好手
 wokg 余业遗烈
-woki 餵糟啜漓
 wokm 从业员
 woko 忿火中烧
-woks 餵糟啜醨
 wolf 创业园
 wolk 创业加速器
 wolw 企业界
@@ -81110,7 +80842,6 @@ woyg 企业主
 woyn 伙房
 woyr 傅粉施朱
 woyw 企业文化
-wpag 倒冠落珮
 wpai 付之东流
 wpan 人神共愤
 wpaq 华容区 集宁区
@@ -81401,7 +81132,6 @@ wqwa 任怨任劳
 wqwd 低估
 wqwg 你俩
 wqwh 今儿个 像个
-wqwi 俠多俠少
 wqwk 低保
 wqwo 佝偻
 wqwq 今夕何夕 忿然作色 爷爷 爸爸 爹爹
@@ -81441,7 +81171,7 @@ wrdt 傅振邦
 wrdx 欲擒故纵
 wrel 伯爵
 wret 售后服务
-wrfa 俛拾地芥 俯拾地芥 倒持干戈
+wrfa 俯拾地芥 倒持干戈
 wrfd 任势者其战人也如转木石 凭白无故
 wrff 舍近求远
 wrfn 售后无忧
@@ -81509,7 +81239,7 @@ wrvc 拿手好戏
 wrvf 舍近即远
 wrvj 俯拾即是
 wrvx 剑拔弩张
-wrwb 仰拾俯取 俛拾仰取 俯拾仰取
+wrwb 仰拾俯取 俯拾仰取
 wrwe 何年何月
 wrwf 侏儒
 wrwi 仗气使酒
@@ -81808,7 +81538,7 @@ wtiq 余光 傅德辉
 wtir 作派
 wtis 舍得酒
 wtit 修身洁行
-wtiw 余兴 含血潠人
+wtiw 余兴
 wtjd 人我是非
 wtjg 偏移量
 wtjj 休息日
@@ -81825,7 +81555,7 @@ wtkl 作别
 wtkm 伤员 公务员
 wtko 人各吃得半升米
 wtkt 作响
-wtkw 人各吃得半升米哪个怕哪个 含血喷人 含血噀人
+wtkw 人各吃得半升米哪个怕哪个 含血喷人
 wtky 人生路不熟 伊犁哈萨克自治州
 wtlf 价等连城 作罢
 wtlg 俄国 贪生畏死
@@ -81961,7 +81691,6 @@ wtwh 八个
 wtwk 作保
 wtwm 借篷使风 八仙
 wtwn 作假
-wtwr 佹得佹失
 wtws 任何
 wtwt 人生何处不相逢 任凭 倒箧倾筐 借箸代筹 倾筐倒箧 倾箱倒箧
 wtwu 作伴 舍策追羊
@@ -82050,7 +81779,7 @@ wuge 仙姿玉貌 斜头歪脑
 wugf 仅次于 任意球 位于
 wugh 人间天上
 wugi 人间天堂
-wugk 传送带 剑头一吷 剑首一吷
+wugk 传送带
 wugm 传闻不如亲见
 wugn 从头到尾 从头至尾 低首下心
 wugp 坐立不安
@@ -82102,7 +81831,7 @@ wuls 登着软梯子上飞机
 wult 位图 佛头加秽
 wulx 低头思故乡
 wuma 停辛贮苦
-wumb 伏首贴耳 俛首帖耳 俯首帖耳 俯首贴耳
+wumb 伏首贴耳 俯首帖耳 俯首贴耳
 wumd 傍岸
 wume 伞骨
 wumf 拿着凤凰当鸡卖
@@ -82255,7 +81984,6 @@ wvff 分封
 wvfg 分寸
 wvfh 分赴
 wvfn 分场
-wvfq 傫如丧狗
 wvfs 拿刀动杖
 wvft 创建者
 wvga 分开
@@ -82473,7 +82201,6 @@ wwdm 从而
 wwdp 休休有容
 wwdt 人寿
 wwdu 偶像面前磕头
-wwdw 食饐而餲鱼馁而肉败不食
 wwdx 偷袭
 wwdy 侃侃而言 侃侃而谈 念念有词
 wweb 佛爷脸上刮金子
@@ -82605,7 +82332,7 @@ wwou 谷粒
 wwov 个位数 人数
 wwoy 谷米
 wwpa 从宽
-wwpb 人字 公伯寮愬子路于季孙
+wwpb 人字
 wwpe 人家
 wwpf 坐守
 wwpg 坐定
@@ -82712,7 +82439,7 @@ wwwd 从优
 wwwf 人代会 价值
 wwwg 人命
 wwwi 伏低做小
-wwwj 人偶 使贪使愚 儽儽兮若无所归
+wwwj 人偶 使贪使愚
 wwwl 低估值策略
 wwwm 伶俜
 wwwo 爷俩分家另起炉灶
@@ -82917,7 +82644,6 @@ wxyr 倾诉
 wxyt 化州 华州 华诞
 wxyv 货郎
 wxyw 华府
-wxyx 侜张为幻
 wxyy 华文
 wyaa 人文荟萃 人言藉藉 仪式 坐享其功
 wyad 储藏 坐享其成
@@ -83214,7 +82940,7 @@ wywd 仪仗 依仗
 wywf 偃旗仆鼓 集会 领会
 wywg 修文偃武 公说公有理婆说婆有理 集合
 wywj 众望攸归
-wywl 依偎 倒廪倾囷
+wywl 依偎
 wywn 俾夜作昼 偏僻
 wywp 分庭伉礼
 wywq 信仰
@@ -85624,7 +85350,7 @@ xxpm 绮纨之岁 绿绸衫上绣牡丹
 xxpp 缝缝补补
 xxpq 引线穿针
 xxpt 红纸裱灯笼
-xxpu 丝袜 缟纻之交
+xxpu 丝袜
 xxpw 幽邃
 xxqb 幽怨
 xxqd 幽然
@@ -85704,7 +85430,6 @@ xxyt 幽州 纽约州
 xxyx 丝线麻线混一团难缠 比率 纲纪废弛
 xxyy 比方 缝纫店里做衣服量体裁衣
 xyaf 编著
-xyai 弢迹匿光
 xyaj 绿衣黄里
 xyak 缩衣节口
 xyaq 张店区 红旗区 颍州区
@@ -85813,7 +85538,7 @@ xytv 编委
 xyty 编入 缘文生义
 xyub 绝户头得个败家子 绝户头生对双生子
 xyud 缠着
-xyuf 比肩并起 缁衣羔裘素衣麑裘黄衣狐裘
+xyuf 比肩并起
 xyuj 顷刻间
 xyuq 编次
 xyva 鬻良杂苦
@@ -85990,10 +85715,9 @@ yatg 谋生
 yath 谋算
 yati 京东物流 文艺复兴 言芳行洁 计功行赏 论功行赏
 yatj 谋利
-yatk 离蔬释躥 试种
+yatk 试种
 yatl 庶务
 yatm 度身 试射
-yatn 离蔬释屩
 yatp 试管
 yatq 谎称
 yatt 试笔
@@ -86341,7 +86065,6 @@ ydbm 诚聘
 ydbw 夜耗子偷食
 yddb 变态百出 方面大耳
 yddd 庞大 磨砻砥砺 齐大非耦
-yddm 烹龙砲凤
 yddn 亢龙有悔 离奇古怪
 yddp 麻布厂遭火灾
 yddq 磨砖成镜 麻布厂遭火灾烧包
@@ -86666,8 +86389,8 @@ yfkk 敲鼓吹口哨
 yfkq 诗史
 yfkr 敲鼓吹口哨自吹自擂
 yfkt 讨吃 谋无遗策
-yfky 认真听讲 谋无遗谞
-yflf 庄园 旋乾转坤 旋干转坤
+yfky 认真听讲
+yflf 庄园 旋干转坤
 yflg 诸国
 yflh 文无加点
 yflk 讨回
@@ -86707,7 +86430,6 @@ yfpy 诗社
 yfqc 诸色
 yfqd 文过饰非
 yfqe 摩云金翅欧鹏 讲解
-yfqf 高埗镇
 yfqg 望远镜观天 讨钱
 yfqi 望远镜照太平洋 望远镜照太平洋一望无涯
 yfqk 诗句
@@ -87145,7 +86867,6 @@ yhqt 施虐狂
 yhqu 弃旧迎新
 yhqy 谈虎色变
 yhra 房上的草
-yhrd 启瞶振聋
 yhrg 谄上抑下
 yhrn 床上失火烧着屁股燎着心
 yhro 床上失火
@@ -87597,7 +87318,6 @@ ykgt 庆吊不行 言听事行 调嘴弄舌
 ykgu 裹足不前
 ykhk 误点
 ykhq 误餐
-ykin 鸾跂鸿惊
 ykit 调嘴学舌
 ykiw 襄汾
 ykiy 讷口少言
@@ -87643,7 +87363,7 @@ ykra 课嘴撩牙
 ykrb 误报
 ykrf 讨口的掉醋坛
 ykrp 讨吃的敬神 误按
-ykrr 庸中皦皦 文史哲
+ykrr 文史哲
 ykrs 讨口的掉醋坛穷酸 误打
 ykrt 说嘴的郎中中医医生
 ykry 训斥
@@ -87710,7 +87430,7 @@ yldj 为非
 yldp 亡国破家
 yldq 库克
 yldw 禀奏
-ylet 为用 膺图受箓
+ylet 为用
 ylfc 颤动
 ylff 旋转乾坤 旋转干坤
 ylfk 敲边鼓
@@ -87753,7 +87473,7 @@ ylnn 为己
 ylnt 禀性
 ylog 为业
 ylov 为数
-ylpd 为害 刘畊宏
+ylpd 为害
 ylpe 为宜
 ylpk 亡国之器
 ylpl 主力军
@@ -88146,11 +87866,11 @@ ynfi 启示 高飞远举
 ynfk 永吉 永嘉
 ynfl 齐心协力
 ynfp 记过
-ynfq 永远 鹑居鷇饮
+ynfq 永远
 ynfr 毫发无损 高飞远遁
 ynft 望都 记者
 ynfu 文以载道 高情远意 高情远韵 高飞远翔
-ynfw 亡夫 高飞远集 鹑居鷇食
+ynfw 亡夫 高飞远集
 ynfx 刻翠裁红
 ynfy 义愤填膺
 ynga 户型 房琪 扇形
@@ -88230,7 +87950,6 @@ ynnl 齐心戮力
 ynnm 齐刷刷
 ynnn 记忆
 ynnp 诗书发冢
-ynnr 亢心憍气
 ynnt 启发 误导性
 ynnu 讫情尽意
 ynnv 记恨
@@ -88272,7 +87991,7 @@ ynqw 放心解体
 ynqx 诛尽杀绝
 ynqy 忘情负义 永久
 ynra 肩扛
-ynrb 放屁扭着腰真倒霉倒霉透了 磨昬抉聩 说书的收了三弦琴不谈弹了
+ynrb 放屁扭着腰真倒霉倒霉透了 说书的收了三弦琴不谈弹了
 ynrc 忘返
 ynre 放屁扭着腰 放屁捂屁股 放心托胆 说书的嘴唱戏的腿
 ynrf 记挂 说书的唱大鼓
@@ -88339,7 +88058,7 @@ ynwf 房舍 永仁
 ynwg 亡命 永登
 ynwh 永修
 ynwj 言必信行必果
-ynwl 齐心併力 齐心合力
+ynwl 齐心合力
 ynwq 望你
 ynws 说书人刹板 遍体
 ynwt 记叙
@@ -88452,8 +88171,7 @@ yonh 弯眉
 yonn 变局
 yont 变性
 yony 谈心
-yoob 文火炖蹄髈肘子
-yoom 放火烧山 文火炖蹄髈
+yoom 放火烧山
 yoos 放火烧山林 放火烧山林不顾根本
 yoov 变数
 yope 恋家
@@ -88547,7 +88265,7 @@ ypdp 言之有礼 高官厚禄
 ypdq 享礼有容色 毫克 豪爽
 ypdr 言之有据
 ypdt 言之有物 这帮
-ypdy 言之有序 諠客夺主 雍容大度
+ypdy 言之有序 雍容大度
 ypeg 广宁县 广宗县 庆安县 文安县 永宁县 永福县 诏安县 鹿寨县
 ypel 豪爵
 ypev 膏腴
@@ -88702,7 +88420,6 @@ ypwx 庹宗华 豪华
 ypwy 谢家集
 ypxj 豪绅
 ypxk 豪强
-ypxp 施衿结褵
 ypxt 这张
 ypxw 启宠纳侮
 ypya 亮度
@@ -88737,7 +88454,6 @@ yqbi 夜猫子睡觉
 yqbp 夜猫子进宅
 yqbs 夜猫子唱歌
 yqbv 底限
-yqby 衣锦褧衣
 yqce 义勇
 yqcn 义马
 yqcy 诳骗
@@ -88775,10 +88491,9 @@ yqhf 麟角虎翅
 yqhk 义战
 yqhq 应名点卯
 yqhw 义齿
-yqic 放饭流歠
 yqig 席包泥巴做被盖卷土重来
 yqip 义演
-yqiu 席包泥巴做被盖 褎然举首
+yqiu 席包泥巴做被盖
 yqiw 义举
 yqjb 店铺里的蚊子 麻包里装钉子
 yqjf 底里
@@ -88807,7 +88522,6 @@ yqni 衣锦昼游
 yqnn 诛锄异己
 yqnr 言多必失
 yqnt 永久性 衣锦昼行
-yqnu 褎然居首
 yqoo 底火
 yqoq 废铜烂铁
 yqov 底数
@@ -88818,7 +88532,7 @@ yqpk 言外之味
 yqpl 义军
 yqps 亡猿灾木 亡猿祸木 计然之术
 yqpt 计然之策
-yqpu 褎然冠首 言外之意
+yqpu 言外之意
 yqpv 义安
 yqpw 度外之人 方外之人
 yqpy 变色之言
@@ -88888,13 +88602,12 @@ yqwm 衣锦食肉
 yqwp 请狼做客
 yqwq 义父
 yqwt 言多伤行 诸色人等
-yqww 底价 言多伤倖
+yqww 底价
 yqwx 底货
 yqxg 底线
 yqxl 底细
 yqxy 底纹
 yqyc 诡谲
-yqyd 敲锣放砲
 yqyf 诡计
 yqyg 诳语
 yqyi 衣锦夜游
@@ -88925,7 +88638,6 @@ yrdr 诉愿
 yrdu 为打耗子伤玉瓶
 yrff 鹰撮霆击
 yrfi 扁担无扎两头滑脱两头滑 扁担无钩两头滑 诉求
-yrfj 郭振乾
 yrfq 扁担无钩 望牛墩镇
 yrfr 扁担无扎
 yrgb 床扳夹屁股有苦讲不出
@@ -89065,7 +88777,6 @@ ysfg 弃本求末 离本趣末 蛮横无理
 ysfh 订址 麻栗坡
 ysfn 高枕无忧
 ysfp 麻索
-ysfq 磨棱刓角
 ysft 魔教
 ysfy 磨坊
 ysgb 房檐下的冰溜子
@@ -89215,7 +88926,7 @@ ysuo 应机立断
 ysuq 麻将
 ysus 订亲
 ysut 魔道
-ysuu 变醨养瘠 订立 订阅
+ysuu 订立 订阅
 ysuy 询根问底
 ysvb 订好
 ysvn 磨刀
@@ -89294,7 +89005,7 @@ ytee 变生肘腋
 yteg 州县 施秉县 旌德县 永和县 永德县
 yteh 鹰鼻鹞眼
 ytej 放胆
-ytel 充箱盈架 膺箓受图 诱胁
+ytel 充箱盈架 诱胁
 ytep 放逐
 ytet 弃短用长 施用
 ytey 谄笑胁肩
@@ -89611,7 +89322,7 @@ yugo 说来
 yugp 席卷一空
 yugq 刻章琢句
 yugu 订单融资 请将不如激将
-yugw 麻痹不仁 麻痺不仁
+yugw 麻痹不仁
 yugy 刘道玉
 yuha 谦虚
 yuhc 廉颇
@@ -89863,11 +89574,10 @@ yvws 离退休
 yvwu 唐僧
 yvwv 康健
 yvww 庸俗
-yvwy 认奴作郎 认奴作鄌 诏令
+yvwy 认奴作郎 诏令
 yvxg 京九线 良母
 yvxw 语妙绝伦
 yvxx 良缘
-yvyb 褎如充耳
 yvyc 朗诵
 yvyd 良庆
 yvyf 唐诗 朗读
@@ -89944,7 +89654,7 @@ ywgi 变化不测 谁不
 ywgj 庄公惠 论理
 ywgk 盲人不问路
 ywgm 衣食不周
-ywgn 庆父不死鲁难未已 诲人不惓
+ywgn 庆父不死鲁难未已
 ywgo 腐恶
 ywgp 为仁不富 变化不穷
 ywgq 腐殖
@@ -90270,12 +89980,12 @@ yxwy 率领 畜禽
 yxxf 言约旨远
 yxxq 文绉绉
 yxya 计绌方匮
-yxyh 诪张变眩 谐谑
+yxyh 谐谑
 yxyi 衣绣夜游 讲经说法
 yxyk 谘经诹史
 yxym 谐调
 yxyt 衣绣夜行
-yxyx 广结良缘 诪张为幻
+yxyx 广结良缘
 yyaa 方式
 yyad 刘亦菲 该项
 yyaf 敲诈勒索 文革 高义薄云
@@ -90335,7 +90045,6 @@ yyfp 永永无穷
 yyfq 广元
 yyfr 翩翩起舞 肩摩毂接 谦让未遑
 yyft 主义者 文教 方才 设计者
-yyfw 鹑衣鷇食
 yyfy 应变无方 廊坊 永庆坊 谠言嘉论
 yyga 文武 方形
 yygb 床底下晒被子 床底下晒谷子
@@ -90357,7 +90066,7 @@ yygr 床底下伸手 床底下拜年 放诞不拘
 yygs 床底下亮相
 yygt 床底下放风筝 床底下鞠躬 谨谢不敏
 yygu 亭亭玉立 广平 床底下翻跟头
-yygw 亹亹不倦 床底下关鸡提啼醒你 床底下抡大斧 床底下抡大斧不好使家伙 恋恋不舍
+yygw 床底下关鸡提啼醒你 床底下抡大斧 床底下抡大斧不好使家伙 恋恋不舍
 yygx 诞妄不经 诞谩不经 诡诞不经
 yygy 床底下亮相姿态不高 床底下伸手要求不高 床底下想办法主意不高
 yyhf 孰为此者
@@ -90421,7 +90130,6 @@ yymi 放诞风流 旖旎风光
 yymm 庐山 文山 方山 谋谟帷幄 高文典册
 yymn 议论风发
 yymq 文风
-yyms 鄐诜丹桂
 yymt 文峰 言论风生 议论风生 论议风生 谈议风生 谈论风生 高文典策
 yymy 翩翩风度
 yynf 言为心声
@@ -90561,9 +90269,9 @@ yyyn 文盲
 yyyo 访谈
 yyyp 变废为宝 敦诗说礼 文豪 识文谈字
 yyyq 广义
-yyyt 广州 庸言庸行 论认识和实践的关系 鄐诜高第
+yyyt 广州 庸言庸行 论认识和实践的关系
 yyyu 就离谱 言说 诬良为盗
 yyyv 谈玄说妙
 yyyw 言论 言高语低 认识论 议论
 yyyx 文盲读圣经
-yyyy 亦庄亦谐 放言高论 方言 詀言詀语 话言话语 询谋谘度
+yyyy 亦庄亦谐 放言高论 方言 话言话语 询谋谘度

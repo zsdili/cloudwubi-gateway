@@ -1268,8 +1268,6 @@ uyqe 前郭尔罗斯蒙古族自治县
 uyqi 前郭尔罗斯蒙古族自治
 tmeg 长岭县
 tamw 长岭
-fpeg 乾安县
-fjpv 乾安
 fssa 吉林松原经济开发区
 fssn 吉林松原经济开发
 rwym 扶余市
@@ -2072,8 +2070,6 @@ viaq 鸠江区
 vqia 鸠江
 aiaq 弋江区
 agia 弋江
-iiaq 湾沚区
-iyih 湾沚
 tjaq 繁昌区
 txjj 繁昌
 fbeg 南陵县
@@ -2232,8 +2228,6 @@ luym 界首市
 lwut 界首
 pwyt 宿州
 pyym 宿州市
-fsaq 埇桥区
-fcst 埇桥
 dmeg 砀山县
 dnmm 砀山
 aveg 萧县
@@ -3076,8 +3070,6 @@ ffaq 老城区
 ftfd 老城
 saaq 西工区
 sgaa 西工
-iila 瀍河回族区
-iily 瀍河回族
 isaq 涧西区
 iusg 涧西
 wjaq 偃师区
@@ -3325,8 +3317,6 @@ yfym 永城市
 ynfd 永城
 wybj 信阳
 wbym 信阳市
-iiaq 浉河区
-ijis 浉河
 gsaq 平桥区
 gust 平桥
 lmeg 罗山县
@@ -3404,8 +3394,6 @@ imaq 江岸区
 iamd 江岸
 iiaq 江汉区
 iaic 江汉
-dkaq 硚口区
-dtkk 硚口
 ibaq 汉阳区
 icbj 汉阳
 gjaq 武昌区
@@ -3463,8 +3451,6 @@ wpma 伍家岗区
 wpmm 伍家岗
 hpaq 点军区
 hkpl 点军
-qyaq 猇亭区
-qtyp 猇亭
 gbaq 夷陵区
 gxbf 夷陵
 fpeg 远安县
@@ -4181,12 +4167,10 @@ tpqf 长安镇
 huqf 虎门镇
 dtqf 厚街镇
 ilqf 沙田镇
-uiqf 道滘镇
 isqf 洪梅镇
 yiqf 麻涌镇
 yrfq 望牛墩镇
 kiqf 中堂镇
-yfqf 高埗镇
 smid 松山湖
 aaia 东莞港
 aatl 东莞生态园
@@ -5707,8 +5691,6 @@ jiaq 临潼区
 jtiu 临潼
 ybaq 高陵区
 ymbf 高陵
-fkaq 鄠邑区
-ffkc 鄠邑
 aleg 蓝田县
 ajll 蓝田
 mgeg 周至县
@@ -5758,7 +5740,6 @@ ddeg 三原县
 dgdr 三原
 ibeg 泾阳县
 icbj 泾阳
-fjeg 乾县
 preg 礼泉县
 pyri 礼泉
 ydeg 永寿县

@@ -110,7 +110,7 @@ def load_phrase_dict():
     phrase_data = {}
     base = os.path.dirname(os.path.abspath(__file__))
     # v0.7.14 标准86词组编码重算表置最前（治本：旧表大量简码拼码错误，如 不要=is 应为 gisv）
-    for fname in ("wubi86_recalc.txt", "wubi86_report.txt", "wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt",
+    for fname in ("wubi86_recalc.txt", "wubi86_report.txt", "wubi86_gov.txt", "wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt",
                   "wubi86_geo.txt", "wubi86_life.txt", "wubi86_mil.txt", "wubi86_poem.txt"):
         path = os.path.join(base, fname)
         try:
@@ -137,6 +137,31 @@ def load_phrase_dict():
 
 WB_DICT = load_dict()
 PHRASE_DICT = load_phrase_dict()
+
+# v0.7.16 文章词高频注入：规划纲要/政府工作报告词库的词排序置顶
+#   （用户以文章为测试样本——打 iiaq 应先见"滞洪区"而非 20 个区名）
+HIGH_FREQ_EXTRA = {}
+try:
+    for _fn in ("wubi86_gov.txt", "wubi86_report.txt"):
+        _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), _fn)
+        for _line in open(_p, encoding="utf-8"):
+            _line = _line.strip()
+            if not _line or _line.startswith("#"):
+                continue
+            for _w in _line.split()[1:]:
+                HIGH_FREQ_EXTRA[_w] = 200   # v0.7.16 文章词强置顶（×0.5=100 分，压过同码区名/市名）
+except Exception:
+    pass
+
+# v0.7.16 真实字频排名表（freq.json：排名越小越常用）——语义排序信号1b
+CHAR_FREQ_RANK = {}
+try:
+    _freq_raw = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "freq.json"), encoding="utf-8"))
+    for _ch, _rank in _freq_raw.items():
+        if len(_ch) == 1:
+            CHAR_FREQ_RANK[_ch] = _rank
+except Exception:
+    pass
 
 # v0.6.6 逗号补全联想（前句→下半句/下半段，212 组公共知识对，懒加载）
 COMMA_PAIRS = None
@@ -840,7 +865,7 @@ def _get_ranker():
     global RANKER
     if RANKER is None:
         user_data = os.environ.get("CLOUDWUBI_USER_DATA", "/tmp/cw_user_weights.json")
-        RANKER = SemanticRanker(user_data_path=user_data)
+        RANKER = SemanticRanker(high_freq=HIGH_FREQ_EXTRA, user_data_path=user_data, char_freq=CHAR_FREQ_RANK)
         # 用规则库中的单字构建语料（提升流畅度统计）
         corpus = []
         for code, chars in WB_DICT.items():
@@ -1006,7 +1031,7 @@ def main_handler(event, context):
     # 阶段2扩展：动态构词 + 阶段3语义排序
     if req.get("phrase"):
         engine = _get_phrase_engine()
-        phrase_candidates = engine.build_phrases(code, max_results=10)
+        phrase_candidates = engine.build_phrases(code, max_results=100)  # v0.7.16 截断100：排序前不截断(滞洪区=iiaq第30+此前被geo区名挤掉)
 
         # 阶段3增强：3码输入时，预测第4码的高频词组（前瞻预测）
         if len(code) == 3:

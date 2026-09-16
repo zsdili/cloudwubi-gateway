@@ -93,7 +93,7 @@ class SemanticRanker:
     """语义排序引擎"""
 
     def __init__(self, high_freq=None, char_weight=None,
-                 user_data_path=None, enable_fluency=True):
+                 user_data_path=None, enable_fluency=True, char_freq=None):
         self.high_freq = dict(DEFAULT_HIGH_FREQ)
         if high_freq:
             self.high_freq.update(high_freq)
@@ -102,6 +102,8 @@ class SemanticRanker:
         self.char_weight = dict(DEFAULT_CHAR_WEIGHT)
         if char_weight:
             self.char_weight.update(char_weight)
+        # v0.7.16 真实字频表（freq.json 3500 常用字：排名越小越常用）——词组内常用字组合优先
+        self.char_freq = dict(char_freq or {})
         self.enable_fluency = enable_fluency
 
         # 用户行为权重（动态学习）
@@ -266,6 +268,14 @@ class SemanticRanker:
             # 信号1：词频权重（含当代热词）
             freq = self.high_freq.get(phrase, 0)
             score += freq * 0.5
+
+            # 信号1b（v0.7.16）：词组内单字频率加权——常用字组合优先
+            #   "江河湖海"（江/河/湖/海 均高频）应排"泾浊渭清/涕泗滂沲"前；
+            #   解决同码候选被生僻成语抢占（build_phrases 截断已扩至 30，排序须把常用词提前）
+            if cand["type"] != "char":
+                # 真实字频：常用字组合优先（江河湖海=江204/河302 应排 泾浊渭清=泾无/渭3294 前）
+                cf = sum((3500 - self.char_freq.get(ch, 3500)) for ch in phrase)
+                score += cf * 0.02
 
             # 信号2：用户行为权重（用户选择是最高置信信号）
             user = self.user_weight.get(phrase, 0)
