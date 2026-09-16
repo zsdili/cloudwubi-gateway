@@ -1090,7 +1090,7 @@ def main_handler(event, context):
             resp["gen"] = gen
         # v0.7.9 用户固化：严禁繁体——词组与单字统一过滤
         resp["phrases"] = [p for p in resp.get("phrases", []) if _no_trad(p)]
-        resp["candidates"] = [cp for cp in resp.get("candidates", []) if _no_trad(chr(cp))]
+        resp["candidates"] = [cp for cp in resp.get("candidates", []) if isinstance(cp, int) and _no_trad(chr(cp))]
         # v0.5.31 词条数上报：云端分类词库规模（客户端"云五笔"弹窗显示）
         resp["cat_count"] = CATEGORY_CATS
         resp["cat_words"] = CATEGORY_TOTAL
@@ -1109,7 +1109,18 @@ def main_handler(event, context):
         if len(resp["phrases"]) > 1:
             resp["phrases"] = _sort_phrases_by_freq(resp["phrases"])
     if resp.get("candidates"):
-        resp["candidates"] = _sort_by_freq(resp["candidates"])
+        if len(code) >= 4:
+            # v0.7.11 86版规则：4码全码精确匹配字置顶（码表顺序），词组混入字在后
+            #   （gggg 第一位必为"王"，不得被高频字/词组字压后）
+            exact = _query_with_cache(code)
+            exact_set = set(exact)
+            ordered = [cp for cp in exact if isinstance(cp, int) and _no_trad(chr(cp))]
+            for cp in resp["candidates"]:
+                if isinstance(cp, int) and cp not in exact_set and cp not in ordered and _no_trad(chr(cp)):
+                    ordered.append(cp)
+            resp["candidates"] = ordered
+        else:
+            resp["candidates"] = _sort_by_freq(resp["candidates"])
         # v0.5.41 反馈⑥：hot 优先取本编码 basic 单字（精确字频 top6，避免词库字符污染如 suf→无/相/场）
         # v0.5.47 顽疾根治：1 码时一级简码字强制 hot 第一（打 r → hot 第一必为"的"，键名字/字根字不得压过简码）
         hot = []
