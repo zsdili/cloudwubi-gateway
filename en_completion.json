@@ -1,0 +1,614 @@
+{
+ "words": {
+  "th": [
+   "the",
+   "that",
+   "this",
+   "they",
+   "think",
+   "thank",
+   "three",
+   "there"
+  ],
+  "wh": [
+   "what",
+   "where",
+   "when",
+   "which",
+   "why",
+   "who",
+   "while",
+   "white"
+  ],
+  "ty": [
+   "type",
+   "typical",
+   "typing",
+   "types",
+   "typical"
+  ],
+  "go": [
+   "good",
+   "go",
+   "going",
+   "got",
+   "goal",
+   "gold"
+  ],
+  "co": [
+   "come",
+   "could",
+   "company",
+   "code",
+   "coffee",
+   "course",
+   "color"
+  ],
+  "wo": [
+   "work",
+   "world",
+   "would",
+   "word",
+   "worry",
+   "woman"
+  ],
+  "lo": [
+   "love",
+   "look",
+   "long",
+   "lot",
+   "lose",
+   "low",
+   "local"
+  ],
+  "no": [
+   "not",
+   "now",
+   "no",
+   "note",
+   "nobody",
+   "north",
+   "nothing"
+  ],
+  "so": [
+   "so",
+   "some",
+   "sorry",
+   "soon",
+   "sound",
+   "soft"
+  ],
+  "to": [
+   "to",
+   "today",
+   "together",
+   "tomorrow",
+   "top",
+   "total"
+  ],
+  "do": [
+   "do",
+   "don't",
+   "down",
+   "door",
+   "does",
+   "done"
+  ],
+  "yo": [
+   "you",
+   "your",
+   "yours",
+   "yesterday",
+   "young"
+  ],
+  "ca": [
+   "can",
+   "call",
+   "car",
+   "cat",
+   "care",
+   "card",
+   "case"
+  ],
+  "wa": [
+   "want",
+   "way",
+   "walk",
+   "water",
+   "wait",
+   "watch",
+   "warm"
+  ],
+  "ma": [
+   "make",
+   "man",
+   "may",
+   "many",
+   "matter",
+   "maybe",
+   "main"
+  ],
+  "li": [
+   "like",
+   "life",
+   "little",
+   "listen",
+   "light",
+   "line"
+  ],
+  "ta": [
+   "take",
+   "talk",
+   "table",
+   "task",
+   "tax",
+   "tall"
+  ],
+  "he": [
+   "he",
+   "here",
+   "help",
+   "hello",
+   "head",
+   "heart",
+   "hear"
+  ],
+  "ha": [
+   "have",
+   "has",
+   "happy",
+   "hand",
+   "hard",
+   "hat"
+  ],
+  "be": [
+   "be",
+   "because",
+   "before",
+   "best",
+   "better",
+   "between"
+  ],
+  "sh": [
+   "she",
+   "should",
+   "show",
+   "short",
+   "share",
+   "shop",
+   "ship"
+  ],
+  "we": [
+   "we",
+   "well",
+   "welcome",
+   "west",
+   "week",
+   "web"
+  ],
+  "an": [
+   "and",
+   "answer",
+   "any",
+   "animal",
+   "another"
+  ],
+  "ar": [
+   "are",
+   "around",
+   "arrive",
+   "art",
+   "arm"
+  ],
+  "al": [
+   "all",
+   "also",
+   "always",
+   "almost",
+   "already",
+   "along"
+  ],
+  "se": [
+   "see",
+   "send",
+   "sell",
+   "search",
+   "second",
+   "season"
+  ],
+  "fr": [
+   "from",
+   "friend",
+   "free",
+   "front",
+   "fresh",
+   "friday"
+  ],
+  "tr": [
+   "try",
+   "true",
+   "train",
+   "travel",
+   "tree",
+   "trip"
+  ],
+  "pl": [
+   "please",
+   "play",
+   "plan",
+   "place",
+   "plant",
+   "platform"
+  ],
+  "st": [
+   "still",
+   "stop",
+   "start",
+   "stay",
+   "story",
+   "stand",
+   "star"
+  ],
+  "sp": [
+   "speak",
+   "special",
+   "space",
+   "spend",
+   "sport",
+   "spring"
+  ],
+  "kn": [
+   "know",
+   "knowledge",
+   "knife",
+   "knock"
+  ],
+  "ne": [
+   "need",
+   "never",
+   "new",
+   "next",
+   "near",
+   "network"
+  ],
+  "ou": [
+   "our",
+   "out",
+   "over",
+   "only",
+   "open",
+   "other",
+   "once"
+  ],
+  "un": [
+   "under",
+   "understand",
+   "until",
+   "university",
+   "unit"
+  ],
+  "up": [
+   "up",
+   "upon",
+   "update",
+   "use",
+   "useful",
+   "usually"
+  ],
+  "fe": [
+   "feel",
+   "few",
+   "feed",
+   "field",
+   "feature",
+   "festival"
+  ],
+  "fi": [
+   "find",
+   "first",
+   "final",
+   "fine",
+   "film",
+   "finance"
+  ],
+  "mo": [
+   "more",
+   "most",
+   "money",
+   "morning",
+   "month",
+   "move"
+  ],
+  "mi": [
+   "miss",
+   "minute",
+   "mind",
+   "middle",
+   "mix",
+   "might"
+  ],
+  "nu": [
+   "number",
+   "nurse",
+   "nut",
+   "nutrition"
+  ],
+  "pa": [
+   "part",
+   "party",
+   "pass",
+   "paper",
+   "parent",
+   "park"
+  ],
+  "pe": [
+   "people",
+   "person",
+   "please",
+   "perfect",
+   "perhaps"
+  ],
+  "re": [
+   "really",
+   "read",
+   "ready",
+   "right",
+   "reason",
+   "real"
+  ],
+  "ru": [
+   "run",
+   "rule",
+   "running",
+   "rural"
+  ],
+  "sa": [
+   "same",
+   "say",
+   "save",
+   "safe",
+   "saturday",
+   "sad"
+  ],
+  "te": [
+   "tell",
+   "test",
+   "teacher",
+   "team",
+   "technology",
+   "ten"
+  ],
+  "ti": [
+   "time",
+   "thing",
+   "think",
+   "ticket",
+   "till",
+   "tiny"
+  ],
+  "us": [
+   "use",
+   "user",
+   "usually",
+   "useful"
+  ],
+  "ve": [
+   "very",
+   "view",
+   "version",
+   "video",
+   "visit"
+  ],
+  "ye": [
+   "year",
+   "yes",
+   "yesterday",
+   "yet"
+  ]
+ },
+ "templates": {
+  "thank": [
+   "you",
+   "you very much",
+   "you for coming",
+   "you for your help"
+  ],
+  "good": [
+   "morning",
+   "afternoon",
+   "evening",
+   "night",
+   "luck",
+   "job",
+   "idea"
+  ],
+  "how are": [
+   "you",
+   "you doing",
+   "you today"
+  ],
+  "how": [
+   "are you",
+   "much",
+   "many",
+   "about you",
+   "old are you",
+   "long"
+  ],
+  "i want": [
+   "to go",
+   "to eat",
+   "to sleep",
+   "to say",
+   "to see",
+   "to try",
+   "to know"
+  ],
+  "i would": [
+   "like to",
+   "like some",
+   "love to",
+   "rather not"
+  ],
+  "i am": [
+   "sorry",
+   "fine",
+   "happy",
+   "ready",
+   "tired",
+   "here"
+  ],
+  "see": [
+   "you",
+   "you later",
+   "you tomorrow",
+   "you soon"
+  ],
+  "come": [
+   "on",
+   "in",
+   "here",
+   "back",
+   "home"
+  ],
+  "go": [
+   "to school",
+   "home",
+   "out",
+   "ahead",
+   "to work"
+  ],
+  "have": [
+   "a good day",
+   "a nice day",
+   "fun",
+   "a look",
+   "a try",
+   "a question"
+  ],
+  "let": [
+   "me",
+   "us",
+   "me know",
+   "me see",
+   "me help",
+   "me check"
+  ],
+  "look": [
+   "at",
+   "for",
+   "forward",
+   "out",
+   "good"
+  ],
+  "get": [
+   "ready",
+   "it",
+   "out",
+   "up",
+   "started",
+   "better"
+  ],
+  "what": [
+   "is",
+   "are",
+   "about",
+   "do you mean",
+   "happened",
+   "do you think"
+  ],
+  "where": [
+   "are you",
+   "is it",
+   "do you live",
+   "have you been"
+  ],
+  "when": [
+   "is it",
+   "did you",
+   "will you",
+   "were you born"
+  ],
+  "why": [
+   "not",
+   "are you",
+   "did you",
+   "do you ask",
+   "so"
+  ],
+  "who": [
+   "are you",
+   "is that",
+   "do you know",
+   "else",
+   "will win"
+  ],
+  "nice to": [
+   "meet you",
+   "see you",
+   "have you"
+  ],
+  "no": [
+   "problem",
+   "way",
+   "thanks",
+   "idea",
+   "worries"
+  ],
+  "of": [
+   "course",
+   "course not",
+   "the day"
+  ],
+  "all": [
+   "right",
+   "the best",
+   "of us",
+   "day"
+  ],
+  "take": [
+   "care",
+   "your time",
+   "a break",
+   "it easy",
+   "a look"
+  ],
+  "talk": [
+   "to you",
+   "to me",
+   "about it",
+   "later"
+  ],
+  "call": [
+   "me",
+   "you",
+   "back",
+   "him",
+   "her"
+  ],
+  "wait": [
+   "a minute",
+   "for me",
+   "for you",
+   "a moment"
+  ],
+  "help": [
+   "me",
+   "you",
+   "yourself",
+   "us"
+  ],
+  "sure": [
+   "thing",
+   "why not",
+   "no problem"
+  ],
+  "great": [
+   "job",
+   "work",
+   "idea",
+   "news",
+   "thanks"
+  ]
+ }
+}

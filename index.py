@@ -474,6 +474,38 @@ def _load_category_by_code():
 
 CAT_BY_CODE = _load_category_by_code()
 
+def _load_meme_by_code():
+    """v0.7.8 谐音梗/网红段子词库（wubi86_meme.json 已按 86 规则预计算码）：码 -> [词]"""
+    meme_map = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "wubi86_meme.json")):
+            _base = os.getcwd()  # SCF 容器兜底
+        data = json.load(open(os.path.join(_base, "wubi86_meme.json"), encoding="utf-8"))
+        for c, words in data.items():
+            if len(c) == 4:
+                meme_map.setdefault(c, []).extend(w for w in words if w not in meme_map.get(c, []))
+    except Exception:
+        pass
+    return meme_map
+
+MEME_BY_CODE = _load_meme_by_code()
+
+# v0.7.8 英文自动补全表（前缀->完整单词；词->后续情景词组）
+def _load_en_completion():
+    en = {"words": {}, "templates": {}}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "en_completion.json")):
+            _base = os.getcwd()
+        d = json.load(open(os.path.join(_base, "en_completion.json"), encoding="utf-8"))
+        en = {"words": d.get("words", {}), "templates": d.get("templates", {})}
+    except Exception:
+        pass
+    return en
+
+EN_COMPLETION = _load_en_completion()
+
 def _cat_stats():
     """分类词库规模统计（词条数上报用）"""
     cats = set()
@@ -859,6 +891,48 @@ def main_handler(event, context):
         phrases = _filter_pos(engine.query_by_prefix(prefix, max_results=20))
         return _resp(200, {"prefix": prefix, "phrases": phrases})
 
+    # v0.7.8 英文/中文自动补全（独立接口：{"completion":"ty"} 英文前缀；{"completion":"thank"} 情景词组；{"completion":"研究"} 中文词后补）
+    comp = req.get("completion")
+    if comp:
+        s = str(comp).strip().lower()
+        out = []
+        if re.match(r'^[a-z][a-z ]{1,}$', s):
+            # 英文补全：①完整词精确命中模板（thank → you/you very much）
+            for tmpl, vals in EN_COMPLETION["templates"].items():
+                if tmpl == s:
+                    out.extend(vals[:8])
+                    break
+            # ②前缀补全：最长前缀匹配（ty → type/typical...）
+            best = ""
+            for pref in EN_COMPLETION["words"]:
+                if s.startswith(pref) and len(pref) > len(best):
+                    best = pref
+            if best:
+                # 模板命中时模板在前；无模板则 words 为全部候选
+                out = out + [w for w in EN_COMPLETION["words"][best][:8] if w not in out]
+            # ③模板模糊：输入是模板单词的前缀（iwa → i want 系列；兼容无空格编码）
+            if not out:
+                for tmpl in EN_COMPLETION["templates"]:
+                    tmpl_ns = tmpl.replace(" ", "")
+                    if tmpl_ns.startswith(s) and tmpl != s:
+                        out.extend(EN_COMPLETION["templates"][tmpl][:4])
+                        if len(out) >= 8:
+                            break
+        else:
+            # 中文词补全：词 → 后续词组（SUCCESSION 里该词作为键的值）
+            if s:
+                for k, v in SUCCESSION.items():
+                    if k == s:
+                        out.extend(v[:8])
+                        break
+        # 去重保序
+        seen, uniq = set(), []
+        for w in out:
+            if w not in seen:
+                seen.add(w)
+                uniq.append(w)
+        return _resp(200, {"completion": s, "phrases": uniq[:10]})
+
     code = (req.get("code") or "").strip().lower()
     if not CODE_RE.match(code):
         return _resp(400, {"error": "invalid code, expect 1-4 of a-y"})
@@ -915,6 +989,11 @@ def main_handler(event, context):
             if hw not in [p["phrase"] for p in phrase_candidates]:
                 phrase_candidates.append({"phrase": hw, "score": 90, "type": "lexicon",
                                           "chars": [ord(ch) for ch in hw]})
+        # v0.7.8 谐音梗/网红段子：同码并入（score 92，高于普通词/热词、低于每日热词）
+        for mw in MEME_BY_CODE.get(code, []):
+            if mw not in [p["phrase"] for p in phrase_candidates]:
+                phrase_candidates.append({"phrase": mw, "score": 92, "type": "lexicon",
+                                          "chars": [ord(ch) for ch in mw]})
         # v0.5.64 每日热词 86 码出词（thta→延长；type=hot 优先显示、不并入单字候选避免类型污染）
         if DAILY_HOT:
             for _w, _c in DAILY_HOT.items():
