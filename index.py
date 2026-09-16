@@ -385,6 +385,14 @@ try:
 except Exception:
     pass
 
+# v0.7.2 LLM 语料强化：情景联想包（诗词对/歇后语对/生活对话，succession_extra.json）
+try:
+    _sep = _os2.path.join(_os2.path.dirname(_os2.path.abspath(__file__)), "succession_extra.json")
+    if _os2.path.exists(_sep):
+        SUCCESSION.update(json.load(open(_sep, encoding="utf-8")))
+except Exception:
+    pass
+
 # v0.6 革命性：n-gram 概率映射表（离线自动学习自训练语料，213 条 9.6KB）
 #   生病了→看医生/想去医院；前进→方向/号角/浪潮；想→办法/一下/你
 NGRAM_LINK = {}
@@ -562,8 +570,9 @@ def context_associate(text, max_results=20):
     text = (text or "").strip()
     if not text:
         return []
-    # v0.5.15 反馈①：前后文顺承——整句末尾从长到短匹配（4字→1字），命中即返回后续词
-    for n in (4, 3, 2, 1):
+    # v0.5.15 反馈① + v0.7.3 整句优先：前后文顺承——整句末尾从长到短匹配（整句长度→1字，上限8字）
+    #   修复缺口：5-7 字整句（山重水复疑无路/哑巴吃黄连）此前只查末1-4字永远不命中
+    for n in range(min(8, len(text)), 0, -1):
         key = text[-n:] if len(text) >= n else text
         if key in SUCCESSION:
             return SUCCESSION[key][:max_results]
