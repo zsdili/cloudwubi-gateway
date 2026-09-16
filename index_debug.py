@@ -536,7 +536,7 @@ XIEHOUYU_BY_CODE = _load_code_words("wubi86_xiehouyu.json")   # 歇后语/典故
 QINGMING_BY_CODE = _load_code_words("wubi86_qingming.json")   # 明清短句/古典
 
 # v0.7.9 用户固化：严禁繁体——真正繁体字形表（简体不存在的字形；简繁同形不算）
-TRAD_CHARS = "國萬鍾龍鳳雲東車門關開說誰們華會來還進過時後學問題體氣機電風視話書報紙錢銀號碼數間愛親邊這樣點頭張長陽陰聲見讀寫語漢簡臺灣廣兩點個動幹麼裡殺鬥買賣飛鳥魚馬車聽聞練習題機會"
+TRAD_CHARS = "國萬鍾龍鳳雲東車門關開說誰們華會來還進過時後學問題體氣機電風視話書報紙錢銀號碼數間愛親邊這樣點頭張長陽陰聲見讀寫語言漢簡繁臺灣港澳廣兩點個動幹麼裡來殺鬥買賣飛鳥魚馬車聽聞練習題機會"
 
 def _no_trad(s):
     """过滤含繁体字形的词/字（用户固化：严禁繁体）"""
@@ -1059,6 +1059,9 @@ def main_handler(event, context):
                 if _w not in [p["phrase"] for p in phrase_candidates]:
                     phrase_candidates.append({"phrase": _w, "score": _score, "type": "lexicon",
                                               "chars": [ord(ch) for ch in _w]})
+        import sys as _sys
+        _sys.stderr.write("DBG_MERGE code=" + str(code) + " total=" + str(len(phrase_candidates)) + "\n")
+        _sys.stderr.write("DBG_HAS_IXAY=" + str(any(p["phrase"] == "满纸荒唐言" for p in phrase_candidates)) + "\n")
         # v0.5.64 每日热词 86 码出词（thta→延长；type=hot 优先显示、不并入单字候选避免类型污染）
         if DAILY_HOT:
             for _w, _c in DAILY_HOT.items():
