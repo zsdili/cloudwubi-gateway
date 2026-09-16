@@ -491,6 +491,30 @@ def _load_meme_by_code():
 
 MEME_BY_CODE = _load_meme_by_code()
 
+def _load_3char_by_code():
+    """v0.7.9 三字词库（日常用语/三字成语，86 码预计算）：码 -> [词]"""
+    c3 = {}
+    try:
+        _base = os.path.dirname(os.path.abspath(__file__))
+        if not os.path.exists(os.path.join(_base, "wubi86_3char.json")):
+            _base = os.getcwd()
+        data = json.load(open(os.path.join(_base, "wubi86_3char.json"), encoding="utf-8"))
+        for c, words in data.items():
+            if len(c) == 3:
+                c3.setdefault(c, []).extend(w for w in words if w not in c3.get(c, []))
+    except Exception:
+        pass
+    return c3
+
+CHAR3_BY_CODE = _load_3char_by_code()
+
+# v0.7.9 用户固化：严禁繁体——真正繁体字形表（简体不存在的字形；简繁同形不算）
+TRAD_CHARS = "國萬鍾龍鳳雲東車門關開說誰們華會來還進過時後學問題體氣機電風視話書報紙錢銀號碼數間愛親邊這樣點頭張長陽陰聲見讀寫語言漢簡繁臺灣港澳廣兩點個動幹麼裡來殺鬥買賣飛鳥魚馬車聽聞練習題機會"
+
+def _no_trad(s):
+    """过滤含繁体字形的词/字（用户固化：严禁繁体）"""
+    return not any(c in TRAD_CHARS for c in s)
+
 # v0.7.8 英文自动补全表（前缀->完整单词；词->后续情景词组）
 def _load_en_completion():
     en = {"words": {}, "templates": {}}
@@ -834,7 +858,7 @@ def main_handler(event, context):
         # 联想：词库中含该字的词组（互联网热点话题）
         engine = _get_phrase_engine()
         phrases = engine.query_by_word(word, max_results=20)
-        resp["phrases"] = _filter_pos(phrases)
+        resp["phrases"] = [p for p in _filter_pos(phrases) if _no_trad(p)]
         # 翻译：v0.6.8 候选数组整词优先（{"words":["是国庆节","国庆节","庆节","节"],"en":true}）
         #   逐个查词典，第一个命中返回（国庆节→PRC National Day）；全未命中→末字 TMT/百度兜底（不翻整句）
         if req.get("en"):
@@ -857,12 +881,12 @@ def main_handler(event, context):
     ctx = req.get("context")
     if ctx is not None:
         phrases = context_associate(str(ctx))
-        return _resp(200, {"context": str(ctx), "phrases": phrases})
+        return _resp(200, {"context": str(ctx), "phrases": [p for p in phrases if _no_trad(p)]})
 
     # v0.6.6 逗号补全联想（独立接口：{"comma":"床前明月光"} → 下半句/下半段）
     cma = req.get("comma")
     if cma:
-        return _resp(200, {"comma": str(cma), "phrases": comma_complete(str(cma))})
+        return _resp(200, {"comma": str(cma), "phrases": [p for p in comma_complete(str(cma)) if _no_trad(p)]})
 
     # v0.6.3 CCA 联动增强：客户端拉取全量衔接映射表（云端规则实时生效，免发版）
     if req.get("linkmap"):
@@ -889,7 +913,7 @@ def main_handler(event, context):
     if prefix:
         engine = _get_phrase_engine()
         phrases = _filter_pos(engine.query_by_prefix(prefix, max_results=20))
-        return _resp(200, {"prefix": prefix, "phrases": phrases})
+        return _resp(200, {"prefix": prefix, "phrases": [p for p in phrases if _no_trad(p)]})
 
     # v0.7.8 英文/中文自动补全（独立接口：{"completion":"ty"} 英文前缀；{"completion":"thank"} 情景词组；{"completion":"研究"} 中文词后补）
     comp = req.get("completion")
@@ -931,7 +955,7 @@ def main_handler(event, context):
             if w not in seen:
                 seen.add(w)
                 uniq.append(w)
-        return _resp(200, {"completion": s, "phrases": uniq[:10]})
+        return _resp(200, {"completion": s, "phrases": [p for p in uniq[:10] if _no_trad(p)]})
 
     code = (req.get("code") or "").strip().lower()
     if not CODE_RE.match(code):
@@ -994,6 +1018,11 @@ def main_handler(event, context):
             if mw not in [p["phrase"] for p in phrase_candidates]:
                 phrase_candidates.append({"phrase": mw, "score": 92, "type": "lexicon",
                                           "chars": [ord(ch) for ch in mw]})
+        # v0.7.9 三字词库（日常用语/三字成语）：同码并入（score 94，高于谐音梗/普通词）
+        for w3 in CHAR3_BY_CODE.get(code, []):
+            if w3 not in [p["phrase"] for p in phrase_candidates]:
+                phrase_candidates.append({"phrase": w3, "score": 94, "type": "lexicon",
+                                          "chars": [ord(ch) for ch in w3]})
         # v0.5.64 每日热词 86 码出词（thta→延长；type=hot 优先显示、不并入单字候选避免类型污染）
         if DAILY_HOT:
             for _w, _c in DAILY_HOT.items():
@@ -1023,6 +1052,9 @@ def main_handler(event, context):
         resp["phrases"] = phrases
         if gen:
             resp["gen"] = gen
+        # v0.7.9 用户固化：严禁繁体——词组与单字统一过滤
+        resp["phrases"] = [p for p in resp.get("phrases", []) if _no_trad(p)]
+        resp["candidates"] = [cp for cp in resp.get("candidates", []) if _no_trad(chr(cp))]
         # v0.5.31 词条数上报：云端分类词库规模（客户端"云五笔"弹窗显示）
         resp["cat_count"] = CATEGORY_CATS
         resp["cat_words"] = CATEGORY_TOTAL
