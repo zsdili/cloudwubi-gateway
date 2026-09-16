@@ -18,8 +18,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 _basic = {}
 for line in io.open(os.path.join(BASE, "wubi86_basic.txt"), encoding="utf-8"):
     line = line.strip()
-    if len(line) < 5:
-        continue
+    if not line or line.startswith("#") or len(line) < 5:
+        continue  # 跳过注释/空行/非4码行
     code, chars = line[0:4], line[4:]
     _basic[code] = chars
 eng = PhraseEngine({c: [ord(ch) for ch in ws] for c, ws in _basic.items()})
