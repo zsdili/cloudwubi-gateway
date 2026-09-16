@@ -575,10 +575,19 @@ def context_associate(text, max_results=20):
         return []
     # v0.5.15 反馈① + v0.7.3 整句优先：前后文顺承——整句末尾从长到短匹配（整句长度→1字，上限8字）
     #   修复缺口：5-7 字整句（山重水复疑无路/哑巴吃黄连）此前只查末1-4字永远不命中
+    # v0.7.5 一并显示：SUCCESSION 命中后，追加末1-3字意思衔接搭配（点哪个句子联想哪个句子+后面加词联想）
     for n in range(min(8, len(text)), 0, -1):
         key = text[-n:] if len(text) >= n else text
         if key in SUCCESSION:
-            return SUCCESSION[key][:max_results]
+            out = list(SUCCESSION[key])
+            for _n2 in (3, 2, 1):
+                k2 = text[-_n2:] if len(text) >= _n2 else text
+                for w in ASSOC_LINK.get(k2, []):
+                    if w not in out:
+                        out.append(w)
+                if len(out) >= max_results:
+                    break
+            return out[:max_results]
     # v0.5.66 创新：意思衔接表（ima 语义级 + Kimi 打分思想的本地实现）——
     #   末 3 字/末 2 字/末 1 字查 ASSOC_LINK（辛苦了→钟总/大家/你；前进→方向/道路/号角/浪潮/脚步），
     #   排位在成语/热词/bigram 之前（"衔接"比"组词"更贴语义延续）
