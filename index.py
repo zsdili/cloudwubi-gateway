@@ -110,7 +110,7 @@ def load_phrase_dict():
     phrase_data = {}
     base = os.path.dirname(os.path.abspath(__file__))
     # v0.7.14 标准86词组编码重算表置最前（治本：旧表大量简码拼码错误，如 不要=is 应为 gisv）
-    for fname in ("wubi86_recalc.txt", "wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt",
+    for fname in ("wubi86_recalc.txt", "wubi86_report.txt", "wubi86_phrases.txt", "wubi86_daily.txt", "wubi86_classics.txt",
                   "wubi86_geo.txt", "wubi86_life.txt", "wubi86_mil.txt", "wubi86_poem.txt"):
         path = os.path.join(base, fname)
         try:
