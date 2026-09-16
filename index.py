@@ -1064,7 +1064,12 @@ def main_handler(event, context):
     if resp.get("phrases"):
         if len(code) < 4:
             py = _PY_WORDS()
-            resp["phrases"] = [p for p in resp["phrases"] if p in HOT_DAILY or p in py]
+            keep = set(HOT_DAILY) | set(py)
+            # v0.7.9 保留词库真词（三字词/谐音梗/分类词等，避免"都没有/晚上好"被常用词过滤误伤）
+            for pc in phrase_candidates:
+                if pc["type"] in ("lexicon", "prediction"):
+                    keep.add(pc["phrase"])
+            resp["phrases"] = [p for p in resp["phrases"] if p in keep]
         if len(resp["phrases"]) > 1:
             resp["phrases"] = _sort_phrases_by_freq(resp["phrases"])
     if resp.get("candidates"):
