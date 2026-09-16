@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 *_mru.json
 *_user_weights.json
+*.zip
