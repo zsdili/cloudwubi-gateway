@@ -570,6 +570,9 @@ def context_associate(text, max_results=20):
     text = (text or "").strip()
     if not text:
         return []
+    # v0.7.4 用户算法：如果不是中文字（数字/英文/符号），就不联想
+    if not re.search(r'[\u4e00-\u9fff]', text):
+        return []
     # v0.5.15 反馈① + v0.7.3 整句优先：前后文顺承——整句末尾从长到短匹配（整句长度→1字，上限8字）
     #   修复缺口：5-7 字整句（山重水复疑无路/哑巴吃黄连）此前只查末1-4字永远不命中
     for n in range(min(8, len(text)), 0, -1):
@@ -781,8 +784,9 @@ def main_handler(event, context):
         return _resp(200, {"learned": learn_phrase, "status": "ok"})
 
     # v0.4.8 字后联想 + 英文翻译（独立接口：{"word":"钟"} / {"word":"钟","en":true}）
+    # v0.7.4 用户算法：空 word（不是字）→ 返回 200+空，不 400
     word = req.get("word")
-    if word:
+    if word is not None:
         resp = {"word": word}
         # 联想：词库中含该字的词组（互联网热点话题）
         engine = _get_phrase_engine()
@@ -806,8 +810,9 @@ def main_handler(event, context):
         return _resp(200, resp)
 
     # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
+    # v0.7.4 空 context（键存在）→ 200+空（用户算法：空就不联想），不 400
     ctx = req.get("context")
-    if ctx:
+    if ctx is not None:
         phrases = context_associate(str(ctx))
         return _resp(200, {"context": str(ctx), "phrases": phrases})
 
