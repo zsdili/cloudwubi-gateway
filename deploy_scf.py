@@ -73,6 +73,7 @@ import time as _time
 _time.sleep(25)  # 等 UpdateFunctionCode 完成后函数不再处于 Updating 状态
 _env_payload = json.dumps({
     "FunctionName": "cloudwubi-gateway",
+    "MemorySize": 256,   # v0.7.17：词组库全量+12万词典内存>128MB → OOM("Task memory exceeded")修复
     "Timeout": 30,   # v0.6.8：冷启动加载 8MB 词库+12万词典需 >3s，默认 3s 超时导致 en/words 接口间歇失败
     "Environment": {"Variables": [
         {"Key": "TMT_SECRET_ID", "Value": SECRET_ID},

@@ -105,6 +105,8 @@ def load_dict():
     return dict_data
 
 
+PHRASE_LIMIT = int(os.environ.get("CLOUDWUBI_PHRASE_LIMIT", "0"))   # 0=不限；防超内存可设上限（如 150000 词条）
+
 def load_phrase_dict():
     """加载词组规则库（wubi86_phrases.txt + wubi86_daily.txt 日常高频词库）：编码 -> 词组列表。"""
     phrase_data = {}
@@ -130,6 +132,8 @@ def load_phrase_dict():
                         phrase_data[code].extend(parts[1:])
                     else:
                         phrase_data[code] = parts[1:]
+                    if PHRASE_LIMIT > 0 and len(phrase_data) >= PHRASE_LIMIT:
+                        return phrase_data
         except FileNotFoundError:
             pass  # 词组库不存在则仅用动态构词
     return phrase_data
@@ -1103,6 +1107,13 @@ def main_handler(event, context):
         cat_phrases = [p["phrase"] for p in phrase_candidates if p.get("cat") and len(p["phrase"]) >= 2]
         if cat_phrases:
             phrases = cat_phrases + [p for p in phrases if p not in cat_phrases]
+        # v0.7.17 用户词实时生效（固化：打过的字/词组成词组实时更新云端，再输入即可用+置顶）
+        #   客户端每次查询携带最近上屏词组（recent≤20）→ 命中当前码的用户词移到备选最前
+        recent = req.get("recent") or []
+        if recent:
+            hit = [w for w in recent if w and w in phrases]
+            if hit:
+                phrases = hit + [p for p in phrases if p not in hit]
         gen = []
         # v0.5.22：候选码点只并入真词（lexicon/prediction）的汉字——动态构词字不再混入
         #   （dugj 无真词时 candidates 保持单字表精确结果，不再出现"磁立理"类组合字）
