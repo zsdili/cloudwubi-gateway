@@ -1107,7 +1107,17 @@ def main_handler(event, context):
                     keep.add(pc["phrase"])
             resp["phrases"] = [p for p in resp["phrases"] if p in keep]
         if len(resp["phrases"]) > 1:
-            resp["phrases"] = _sort_phrases_by_freq(resp["phrases"])
+            if len(code) >= 4:
+                # v0.7.12 用户要求"输4码时词组优先显示"：4 码（全码）时词库真词组
+                #   （lexicon/prediction 精确命中，如 uefj→前进/rcqn→反馈/lyab→国庆节）
+                #   强制置顶；HOT_DAILY/拼音/联想句殿后——用户按全码打词组，第一眼必见词库词组
+                exact_ph = [p["phrase"] for p in phrase_candidates
+                            if p["type"] in ("lexicon", "prediction")]
+                rest = [p for p in resp["phrases"] if p not in exact_ph]
+                rest = _sort_phrases_by_freq(rest)
+                resp["phrases"] = exact_ph + [p for p in rest if p not in exact_ph]
+            else:
+                resp["phrases"] = _sort_phrases_by_freq(resp["phrases"])
     if resp.get("candidates"):
         if len(code) >= 4:
             # v0.7.11 86版规则：4码全码精确匹配字置顶（码表顺序），词组混入字在后
