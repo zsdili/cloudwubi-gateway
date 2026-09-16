@@ -574,11 +574,11 @@ def context_associate(text, max_results=20):
     if not re.search(r'[\u4e00-\u9fff]', text):
         return []
     # v0.7.6 用户要求：标点一起参与联想——匹配键剥离标点（"哪有这么好的事？"→匹配"哪有这么好的事"）
-    _strip_punct = lambda s: re.sub(r'[，。、！？；：""''（）《》…—·,.!?;:\s]', '', s)
+    _strip_punct = lambda s: re.sub(r'[，。、！？；：""()《》…—·,.!?;:\s]', '', s)
     # v0.5.15 反馈① + v0.7.3 整句优先：前后文顺承——整句末尾从长到短匹配（整句长度→1字，上限8字）
     #   修复缺口：5-7 字整句（山重水复疑无路/哑巴吃黄连）此前只查末1-4字永远不命中
     # v0.7.5 一并显示：SUCCESSION 命中后，追加末1-3字意思衔接搭配（点哪个句子联想哪个句子+后面加词联想）
-    for n in range(min(8, len(text)), 0, -1):
+    for n in range(min(16, len(text)), 0, -1):
         key = _strip_punct(text[-n:] if len(text) >= n else text)
         if key in SUCCESSION:
             out = list(SUCCESSION[key])
