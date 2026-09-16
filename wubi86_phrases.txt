@@ -6452,6 +6452,7 @@ tuoe 乱头粗服
 tddd 乱套
 tdyc 乱序
 tdxu 乱弹
+txgg 每一
 txgg 乱弹琴
 txgy 乱弹琴没谱
 tdsh 乱想
