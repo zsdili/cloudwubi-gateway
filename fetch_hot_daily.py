@@ -82,13 +82,18 @@ def main():
     hot = {}
     try: hot = json.load(open(HOT_JSON, encoding="utf-8"))
     except Exception: hot = {}
+    added = []
     for w in phrases:
         c = code86(single, w)
         if c and w not in hot:
             hot[w] = c
+            added.append(w)
         if len(hot) >= 120: break
+    # v0.5.104-fix 封顶 120：超限时保留最新 120 条（热词有时效，最旧挤出），去重不误删旧词
+    if len(hot) > 120:
+        hot = dict(list(hot.items())[-120:])
     json.dump(hot, open(HOT_JSON, "w"), ensure_ascii=False, indent=1)
-    print(f"热词入库完成: {len(hot)} 条")
+    print(f"热词入库完成: {len(hot)} 条, 新增 {len(added)} 条: {added[:10]}")
 
 if __name__ == "__main__":
     main()
