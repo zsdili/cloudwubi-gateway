@@ -881,6 +881,45 @@ def _get_ranker():
     return RANKER
 
 
+import re as _re
+
+# v0.7.18 常见姓名词义表（用户反馈 surname 干扰——纯姓名字给出准确词义，干净翻译）
+SURNAME_WORD_MEANING = {
+    "钟":"bell; clock", "王":"king", "李":"plum", "张":"to open up; sheet",
+    "陈":"old; to exhibit", "杨":"poplar", "黄":"yellow", "周":"circumference; to surround",
+    "徐":"slowly; gentle", "孙":"grandchild", "马":"horse", "朱":"vermilion",
+    "胡":"beard; non-Han people", "郭":"outer city wall", "何":"what; how",
+    "林":"forest", "罗":"net; to collect", "高":"high; tall", "郑":"solemn",
+    "梁":"beam; bridge", "谢":"to thank; to decline", "宋":"the Song dynasty",
+    "唐":"the Tang dynasty", "许":"to allow; maybe", "韩":"the Han states",
+    "田":"field; farmland", "董":"to direct", "于":"in; at; for", "余":"surplus; more than",
+    "杜":"to stop; to prevent", "叶":"leaf", "程":"rule; journey", "苏":"to revive",
+    "丁":"4th heavenly stem; adult male", "任":"to appoint; duty", "白":"white",
+    "石":"stone; rock", "江":"river", "华":"China; splendid", "秦":"the Qin dynasty",
+    "刘":"a surname", "赵":"a surname", "吴":"a surname", "郑":"solemn", "冯":"a surname",
+    "邓":"a surname", "曹":"a surname", "彭":"a surname", "曾":"once; ever", "肖":"resemble",
+    "袁":"a surname", "潘":"a surname", "蒋":"a surname", "蔡":"a surname", "魏":"a surname",
+    "吕":"a surname", "沈":"sink; Shenyang",
+}
+
+def _clean_en(s, word=""):
+    """v0.7.18 用户反馈：翻译要准确干净——surname 段剔除。
+    - 钟='surname Zhong' → 查姓名词义表 → 'bell; clock'
+    - 中='(bound form) China; Chinese' → 保留词义
+    - 纯姓氏且表外 → 原样（至少可理解）；表内 → 准确词义"""
+    if not s:
+        return s
+    if "surname" in s and word in SURNAME_WORD_MEANING:
+        return SURNAME_WORD_MEANING[word]
+    parts = [x.strip() for x in s.split(";") if x.strip() and "surname" not in x.lower() and "variant" not in x.lower()]
+    out = "; ".join(parts)
+    if out:
+        return out
+    if word:
+        return word + " (a Chinese surname)"
+    return s
+
+
 def main_handler(event, context):
     """腾讯云函数统一入口。
 
@@ -930,7 +969,7 @@ def main_handler(event, context):
                 # v0.5.74：末字非中文（数字/符号）不兜底——"不是字就不翻译"
                 if last and re.search(r'[\u4e00-\u9fff]', last):
                     en_out = _get_en_dict().get(last, "") or _tmt_translate(last) or _baidu_translate(last)
-            resp["en"] = en_out
+            resp["en"] = _clean_en(en_out, word=cands[0] if cands else "")
         return _resp(200, resp)
 
     # v0.6 反馈①②：上下文连续联想（独立接口：{"context":"我最近在了解人工智能"}）
@@ -1117,8 +1156,11 @@ def main_handler(event, context):
         gen = []
         # v0.5.22：候选码点只并入真词（lexicon/prediction）的汉字——动态构词字不再混入
         #   （dugj 无真词时 candidates 保持单字表精确结果，不再出现"磁立理"类组合字）
+        # v0.7.18 骚扰根治（用户反馈 kwl 出现"和/中/人/民/共"长词拆字刷屏）：
+        #   ① prediction（3码预测长词）拆字严禁并入——3码只显示预测词组本体
+        #   ② lexicon 拆字仅限 2 码输入时（2码单字在前是固化规则）；3/4码不拆字
         for p in phrase_candidates:
-            if p["type"] in ("lexicon", "prediction"):
+            if p["type"] == "lexicon" and len(p["phrase"]) <= 2 and len(code) == 2:
                 for cp in p["chars"]:
                     if cp not in resp["candidates"]:
                         resp["candidates"].append(cp)
