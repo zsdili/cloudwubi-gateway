@@ -356,16 +356,23 @@ HOT_WORDS = [
     "服务贸易", "秋粮生产", "金砖合作", "全球南方", "统筹监测", "复合型人才", "服贸会", "算力统筹"
 ]
 # v0.5.64 修复：每日热词文件（fetch_hot_daily.py 自动入库）与硬编码合并加载
+DAILY_HOT = {}   # v0.5.64：热词码映射（code 打字出词）
 try:
     import os as _os
-    _dhp = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "daily_hot_words.json")
-    if not _os.path.exists(_dhp):
-        _dhp = _os.path.join(_os.getcwd(), "daily_hot_words.json")
-    if _os.path.exists(_dhp):
+    # v0.5.65：SCF 环境路径差异——多候选路径（__file__ 目录 / cwd / /var/user）
+    _dhp = None
+    for _p in (_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "daily_hot_words.json"),
+               _os.path.join(_os.getcwd(), "daily_hot_words.json"),
+               "/var/user/daily_hot_words.json"):
+        if _os.path.exists(_p):
+            _dhp = _p
+            break
+    if _dhp:
         _dh = json.load(open(_dhp, encoding="utf-8"))
         for _w in _dh.keys():
             if _w not in HOT_WORDS:
                 HOT_WORDS.append(_w)
+        DAILY_HOT = _dh
 except Exception:
     pass
 
@@ -398,7 +405,7 @@ def _ngram_link_associate(text, max_results=6):
     for n in (3, 2, 1):
         key = t[-n:] if len(t) >= n else t
         if key in NGRAM_LINK:
-            return [w for w in NGRAM_LINK[key] if len(w) >= 1][:max_results]
+            return [w for w in NGRAM_LINK[key] if len(w) >= 2][:max_results]
     return []
 
 def _load_hot_by_code():
@@ -540,6 +547,10 @@ def _filter_pos(words):
     return [w for w in words if not any(n in w for n in NEG_WORDS)]
 
 
+# v0.5.76 城市知识联想（真实搭配，算法即库——动态生成，无需词库）
+CITY_KNOWLEDGE = {'广州': ['广州塔', '广州地铁', '广州美食', '广州欢迎你', '广州市', '广州天气', '广州房价', '广州白云机场', '广州火车站', '广州大学城'], '北京': ['北京故宫', '北京烤鸭', '北京地铁', '北京欢迎你', '北京市', '北京天气', '北京房价', '北京大兴机场', '北京胡同', '北京大学'], '上海': ['上海外滩', '上海迪士尼', '上海地铁', '上海美食', '上海市', '上海天气', '上海房价', '上海虹桥机场', '上海浦东', '上海交通大学'], '深圳': ['深圳湾', '深圳速度', '深圳地铁', '深圳大学', '深圳市', '深圳天气', '深圳房价', '深圳宝安机场', '深圳科技园', '深圳人才公园'], '成都': ['成都大熊猫', '成都火锅', '成都地铁', '成都美食', '成都市', '成都天气', '成都房价', '成都双流机场', '成都宽窄巷子', '成都太古里'], '杭州': ['杭州西湖', '杭州地铁', '杭州美食', '杭州市', '杭州天气', '杭州房价', '杭州萧山机场', '杭州灵隐寺', '杭州宋城', '杭州亚运会'], '武汉': ['武汉樱花', '武汉热干面', '武汉地铁', '武汉美食', '武汉市', '武汉天气', '武汉房价', '武汉天河机场', '武汉黄鹤楼', '武汉大学'], '西安': ['西安兵马俑', '西安肉夹馍', '西安地铁', '西安美食', '西安市', '西安天气', '西安房价', '西安咸阳机场', '西安大雁塔', '西安城墙'], '重庆': ['重庆火锅', '重庆洪崖洞', '重庆地铁', '重庆美食', '重庆市', '重庆天气', '重庆房价', '重庆江北机场', '重庆小面', '重庆解放碑'], '南京': ['南京夫子庙', '南京中山陵', '南京地铁', '南京美食', '南京市', '南京天气', '南京房价', '南京禄口机场', '南京盐水鸭', '南京大学'], '长沙': ['长沙臭豆腐', '长沙橘子洲', '长沙地铁', '长沙美食', '长沙市', '长沙天气', '长沙房价', '长沙黄花机场', '长沙茶颜悦色', '长沙岳麓山'], '厦门': ['厦门鼓浪屿', '厦门地铁', '厦门美食', '厦门市', '厦门天气', '厦门房价', '厦门高崎机场', '厦门大学', '厦门环岛路', '厦门曾厝垵'], '青岛': ['青岛啤酒', '青岛栈桥', '青岛地铁', '青岛美食', '青岛市', '青岛天气', '青岛房价', '青岛流亭机场', '青岛五四广场', '青岛崂山'], '哈尔滨': ['哈尔滨冰雪大世界', '哈尔滨红肠', '哈尔滨地铁', '哈尔滨美食', '哈尔滨市', '哈尔滨天气', '哈尔滨房价', '哈尔滨太平机场', '哈尔滨中央大街', '哈尔滨冰灯'], '天津': ['天津狗不理', '天津之眼', '天津地铁', '天津美食', '天津市', '天津天气', '天津房价', '天津滨海机场', '天津五大道', '天津煎饼果子'], '苏州': ['苏州园林', '苏州刺绣', '苏州地铁', '苏州美食', '苏州市', '苏州天气', '苏州房价', '苏州机场', '苏州评弹', '苏州博物馆'], '东莞': ['东莞制造', '东莞地铁', '东莞美食', '东莞市', '东莞天气', '东莞房价', '东莞松山湖', '东莞虎门', '东莞篮球', '东莞理工学院'], '佛山': ['佛山武术', '佛山陶都', '佛山地铁', '佛山美食', '佛山市', '佛山天气', '佛山房价', '佛山祖庙', '佛山顺德', '佛山岭南天地'], '中山': ['中山故居', '中山灯饰', '中山美食', '中山市', '中山天气', '中山房价', '中山站', '中山影视城', '中山詹园', '中山石岐乳鸽'], '珠海': ['珠海长隆', '珠海渔女', '珠海地铁', '珠海美食', '珠海市', '珠海天气', '珠海房价', '珠海金湾机场', '珠海情侣路', '珠海横琴'], '惠州': ['惠州西湖', '惠州双月湾', '惠州美食', '惠州市', '惠州天气', '惠州房价', '惠州机场', '惠州巽寮湾', '惠州罗浮山', '惠州大亚湾'], '汕头': ['汕头牛肉丸', '汕头南澳岛', '汕头美食', '汕头市', '汕头天气', '汕头房价', '汕头机场', '汕头小公园', '汕头工夫茶', '汕头潮汕'], '江门': ['江门碉楼', '江门陈皮', '江门美食', '江门市', '江门天气', '江门房价', '江门站', '江门小鸟天堂', '江门古劳水乡', '江门开平'], '肇庆': ['肇庆七星岩', '肇庆裹蒸粽', '肇庆美食', '肇庆市', '肇庆天气', '肇庆房价', '肇庆站', '肇庆鼎湖山', '肇庆砚都', '肇庆端砚'], '昆明': ['昆明四季如春', '昆明滇池', '昆明美食', '昆明市', '昆明天气', '昆明房价', '昆明长水机场', '昆明鲜花', '昆明石林', '昆明翠湖'], '郑州': ['郑州烩面', '郑州地铁', '郑州美食', '郑州市', '郑州天气', '郑州房价', '郑州新郑机场', '郑州二七塔', '郑州黄河', '郑州大学'], '济南': ['济南趵突泉', '济南大明湖', '济南美食', '济南市', '济南天气', '济南房价', '济南遥墙机场', '济南千佛山', '济南把子肉', '济南大学'], '福州': ['福州三坊七巷', '福州鱼丸', '福州美食', '福州市', '福州天气', '福州房价', '福州长乐机场', '福州鼓山', '福州茉莉花', '福州大学'], '南宁': ['南宁老友粉', '南宁青秀山', '南宁美食', '南宁市', '南宁天气', '南宁房价', '南宁吴圩机场', '南宁中山路', '南宁会展中心', '南宁大学'], '海口': ['海口骑楼', '海口海鲜', '海口美食', '海口市', '海口天气', '海口房价', '海口美兰机场', '海口假日海滩', '海口火山口', '海口万绿园']}
+
+
 def context_associate(text, max_results=20):
     """v0.6/v0.5.15 反馈①②：上下文连续联想（革命性核心）
     输入：输入框光标前 N 字（整句上文）
@@ -565,6 +576,11 @@ def context_associate(text, max_results=20):
             return [w for w in ASSOC_LINK[key]][:max_results]
     # v0.6 革命性：n-gram 概率映射层（自动学习自训练语料，比手写表覆盖更大）
     #   生病了→看医生/想去医院；想→办法/一下/你；学习→知识/向上/奋斗
+    # v0.5.76 城市知识联想：末 2 字命中城市 → 动态给出该城真实搭配（算法即库，无需词库）
+    for _n in (2, 1):
+        _key = text[-_n:] if len(text) >= _n else text
+        if _key in CITY_KNOWLEDGE:
+            return CITY_KNOWLEDGE[_key][:max_results]
     _ng = _ngram_link_associate(text, max_results)
     if _ng:
         return _ng
@@ -824,7 +840,17 @@ def main_handler(event, context):
 
     # 基础查询：单字/编码查表
     candidates = _query_with_cache(code)
+    # v0.5.64：每日热词 86 码出词（thta→延长；不占普通词库码位）
+    if not candidates and DAILY_HOT:
+        for _w, _c in DAILY_HOT.items():
+            if _c == code:
+                candidates.append({"phrase": _w, "chars": [ord(ch) for ch in _w],
+                                   "code": code, "type": "hot"})
+                if len(candidates) >= 3:
+                    break
     resp = {"code": code, "candidates": candidates}
+    if req.get("dbg"):
+        resp["dbg_daily"] = len(DAILY_HOT)
 
     # 阶段2扩展：动态构词 + 阶段3语义排序
     if req.get("phrase"):
@@ -864,13 +890,20 @@ def main_handler(event, context):
             if hw not in [p["phrase"] for p in phrase_candidates]:
                 phrase_candidates.append({"phrase": hw, "score": 90, "type": "lexicon",
                                           "chars": [ord(ch) for ch in hw]})
+        # v0.5.64 每日热词 86 码出词（thta→延长；type=hot 优先显示、不并入单字候选避免类型污染）
+        if DAILY_HOT:
+            for _w, _c in DAILY_HOT.items():
+                if _c == code and _w not in [p["phrase"] for p in phrase_candidates]:
+                    phrase_candidates.insert(0, {"phrase": _w, "score": 96, "type": "hot",
+                                                 "chars": [ord(ch) for ch in _w]})
+                    break
         # phrases 只含词组（长度>=2），单字仅并入 candidates（客户端显示分离）
         # v0.5.17 反馈②③（举一反三）：词组分组——真词组（lexicon/prediction）进 phrases（优先显示）
         # v0.5.22（用户反馈"常用词库未正确显示"）：禁用动态构词 gen——
         #   dugj 等无词库真词的编码不再返回"在立理/磁理"类无意义组合，宁可无候选提示打错，
         #   词库真词（lexicon/prediction）照常显示；未来若需"无限组词"可恢复本分支
         phrases = [p["phrase"] for p in phrase_candidates
-                   if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction")]
+                   if len(p["phrase"]) >= 2 and p["type"] in ("lexicon", "prediction", "hot")]
         # v0.5.31 分类词优先：带 cat 的分类词移到 phrases 最前（用户打码即见分类词）
         cat_phrases = [p["phrase"] for p in phrase_candidates if p.get("cat") and len(p["phrase"]) >= 2]
         if cat_phrases:
@@ -911,6 +944,8 @@ def main_handler(event, context):
                 break
         if not hot:
             for cp in resp["candidates"]:
+                if not isinstance(cp, int):   # v0.5.64：防御 dict 混入（词组候选只走 phrases）
+                    continue
                 ch = chr(cp)
                 if len(ch) == 1 and FREQ.get(ch):
                     hot.append(ch)

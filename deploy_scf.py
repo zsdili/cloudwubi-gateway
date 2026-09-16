@@ -92,3 +92,30 @@ try:
             print("✅ 环境变量已设置: TMT_SECRET_ID/TMT_SECRET_KEY")
 except urllib.error.HTTPError as e:
     print("环境变量设置 HTTP %s: %s" % (e.code, e.read().decode("utf-8", errors="replace")[:400]))
+
+# v0.6.11 部署即验证：部署后自动 curl 抽样验证（2-3 个接口），失败即报错（防"SCF 旧容器/数据不生效"）
+import urllib.parse as _up
+try:
+    _GATEWAY = "https://1251037126-bglnivgmaf.ap-guangzhou.tencentscf.com"
+    _checks = [("code", {"code": "lyab", "phrase": True}, "国庆节"),
+               ("code", {"code": "qkhh", "phrase": True}, "钟"),
+               ("context", {"context": "床前明月光"}, None)]
+    _ok = 0
+    for _itf, _body, _expect in _checks:
+        try:
+            _req = urllib.request.Request(_GATEWAY, data=json.dumps(_body).encode("utf-8"),
+                                          headers={"Content-Type": "application/json"}, method="POST")
+            with urllib.request.urlopen(_req, timeout=60) as _r:
+                _resp = json.loads(_r.read().decode("utf-8"))
+                _txt = json.dumps(_resp, ensure_ascii=False)[:200]
+                if _expect and _expect not in _txt:
+                    print("⚠️ 部署后验证未过: %s 缺 %s → %s" % (_itf, _expect, _txt))
+                else:
+                    print("✅ 部署后验证通过: %s → %s" % (_itf, _txt[:80]))
+                    _ok += 1
+        except Exception as _e:
+            print("⚠️ 部署后验证异常 %s: %s" % (_itf, _e))
+    if _ok < 2:
+        print("❌ 部署后验证不足（仅 %d/3 通过），请检查 SCF 是否真正更新" % _ok)
+except Exception as _e:
+    print("部署后验证脚本异常（不影响部署）: %s" % _e)
